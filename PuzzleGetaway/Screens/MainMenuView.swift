@@ -198,6 +198,7 @@ struct MainMenuView: View {
         }
         .buttonStyle(PressableStyle())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel("\(title), \(subtitle)")
         .accessibilityIdentifier(id)
     }

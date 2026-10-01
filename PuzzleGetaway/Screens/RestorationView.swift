@@ -155,6 +155,7 @@ struct RestorationView: View {
         }
         .buttonStyle(PressableStyle())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(index == 0 ? "Before restoration" : "Stage \(index), \(title), \(unlocked ? "unlocked" : "locked, needs \(required) stars")")
         .accessibilityAddTraits(selected ? .isSelected : [])
         .accessibilityIdentifier("stage-\(index)")

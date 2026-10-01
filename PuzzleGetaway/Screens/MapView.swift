@@ -161,6 +161,7 @@ struct MapView: View {
         }
         .buttonStyle(PressableStyle())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(accessibilityText(dest: dest, unlocked: unlocked, hasLevels: hasLevels,
                                               stars: stars, maxStars: maxStars, done: done, total: total))
         .accessibilityHint(unlocked ? "Opens this stop" : "")

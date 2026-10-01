@@ -103,6 +103,7 @@ struct ScrapbookView: View {
         }
         .buttonStyle(PressableStyle())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(isUnlocked ? "\(title), from \(entry.destinationName)" : "Locked picture from \(entry.destinationName), earn \(entry.stage.starsRequired) stars there")
         .accessibilityIdentifier("scrap-\(entry.artId)")
     }

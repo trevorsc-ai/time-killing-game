@@ -102,6 +102,7 @@ struct LevelSelectView: View {
         }
         .buttonStyle(PressableStyle())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel("\(dest.restorationTitle). Stage \(count) of \(total). \(stars) stars collected.")
         .accessibilityHint("Opens the restoration scene")
         .accessibilityIdentifier("restorationLink")
@@ -174,6 +175,7 @@ struct LevelSelectView: View {
         }
         .buttonStyle(PressableStyle())
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(tileLabel(level: level, modeName: modeName, unlocked: unlocked, stars: result?.stars, inProgress: inProgress))
         .accessibilityIdentifier("level-\(level.id)")
     }

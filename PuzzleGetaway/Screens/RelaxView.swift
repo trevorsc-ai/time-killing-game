@@ -93,6 +93,7 @@ struct RelaxView: View {
         .buttonStyle(PressableStyle())
         .disabled(entry == nil)
         .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
         .accessibilityLabel(entry == nil ? "\(info.title), puzzles coming soon" : "\(info.title). Puzzle \(number) of \(count). \(info.blurb)")
         .accessibilityIdentifier("relax-\(info.pool)")
     }
