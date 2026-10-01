@@ -48,6 +48,15 @@ jobs:
             -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
             CODE_SIGNING_ALLOWED=NO \
             2>&1 | tee "$RUNNER_TEMP/iphone-build.log" | xcbeautify
+      - name: Failure details
+        if: failure()
+        run: |
+          tail -n 60 "$RUNNER_TEMP/iphone-build.log" || true
+          xcrun xcresulttool get test-results summary --path "$RUNNER_TEMP/iphone.xcresult" || true
+          xcrun xcresulttool get build-results --path "$RUNNER_TEMP/iphone.xcresult" || true
+          mkdir -p "$RUNNER_TEMP/iphone-fail"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/iphone.xcresult" --output-path "$RUNNER_TEMP/iphone-fail" || true
+          for f in "$RUNNER_TEMP"/iphone-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
       - name: Export screenshots
         if: always()
         run: |
@@ -93,6 +102,15 @@ jobs:
             -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
             CODE_SIGNING_ALLOWED=NO \
             2>&1 | tee "$RUNNER_TEMP/ipad-build.log" | xcbeautify
+      - name: Failure details
+        if: failure()
+        run: |
+          tail -n 60 "$RUNNER_TEMP/ipad-build.log" || true
+          xcrun xcresulttool get test-results summary --path "$RUNNER_TEMP/ipad.xcresult" || true
+          xcrun xcresulttool get build-results --path "$RUNNER_TEMP/ipad.xcresult" || true
+          mkdir -p "$RUNNER_TEMP/ipad-fail"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-fail" || true
+          for f in "$RUNNER_TEMP"/ipad-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
