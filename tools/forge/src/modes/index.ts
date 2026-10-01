@@ -2,6 +2,7 @@ import type { ModeHandlers } from "./types.js";
 import { demo } from "./demo.js";
 // === MODE IMPORTS: add one line per mode (expect merge conflicts here; keep one per line) ===
 // import { liquid } from "./liquid/index.js";
+import { pixel } from "./pixel/index.js";
 // === END MODE IMPORTS ===
 
 /**
@@ -11,6 +12,7 @@ export const MODE_HANDLERS: ModeHandlers[] = [
   demo,
   // === MODE REGISTRATIONS: one per line, trailing comma ===
   // liquid,
+  pixel,
   // === END MODE REGISTRATIONS ===
 ];
 
