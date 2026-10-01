@@ -26,10 +26,16 @@ targets:
       - path: PuzzleGetaway
         excludes:
           - "Resources/**"
-      # Resources is bundled as a FOLDER REFERENCE: the app bundle contains `Resources/Levels`, `Resources/Pools`,
-      # `Resources/Art`, `Resources/Destinations.json`. Use ResourceLocator (Core/Content.swift) to find them.
+      # Resources is bundled as a FOLDER REFERENCE copied to `<app>/Content/Resources/...` (Levels, Pools, Art,
+      # Destinations.json). It must NOT sit at the bundle root: a root-level `Resources` directory makes CFBundle
+      # treat the app as a legacy bundle and the install fails with "Missing bundle ID".
+      # Use ResourceLocator (Core/Content.swift) to find the files.
       - path: PuzzleGetaway/Resources
         type: folder
+        buildPhase:
+          copyFiles:
+            destination: resources
+            subpath: Content
     info:
       path: Generated/Info.plist
       properties:

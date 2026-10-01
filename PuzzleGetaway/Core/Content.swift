@@ -153,8 +153,9 @@ struct Palette: Codable, Hashable {
 
 /// Finds the bundled `Resources` folder reference (see project.yml).
 ///
-/// The app bundle contains `Resources/Levels/*.json`, `Resources/Pools/*.json`, `Resources/Art/*.json`
-/// and `Resources/Destinations.json`. In hosted unit tests `Bundle.main` is the app bundle, and
+/// The app bundle contains `Content/Resources/Levels/*.json`, `.../Pools/*.json`, `.../Art/*.json`
+/// and `.../Destinations.json` (a folder reference copied into `Content/`; a `Resources` directory at the
+/// bundle root breaks app installation, see project.yml). In hosted unit tests `Bundle.main` is the app bundle, and
 /// `Bundle(for:)` of an app class resolves to the same bundle, so this works for both.
 enum ResourceLocator {
     private final class BundleToken {}
@@ -163,8 +164,11 @@ enum ResourceLocator {
         let fm = FileManager.default
         for bundle in bundles {
             guard let base = bundle.resourceURL else { continue }
-            let nested = base.appendingPathComponent("Resources", isDirectory: true)
-            if fm.fileExists(atPath: nested.appendingPathComponent("Levels").path) { return nested }
+            let nestedPaths = ["Content/Resources", "Resources"]
+            for rel in nestedPaths {
+                let nested = base.appendingPathComponent(rel, isDirectory: true)
+                if fm.fileExists(atPath: nested.appendingPathComponent("Levels").path) { return nested }
+            }
             if fm.fileExists(atPath: base.appendingPathComponent("Levels").path) { return base }
         }
         return nil

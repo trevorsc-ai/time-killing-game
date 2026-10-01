@@ -1,6 +1,6 @@
 # Level and content format
 
-All content is JSON under `PuzzleGetaway/Resources/`, bundled as a folder reference (see `ResourceLocator` in `Core/Content.swift`). Mirrors: TypeScript `tools/forge/src/schema.ts`, Swift `PuzzleGetaway/Core/Content.swift`. The forge validator (`npm run validate`) enforces everything below. Rules semantics live in `rules.md`.
+All content is JSON under `PuzzleGetaway/Resources/`, bundled as a folder reference at `<app>/Content/Resources/` (see `ResourceLocator` in `Core/Content.swift`; never use `Bundle.url(forResource:)` for these). Mirrors: TypeScript `tools/forge/src/schema.ts`, Swift `PuzzleGetaway/Core/Content.swift`. The forge validator (`npm run validate`) enforces everything below. Rules semantics live in `rules.md`.
 
 ## Layout
 

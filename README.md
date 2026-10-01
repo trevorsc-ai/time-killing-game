@@ -10,7 +10,7 @@ xcodegen generate
 open PuzzleGetaway.xcodeproj
 ```
 
-The Xcode project is generated from `project.yml` and git-ignored. Sources are picked up by folder, so adding a Swift file needs no project edits. The `PuzzleGetaway/Resources` folder is bundled as a folder reference (`Resources/Levels`, `Resources/Pools`, `Resources/Art`, `Resources/Destinations.json`); load it through `ContentStore` / `ResourceLocator` in `Core/Content.swift`.
+The Xcode project is generated from `project.yml` and git-ignored. Sources are picked up by folder, so adding a Swift file needs no project edits. The `PuzzleGetaway/Resources` folder is bundled as a folder reference copied to `Content/Resources/` inside the app (`Levels`, `Pools`, `Art`, `Destinations.json`); load it through `ContentStore` / `ResourceLocator` in `Core/Content.swift`.
 
 Run tests: select the `PuzzleGetaway` scheme and press Cmd-U, or
 
