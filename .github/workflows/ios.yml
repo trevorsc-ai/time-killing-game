@@ -29,7 +29,9 @@ jobs:
       - name: Install XcodeGen and xcbeautify
         run: brew install xcodegen xcbeautify
       - name: Generate project
-        run: xcodegen generate
+        run: |
+          xcodegen generate
+          cat Generated/Info.plist
       - name: Pick iPhone simulator
         id: sim
         run: echo "udid=$(python3 .github/scripts/pick_sim.py iphone)" >> "$GITHUB_OUTPUT"
@@ -51,9 +53,8 @@ jobs:
       - name: Failure details
         if: failure()
         run: |
-          tail -n 60 "$RUNNER_TEMP/iphone-build.log" || true
-          xcrun xcresulttool get test-results summary --path "$RUNNER_TEMP/iphone.xcresult" || true
-          xcrun xcresulttool get build-results --path "$RUNNER_TEMP/iphone.xcresult" || true
+          tail -n 40 "$RUNNER_TEMP/iphone-build.log" || true
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name PuzzleGetaway.app -path '*Debug-iphonesimulator*' | head -1); ls -la "$APP"; plutil -p "$APP/Info.plist" || true
           mkdir -p "$RUNNER_TEMP/iphone-fail"
           xcrun xcresulttool export attachments --path "$RUNNER_TEMP/iphone.xcresult" --output-path "$RUNNER_TEMP/iphone-fail" || true
           for f in "$RUNNER_TEMP"/iphone-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
@@ -82,7 +83,9 @@ jobs:
       - name: Install XcodeGen and xcbeautify
         run: brew install xcodegen xcbeautify
       - name: Generate project
-        run: xcodegen generate
+        run: |
+          xcodegen generate
+          cat Generated/Info.plist
       - name: Pick iPad simulator
         id: sim
         run: echo "udid=$(python3 .github/scripts/pick_sim.py ipad)" >> "$GITHUB_OUTPUT"
@@ -106,8 +109,6 @@ jobs:
         if: failure()
         run: |
           tail -n 60 "$RUNNER_TEMP/ipad-build.log" || true
-          xcrun xcresulttool get test-results summary --path "$RUNNER_TEMP/ipad.xcresult" || true
-          xcrun xcresulttool get build-results --path "$RUNNER_TEMP/ipad.xcresult" || true
           mkdir -p "$RUNNER_TEMP/ipad-fail"
           xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-fail" || true
           for f in "$RUNNER_TEMP"/ipad-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
