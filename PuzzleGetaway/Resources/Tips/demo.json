@@ -1,0 +1,8 @@
+{
+  "tips": {
+    "demo.counter": {
+      "title": "Count up to the goal",
+      "body": "Tap a button to add its number. Land exactly on the target to finish."
+    }
+  }
+}

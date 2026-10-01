@@ -1,0 +1,27 @@
+name: Forge
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: forge-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/forge
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/forge/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: npm run validate

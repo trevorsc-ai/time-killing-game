@@ -1,0 +1,16 @@
+{
+  "colors": [
+    { "id": "r", "name": "Tomato",   "hex": "#E5594F", "highContrastHex": "#B3201A", "symbol": "circle.fill" },
+    { "id": "o", "name": "Tangerine","hex": "#F59B3D", "highContrastHex": "#B85C00", "symbol": "triangle.fill" },
+    { "id": "y", "name": "Sunbeam",  "hex": "#F7D154", "highContrastHex": "#8A6A00", "symbol": "square.fill" },
+    { "id": "g", "name": "Meadow",   "hex": "#6DC47A", "highContrastHex": "#1A7430", "symbol": "leaf.fill" },
+    { "id": "t", "name": "Lagoon",   "hex": "#41BDB3", "highContrastHex": "#00746C", "symbol": "drop.fill" },
+    { "id": "b", "name": "Sky",      "hex": "#5DA9E8", "highContrastHex": "#1A5CA8", "symbol": "hexagon.fill" },
+    { "id": "i", "name": "Twilight", "hex": "#7078DB", "highContrastHex": "#2E359F", "symbol": "moon.fill" },
+    { "id": "p", "name": "Plum",     "hex": "#AC70D8", "highContrastHex": "#6A2A9C", "symbol": "diamond.fill" },
+    { "id": "k", "name": "Blossom",  "hex": "#F28FB8", "highContrastHex": "#B02E6A", "symbol": "heart.fill" },
+    { "id": "n", "name": "Cocoa",    "hex": "#B07E55", "highContrastHex": "#6A4222", "symbol": "plus" },
+    { "id": "w", "name": "Cloud",    "hex": "#F1EBDD", "highContrastHex": "#5A5648", "symbol": "star.fill" },
+    { "id": "s", "name": "Slate",    "hex": "#8795A6", "highContrastHex": "#37424F", "symbol": "bolt.fill" }
+  ]
+}

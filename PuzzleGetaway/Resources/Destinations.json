@@ -1,0 +1,104 @@
+{
+  "unlockPercent": 60,
+  "destinations": [
+    {
+      "id": "d1",
+      "name": "Station Snack Cart",
+      "tagline": "Every journey starts with a little something sweet.",
+      "intro": "The Lantern Line has pulled into Platform One, where an old snack cart sits dusty and forgotten. The Parcel Pals have rolled up their sleeves, and with your help it will smell of warm treats again.",
+      "theme": { "primary": "#E98B5F", "secondary": "#F7D7B5", "accent": "#5DA9E8", "background": "#FFF6E8" },
+      "comingSoon": false,
+      "restorationTitle": "Restore the Snack Cart",
+      "restorationStages": [
+        { "id": "d1-s1", "title": "A good sweep", "starsRequired": 3, "scrapbookArtId": "d1-stage1" },
+        { "id": "d1-s2", "title": "Fresh paint", "starsRequired": 10, "scrapbookArtId": "d1-stage2" },
+        { "id": "d1-s3", "title": "Striped awning", "starsRequired": 20, "scrapbookArtId": "d1-stage3" },
+        { "id": "d1-s4", "title": "Warm lanterns", "starsRequired": 32, "scrapbookArtId": "d1-stage4" },
+        { "id": "d1-s5", "title": "Stocked shelves", "starsRequired": 46, "scrapbookArtId": "d1-stage5" },
+        { "id": "d1-s6", "title": "Grand reopening", "starsRequired": 60, "scrapbookArtId": "d1-stage6" }
+      ]
+    },
+    {
+      "id": "d2",
+      "name": "Garden Express",
+      "tagline": "A greenhouse on wheels, humming along the rails.",
+      "intro": "Next stop is the Garden Express, a long glass carriage full of sleepy seedlings and loose tools. The Pals need every bolt back where it belongs before the first sprout wakes up.",
+      "theme": { "primary": "#5FB36F", "secondary": "#CDEBC9", "accent": "#F7D154", "background": "#F1FAEC" },
+      "comingSoon": false,
+      "restorationTitle": "Revive the Greenhouse Car",
+      "restorationStages": [
+        { "id": "d2-s1", "title": "Open the windows", "starsRequired": 3, "scrapbookArtId": "d2-stage1" },
+        { "id": "d2-s2", "title": "Fresh soil", "starsRequired": 8, "scrapbookArtId": "d2-stage2" },
+        { "id": "d2-s3", "title": "In full bloom", "starsRequired": 13, "scrapbookArtId": "d2-stage3" }
+      ]
+    },
+    {
+      "id": "d3",
+      "name": "Baggage Bay",
+      "tagline": "Suitcases, trunks, and one very patient porter.",
+      "intro": "Behind the ticket hall, the baggage bay is packed wall to wall with carts that have lost their way. Slide them gently aside and the Pals can finally get every trunk to the right gate.",
+      "theme": { "primary": "#6C8EDB", "secondary": "#D6E0F7", "accent": "#F59B3D", "background": "#F2F5FD" },
+      "comingSoon": false,
+      "restorationTitle": "Tidy the Baggage Bay",
+      "restorationStages": [
+        { "id": "d3-s1", "title": "Clear the aisle", "starsRequired": 3, "scrapbookArtId": "d3-stage1" },
+        { "id": "d3-s2", "title": "Label the shelves", "starsRequired": 9, "scrapbookArtId": "d3-stage2" },
+        { "id": "d3-s3", "title": "Brass and polish", "starsRequired": 15, "scrapbookArtId": "d3-stage3" }
+      ]
+    },
+    {
+      "id": "d4",
+      "name": "Rainy Platform",
+      "tagline": "Drip, drop, and a little water to guide.",
+      "intro": "Rain drums on the tin roof of the far platform, and the old rain pipes have all been turned the wrong way. Twist them back into line and the water will sing down to the flower boxes.",
+      "theme": { "primary": "#4FA3B5", "secondary": "#CBE7EE", "accent": "#AC70D8", "background": "#EEF8FA" },
+      "comingSoon": false,
+      "restorationTitle": "Mend the Rainy Platform",
+      "restorationStages": [
+        { "id": "d4-s1", "title": "Patch the roof", "starsRequired": 3, "scrapbookArtId": "d4-stage1" },
+        { "id": "d4-s2", "title": "Flowing gutters", "starsRequired": 9, "scrapbookArtId": "d4-stage2" },
+        { "id": "d4-s3", "title": "Window boxes in bloom", "starsRequired": 15, "scrapbookArtId": "d4-stage3" }
+      ]
+    },
+    {
+      "id": "d5",
+      "name": "Midnight Workshop",
+      "tagline": "Where the Lantern Line gets its night-time tune-up.",
+      "intro": "When the last passenger has gone home, the workshop doors swing open and the Pals get to tinker by lamplight. Something special is being built in there, and it is almost ready.",
+      "theme": { "primary": "#4B4F9E", "secondary": "#C9CBF0", "accent": "#F7D154", "background": "#EEEFFB" },
+      "comingSoon": true,
+      "restorationTitle": "",
+      "restorationStages": []
+    },
+    {
+      "id": "d6",
+      "name": "Lamplight Library Car",
+      "tagline": "A quiet carriage with a thousand bedtime stories.",
+      "intro": "Somewhere down the line, a carriage lined with warm lamps and tall shelves is waiting for its next reader. The Pals are saving you a seat by the window.",
+      "theme": { "primary": "#B5835A", "secondary": "#EBD6BF", "accent": "#E5594F", "background": "#FBF3EA" },
+      "comingSoon": true,
+      "restorationTitle": "",
+      "restorationStages": []
+    },
+    {
+      "id": "d7",
+      "name": "Orchard Junction",
+      "tagline": "Where every track smells of apple blossom.",
+      "intro": "Far past the hills, the rails split into a dozen sleepy paths through an orchard. The Pals can hardly wait to see which way the blossoms will lead you.",
+      "theme": { "primary": "#E58AAE", "secondary": "#F9D8E5", "accent": "#6DC47A", "background": "#FEF1F6" },
+      "comingSoon": true,
+      "restorationTitle": "",
+      "restorationStages": []
+    },
+    {
+      "id": "d8",
+      "name": "Snowglobe Summit",
+      "tagline": "The last stop, glittering at the top of the world.",
+      "intro": "At the very end of the Lantern Line, a tiny village glows inside a drift of soft snow. It is the cosiest place on the map, and it is saving a mug of cocoa for you.",
+      "theme": { "primary": "#7FA8D6", "secondary": "#E0ECF8", "accent": "#F59B3D", "background": "#F4F8FD" },
+      "comingSoon": true,
+      "restorationTitle": "",
+      "restorationStages": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "tips": {
+    "liquid.pour": {
+      "title": "Pour to sort",
+      "body": "Tap a tube to lift it, then tap another tube to pour. You can pour onto the same color, or into an empty tube. Fill each tube with just one color."
+    },
+    "twist.hidden": {
+      "title": "Mystery layers",
+      "body": "A frosted ? layer hides its color. Pour away what sits on top of it and the color is revealed."
+    },
+    "twist.lock": {
+      "title": "Locked tubes",
+      "body": "A tube with a padlock tag cannot be used yet. It opens as soon as the color on the tag is finished in another tube."
+    }
+  }
+}

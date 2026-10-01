@@ -1,0 +1,130 @@
+name: iOS
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  network-audit:
+    name: Network audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: .github/scripts/network_audit.sh
+
+  iphone:
+    name: Build + unit + UI tests (iPhone)
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tool versions
+        run: |
+          xcodebuild -version
+          xcrun simctl list runtimes available
+      - name: Install XcodeGen and xcbeautify
+        run: brew install xcodegen xcbeautify
+      - name: Generate project
+        run: |
+          xcodegen generate
+          cat Generated/Info.plist
+      - name: Pick iPhone simulator
+        id: sim
+        run: echo "udid=$(python3 .github/scripts/pick_sim.py iphone)" >> "$GITHUB_OUTPUT"
+      - name: Boot simulator
+        run: xcrun simctl bootstatus ${{ steps.sim.outputs.udid }} -b
+        timeout-minutes: 8
+      - name: Test (unit + UI)
+        timeout-minutes: 25
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project PuzzleGetaway.xcodeproj \
+            -scheme PuzzleGetaway \
+            -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath "$RUNNER_TEMP/iphone.xcresult" \
+            -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee "$RUNNER_TEMP/iphone-build.log" | xcbeautify
+      - name: Failure details
+        if: failure()
+        run: |
+          grep -E "error:|failed|✖|exceeded" "$RUNNER_TEMP/iphone-build.log" | head -60 || true
+          tail -n 40 "$RUNNER_TEMP/iphone-build.log" || true
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name PuzzleGetaway.app -path '*Debug-iphonesimulator*' | head -1); ls -la "$APP"; plutil -p "$APP/Info.plist" || true
+          mkdir -p "$RUNNER_TEMP/iphone-fail"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/iphone.xcresult" --output-path "$RUNNER_TEMP/iphone-fail" || true
+          for f in "$RUNNER_TEMP"/iphone-fail/*.txt; do case "$f" in *Spindump*) continue;; esac; echo "=== $f"; head -c 4000 "$f"; done || true
+      - name: Export screenshots
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/iphone-attachments"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/iphone.xcresult" --output-path "$RUNNER_TEMP/iphone-attachments" || true
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iphone-results
+          path: |
+            ${{ runner.temp }}/iphone.xcresult
+            ${{ runner.temp }}/iphone-attachments
+            ${{ runner.temp }}/iphone-build.log
+          if-no-files-found: warn
+
+  ipad:
+    name: Build + unit + UI tests (iPad)
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen and xcbeautify
+        run: brew install xcodegen xcbeautify
+      - name: Generate project
+        run: |
+          xcodegen generate
+          cat Generated/Info.plist
+      - name: Pick iPad simulator
+        id: sim
+        run: echo "udid=$(python3 .github/scripts/pick_sim.py ipad)" >> "$GITHUB_OUTPUT"
+      - name: Boot simulator
+        run: xcrun simctl bootstatus ${{ steps.sim.outputs.udid }} -b
+        timeout-minutes: 8
+      - name: Test (unit + UI)
+        timeout-minutes: 25
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project PuzzleGetaway.xcodeproj \
+            -scheme PuzzleGetaway \
+            -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath "$RUNNER_TEMP/ipad.xcresult" \
+            -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee "$RUNNER_TEMP/ipad-build.log" | xcbeautify
+      - name: Failure details
+        if: failure()
+        run: |
+          grep -E "error:|failed|✖|exceeded" "$RUNNER_TEMP/ipad-build.log" | head -60 || true
+          tail -n 60 "$RUNNER_TEMP/ipad-build.log" || true
+          mkdir -p "$RUNNER_TEMP/ipad-fail"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-fail" || true
+          for f in "$RUNNER_TEMP"/ipad-fail/*.txt; do case "$f" in *Spindump*) continue;; esac; echo "=== $f"; head -c 4000 "$f"; done || true
+      - name: Export screenshots
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/ipad-attachments"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-attachments" || true
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipad-results
+          path: |
+            ${{ runner.temp }}/ipad.xcresult
+            ${{ runner.temp }}/ipad-attachments
+            ${{ runner.temp }}/ipad-build.log
+          if-no-files-found: warn
