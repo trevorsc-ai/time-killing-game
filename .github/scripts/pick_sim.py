@@ -31,10 +31,17 @@ def score(name):
     return s
 
 
+# Only use runtimes no newer than the active Xcode's iOS SDK (newer simulators can fail to install the app).
+try:
+    sdk = subprocess.check_output(["xcrun", "--sdk", "iphonesimulator", "--show-sdk-version"], text=True).strip()
+    sdk_major = int(sdk.split(".")[0])
+except Exception:
+    sdk_major = 999
+
 candidates = []
 for runtime, devs in devices.items():
     ver = runtime_version(runtime)
-    if not ver or ver[0] < 16:
+    if not ver or ver[0] < 16 or ver[0] > sdk_major:
         continue
     for d in devs:
         if not d.get("isAvailable", True):
