@@ -310,7 +310,7 @@ final class ProgressionTests: XCTestCase {
         "comingSoon":false,"restorationTitle":"R","restorationStages":\(stagesJSON)}]}
         """
         try write(dest, to: root.appendingPathComponent("Destinations.json"))
-        try write(#"{"colors":[{"id":"r","name":"Red","hex":"#FF0000","highContrastHex":"#AA0000","symbol":"circle.fill"}]}"#,
+        try write(##"{"colors":[{"id":"r","name":"Red","hex":"#FF0000","highContrastHex":"#AA0000","symbol":"circle.fill"}]}"##,
                   to: root.appendingPathComponent("Art/palette.json"))
         let levels = (1...3).map { demoLevelJSON(id: "d1-demo-0\($0)", destination: "d1", order: $0) }.joined(separator: ",")
         try write(#"{"destination":"d1","mode":"demo","levels":["# + levels + "]}", to: root.appendingPathComponent("Levels/d1-demo.json"))
