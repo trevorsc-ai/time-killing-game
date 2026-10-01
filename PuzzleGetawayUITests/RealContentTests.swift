@@ -94,19 +94,22 @@ final class RealContentTests: XCTestCase {
         }
     }
 
-    /// One screenshot of each mode's board, opened directly.
-    func testEveryModeBoard() {
-        let boards = ["d1-liquid-01", "d1-pixel-02", "d1-bolt-16", "d3-parking-01", "d4-pipe-01"]
-        for id in boards {
-            let app = launch(["-PGOpenLevel", id])
-            XCTAssertTrue(app.buttons["undoButton"].waitForExistence(timeout: 20), "\(id) should open")
-            attach(app, name: "b-\(id)-with-tip")
-            dismissTips(app)
-            sleep(1)
-            attach(app, name: "b-\(id)")
-            app.terminate()
-        }
+    /// One screenshot of each mode's board, opened directly. One test per board keeps each well inside the per-test
+    /// time allowance on the slower iPad simulator.
+    private func checkBoard(_ id: String) {
+        let app = launch(["-PGOpenLevel", id])
+        XCTAssertTrue(app.buttons["undoButton"].waitForExistence(timeout: 20), "\(id) should open")
+        attach(app, name: "b-\(id)-with-tip")
+        dismissTips(app)
+        sleep(1)
+        attach(app, name: "b-\(id)")
     }
+
+    func testBoardLiquid() { checkBoard("d1-liquid-01") }
+    func testBoardPixel() { checkBoard("d1-pixel-02") }
+    func testBoardBolt() { checkBoard("d1-bolt-16") }
+    func testBoardParking() { checkBoard("d3-parking-01") }
+    func testBoardPipe() { checkBoard("d4-pipe-01") }
 
     /// A first real move in a Pixel level shows progress in the HUD and the move counter ticks.
     func testPixelStepUpdatesProgress() {

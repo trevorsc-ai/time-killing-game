@@ -53,11 +53,12 @@ jobs:
       - name: Failure details
         if: failure()
         run: |
+          grep -E "error:|failed|✖|exceeded" "$RUNNER_TEMP/iphone-build.log" | head -60 || true
           tail -n 40 "$RUNNER_TEMP/iphone-build.log" || true
           APP=$(find ~/Library/Developer/Xcode/DerivedData -name PuzzleGetaway.app -path '*Debug-iphonesimulator*' | head -1); ls -la "$APP"; plutil -p "$APP/Info.plist" || true
           mkdir -p "$RUNNER_TEMP/iphone-fail"
           xcrun xcresulttool export attachments --path "$RUNNER_TEMP/iphone.xcresult" --output-path "$RUNNER_TEMP/iphone-fail" || true
-          for f in "$RUNNER_TEMP"/iphone-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
+          for f in "$RUNNER_TEMP"/iphone-fail/*.txt; do case "$f" in *Spindump*) continue;; esac; echo "=== $f"; head -c 4000 "$f"; done || true
       - name: Export screenshots
         if: always()
         run: |
@@ -107,10 +108,11 @@ jobs:
       - name: Failure details
         if: failure()
         run: |
+          grep -E "error:|failed|✖|exceeded" "$RUNNER_TEMP/ipad-build.log" | head -60 || true
           tail -n 60 "$RUNNER_TEMP/ipad-build.log" || true
           mkdir -p "$RUNNER_TEMP/ipad-fail"
           xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-fail" || true
-          for f in "$RUNNER_TEMP"/ipad-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
+          for f in "$RUNNER_TEMP"/ipad-fail/*.txt; do case "$f" in *Spindump*) continue;; esac; echo "=== $f"; head -c 4000 "$f"; done || true
       - name: Export screenshots
         if: always()
         run: |
