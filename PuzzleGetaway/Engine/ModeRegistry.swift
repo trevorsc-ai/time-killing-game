@@ -48,7 +48,7 @@ enum ModeRegistry {
         // BoltMode.self,
         // PixelMode.self,
         ParkingMode.self,
-        // PipeMode.self,
+        PipeMode.self,
     ]
     /// === END MODE REGISTRATIONS ===
 

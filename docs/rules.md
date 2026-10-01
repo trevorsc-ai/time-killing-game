@@ -97,6 +97,8 @@ A `6 x 6` grid (`size` in the payload, default 6). Vehicles are axis-aligned rec
 
 **Solved.** For every gate, the target vehicle touches that edge: `right`: `c + len == size`; `left`: `c == 0`; `bottom`: `r + len == size`; `top`: `r == 0` (the cart "drives out"). Two-target levels have two gates and two targets (late levels).
 
+**Exit presentation (not a rule).** Targets stay on the board and remain movable until *every* gate is satisfied; only then does the app play the departure animation (targets roll out through their gates, the gates open). The exit is purely visual and happens after the state is solved, so it does not affect replay, hints, or undo. A target that already touches its gate in a two-target level simply waits there. Solutions must not contain moves after the state first becomes solved. Because every slide can be undone by the opposite slide, a Baggage Jam board can never get stuck. Vehicle "kind" (luggage cart, mini train, service tug, baggage trolley) is cosmetic and derived by the app from the vehicle's length and index.
+
 ## Flow Fix, mode `pipe`
 
 Grid of tiles. Openings are a 4-bit mask `N=1, E=2, S=4, W=8`. Rotation is 90 degrees **clockwise**: `rotate(mask) = ((mask << 1) & 15) | (mask >> 3)`.
@@ -120,6 +122,8 @@ A tile token is its code plus the rotation digit `0-3` (e.g. `l2`); empty tiles 
 **Solved.** Every destination tile is reached by the flow. (Dead ends and unused branches are allowed.)
 
 **Scramble guarantee.** The initial state must not be solved. Forge generators scramble from a solved layout and reject any result that is solved.
+
+**Conventions for shipped content.** The source and every destination are listed in `fixed` (they keep their solved orientation); only pipes are turned by the player. Several solutions may exist; the stored `solution` is one valid list of taps and `par` is its length. The forge solver (`tools/forge/src/modes/pipe/solver.ts`) searches for a cheaper solution and shipped boards are proven minimal whenever its search finishes within budget. Swift hints do not search: they steer the player toward the configuration reached by the stored solution. The app may show connected tiles filled with water and lit destinations as presentation; this does not change the rules.
 
 ## Stars
 

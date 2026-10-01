@@ -113,7 +113,7 @@ Same as liquid, plus optional `"capacities": [4,4,3,...]` (per bolt) and `"rusty
   "gates": [{"target":"T","edge":"right","index":2}]
 }
 ```
-Move: `{"id": "A", "delta": 2}`.
+Move: `{"id": "A", "delta": 2}`. Vehicle ids are short strings; targets are conventionally `T` (and `U`). The levels `d3-parking-01..06` use tutorial `parking.slide` (level 1) and the twist `second-gate` (levels 5 and 6, two targets).
 
 ### pipe
 
@@ -123,7 +123,7 @@ Move: `{"id": "A", "delta": 2}`.
   "fixed": [[0,0]]
 }
 ```
-Tile token = code (`. i l t x S D`) + rotation digit 0..3 (initial, i.e. scrambled, rotation). `fixed` (optional): `[row, col]` tiles that cannot be rotated. Move: `{"r": 1, "c": 2}` (rotate that tile one step clockwise).
+Tile token = code (`. i l t x S D`) + rotation digit 0..3 (initial, i.e. scrambled, rotation). `fixed` (optional): `[row, col]` tiles that cannot be rotated. Move: `{"r": 1, "c": 2}` (rotate that tile one step clockwise). Shipped boards list the source and destinations in `fixed`. Levels `d4-pipe-01..06` use tutorial `pipe.rotate` (level 1) and the twist `tee` (levels 4 to 6, which also have several destinations). `Pools/relax-pipe.json` holds 150 entries rising from 3x3 to 7x7.
 
 ### demo (placeholder)
 
