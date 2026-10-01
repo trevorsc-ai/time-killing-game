@@ -33,7 +33,11 @@ jobs:
       - name: Pick iPhone simulator
         id: sim
         run: echo "udid=$(python3 .github/scripts/pick_sim.py iphone)" >> "$GITHUB_OUTPUT"
+      - name: Boot simulator
+        run: xcrun simctl bootstatus ${{ steps.sim.outputs.udid }} -b
+        timeout-minutes: 8
       - name: Test (unit + UI)
+        timeout-minutes: 25
         run: |
           set -o pipefail
           xcodebuild test \
@@ -41,6 +45,7 @@ jobs:
             -scheme PuzzleGetaway \
             -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
             -resultBundlePath "$RUNNER_TEMP/iphone.xcresult" \
+            -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
             CODE_SIGNING_ALLOWED=NO \
             2>&1 | tee "$RUNNER_TEMP/iphone-build.log" | xcbeautify
       - name: Export screenshots
@@ -72,7 +77,11 @@ jobs:
       - name: Pick iPad simulator
         id: sim
         run: echo "udid=$(python3 .github/scripts/pick_sim.py ipad)" >> "$GITHUB_OUTPUT"
+      - name: Boot simulator
+        run: xcrun simctl bootstatus ${{ steps.sim.outputs.udid }} -b
+        timeout-minutes: 8
       - name: Test (unit)
+        timeout-minutes: 25
         run: |
           set -o pipefail
           xcodebuild test \
@@ -81,6 +90,7 @@ jobs:
             -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
             -only-testing:PuzzleGetawayTests \
             -resultBundlePath "$RUNNER_TEMP/ipad.xcresult" \
+            -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
             CODE_SIGNING_ALLOWED=NO \
             2>&1 | tee "$RUNNER_TEMP/ipad-build.log" | xcbeautify
       - name: Upload results
