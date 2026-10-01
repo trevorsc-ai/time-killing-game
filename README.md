@@ -94,7 +94,7 @@ The app contains no networking code, no analytics and no third-party packages. `
 
 - `iOS` (macOS runner): network audit, then XcodeGen build and all unit and UI tests on an iPhone and an iPad simulator. Screenshots from the UI tests are exported as the `iphone-results` and `ipad-results` artifacts (the `*-attachments` folders inside them; each file is a named `XCTAttachment`).
 - `Forge` (Ubuntu): `npm test`, `npm run validate`, `npm run build`.
-- UI tests with real content use DEBUG-only launch hooks (`Core/TestHooks.swift`): `-PGUITestHooks` adds an almost invisible "Solve step" button in the HUD that plays the next stored-solution move, and `-PGOpenLevel <id>` opens a level directly. Neither exists in Release builds. Older shell tests use `-PGDemoOnly`.
+- UI tests with real content use DEBUG-only launch hooks (`Core/TestHooks.swift`): `-PGUITestHooks` adds an invisible but hittable "Solve step" button (accessibility id `solveStep`) in the HUD that plays the next stored-solution move, and `-PGOpenLevel <id>` opens a level directly. Neither exists in Release builds. Older shell tests use `-PGDemoOnly`.
 - `SolutionReplayTests` replays every campaign level and a deterministic sample of each pool (every 6th entry); the forge replays all entries.
 
 ## Manual device test checklist
