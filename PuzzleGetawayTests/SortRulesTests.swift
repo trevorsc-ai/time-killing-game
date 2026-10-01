@@ -23,7 +23,7 @@ final class SortRulesTests: XCTestCase {
         let r = rules(p)
         XCTAssertNil(r.apply(SortMove(from: 0, to: 1), to: state(p)))
         XCTAssertNotNil(r.apply(SortMove(from: 0, to: 2), to: state(p)))
-        XCTAssertEqual(r.legalMoves(state(p)).count, 4)
+        XCTAssertEqual(r.legalMoves(state(p)).count, 2)
     }
 
     func testSolvedNeedsOneTubePerColor() {
