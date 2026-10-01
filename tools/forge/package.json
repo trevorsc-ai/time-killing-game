@@ -11,6 +11,7 @@
     "preview:pixel": "tsx src/modes/pixel/preview.ts",
     "build:pixel": "tsx src/modes/pixel/build.ts",
     "gen:sort": "tsx scripts/gen-sort.ts",
+    "gen:daily": "tsx scripts/gen-daily.ts",
     "gen:sort-golden": "tsx scripts/gen-sort-golden.ts"
   },
   "devDependencies": {

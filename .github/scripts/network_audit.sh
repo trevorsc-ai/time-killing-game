@@ -21,6 +21,21 @@ check "import WebKit" '^[[:space:]]*(@_exported[[:space:]]+)?import[[:space:]]+W
 check "NSURLConnection" 'NSURLConnection'
 check "URLRequest(" 'URLRequest\('
 
+check "AdSupport / ATT / analytics import" '^[[:space:]]*import[[:space:]]+(AdSupport|AppTrackingTransparency|FirebaseAnalytics|Firebase|Mixpanel|Amplitude|Sentry|Crashlytics)([[:space:]]|$)'
+check "remote URL literal" 'https?://'
+check "UIApplication open URL" 'UIApplication\.shared\.open|\.openURL|openURL\('
+
+json_urls=$(grep -rnE 'https?://' PuzzleGetaway/Resources 2>/dev/null || true)
+if [ -n "$json_urls" ]; then
+  echo "::error::Remote URL found in bundled resources:"
+  echo "$json_urls"
+  fail=1
+fi
+if grep -nE 'NSAppTransportSecurity|NSUserTrackingUsageDescription|NSLocalNetworkUsageDescription|NSBonjourServices' project.yml; then
+  echo "::error::project.yml declares network-related Info.plist keys"
+  fail=1
+fi
+
 pkgs=$(find . -path ./node_modules -prune -o -path ./tools/forge/node_modules -prune -o \( -name 'Package.resolved' -o -name 'Package.swift' \) -print 2>/dev/null)
 if [ -n "$pkgs" ]; then
   echo "::error::Swift Package Manager files found (no third-party dependencies allowed):"

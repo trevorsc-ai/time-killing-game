@@ -10,7 +10,7 @@ import { generate, type Target } from "./generate.js";
 
 export const POOL_SIZE = 150;
 
-interface Tier {
+export interface Tier {
   upTo: number; // exclusive end index
   difficulty: number;
   slots: number;
@@ -25,7 +25,7 @@ interface Tier {
   colors: [number, number];
 }
 
-const TIERS: Tier[] = [
+export const TIERS: Tier[] = [
   { upTo: 30, difficulty: 1, slots: 5, lanes: [2, 3], maxSplit: 2, minCrate: 2, target: { crates: [4, 7], doomedFraction: [0, 0], pStuck: [0, 0] }, stoneChance: 0, hand: ["fruit-cup"], sizes: [8, 10], colors: [3, 3] },
   { upTo: 60, difficulty: 2, slots: 5, lanes: [3, 3], maxSplit: 2, minCrate: 2, target: { crates: [6, 9], doomedFraction: [0, 0], pStuck: [0, 0] }, stoneChance: 0, hand: ["tea-tray", "donut-box", "fruit-cup"], sizes: [9, 12], colors: [3, 4] },
   { upTo: 90, difficulty: 3, slots: 4, lanes: [3, 3], maxSplit: 3, minCrate: 2, target: { crates: [7, 11], doomedFraction: [0.01, 0.5], pStuck: [0.03, 0.3] }, stoneChance: 0, hand: ["sandwich", "tea-tray", "donut-box"], sizes: [10, 12], colors: [4, 5] },
@@ -37,7 +37,7 @@ function between(rng: Rng, [a, b]: [number, number]): number {
   return a + rng.int(b - a + 1);
 }
 
-function addStones(rows: string[], rng: Rng, count: number): string[] {
+export function addStones(rows: string[], rng: Rng, count: number): string[] {
   const g = rows.map((r) => r.split(""));
   const h = g.length;
   const w = g[0]!.length;
@@ -54,7 +54,7 @@ function addStones(rows: string[], rng: Rng, count: number): string[] {
   return g.map((r) => r.join(""));
 }
 
-function proceduralScene(rng: Rng, tier: Tier, i: number): PatternScene {
+export function proceduralScene(rng: Rng, tier: Tier, i: number): PatternScene {
   const w = between(rng, tier.sizes);
   const h = Math.max(8, w - rng.int(3));
   const k = between(rng, tier.colors);

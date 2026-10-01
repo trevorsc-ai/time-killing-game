@@ -161,11 +161,13 @@ struct GameHost: View {
                 .padding(.bottom, 6)
 #if DEBUG
             if TestHooks.enabled {
-                Button("Solve step") { controller.debugSolveStep() }
-                    .font(.system(size: 6))
-                    .frame(width: 80, height: 10)
-                    .opacity(0.02)
-                    .accessibilityIdentifier("solveStep")
+                // Invisible but fully hittable: plays the next stored-solution move (UI tests only).
+                Button { controller.debugSolveStep() } label: {
+                    Color.clear.frame(width: 120, height: 16).contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Solve step")
+                .accessibilityIdentifier("solveStep")
             }
 #endif
             if let fraction = controller.progress {
