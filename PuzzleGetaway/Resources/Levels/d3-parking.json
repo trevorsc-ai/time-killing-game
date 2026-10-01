@@ -1,0 +1,857 @@
+{
+ "destination": "d3",
+ "mode": "parking",
+ "levels": [
+  {
+   "id": "d3-parking-01",
+   "mode": "parking",
+   "destination": "d3",
+   "order": 1,
+   "title": "First Slide",
+   "difficulty": 1,
+   "tutorial": "parking.slide",
+   "twists": [],
+   "par": 2,
+   "solution": [
+    {
+     "id": "A",
+     "delta": -1
+    },
+    {
+     "id": "T",
+     "delta": 2
+    }
+   ],
+   "payload": {
+    "size": 6,
+    "vehicles": [
+     {
+      "id": "T",
+      "r": 2,
+      "c": 2,
+      "len": 2,
+      "axis": "h",
+      "target": true
+     },
+     {
+      "id": "A",
+      "r": 1,
+      "c": 5,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "B",
+      "r": 0,
+      "c": 3,
+      "len": 2,
+      "axis": "h"
+     }
+    ],
+    "gates": [
+     {
+      "target": "T",
+      "edge": "right",
+      "index": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "d3-parking-02",
+   "mode": "parking",
+   "destination": "d3",
+   "order": 2,
+   "title": "Tight Corner",
+   "difficulty": 2,
+   "twists": [],
+   "par": 6,
+   "solution": [
+    {
+     "id": "A",
+     "delta": 1
+    },
+    {
+     "id": "D",
+     "delta": 1
+    },
+    {
+     "id": "B",
+     "delta": -3
+    },
+    {
+     "id": "C",
+     "delta": 2
+    },
+    {
+     "id": "E",
+     "delta": 2
+    },
+    {
+     "id": "T",
+     "delta": 2
+    }
+   ],
+   "payload": {
+    "size": 6,
+    "vehicles": [
+     {
+      "id": "T",
+      "r": 1,
+      "c": 2,
+      "len": 2,
+      "axis": "h",
+      "target": true
+     },
+     {
+      "id": "A",
+      "r": 3,
+      "c": 4,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "B",
+      "r": 2,
+      "c": 3,
+      "len": 3,
+      "axis": "h"
+     },
+     {
+      "id": "C",
+      "r": 0,
+      "c": 5,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "D",
+      "r": 2,
+      "c": 1,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "E",
+      "r": 0,
+      "c": 4,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "F",
+      "r": 0,
+      "c": 0,
+      "len": 3,
+      "axis": "h"
+     }
+    ],
+    "gates": [
+     {
+      "target": "T",
+      "edge": "right",
+      "index": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "d3-parking-03",
+   "mode": "parking",
+   "destination": "d3",
+   "order": 3,
+   "title": "Rush Hour at the Bay",
+   "difficulty": 3,
+   "twists": [],
+   "par": 11,
+   "solution": [
+    {
+     "id": "C",
+     "delta": -1
+    },
+    {
+     "id": "D",
+     "delta": 3
+    },
+    {
+     "id": "A",
+     "delta": 3
+    },
+    {
+     "id": "D",
+     "delta": -1
+    },
+    {
+     "id": "G",
+     "delta": -4
+    },
+    {
+     "id": "H",
+     "delta": 1
+    },
+    {
+     "id": "C",
+     "delta": 2
+    },
+    {
+     "id": "F",
+     "delta": 1
+    },
+    {
+     "id": "B",
+     "delta": 2
+    },
+    {
+     "id": "J",
+     "delta": 2
+    },
+    {
+     "id": "T",
+     "delta": -3
+    }
+   ],
+   "payload": {
+    "size": 6,
+    "vehicles": [
+     {
+      "id": "T",
+      "r": 1,
+      "c": 3,
+      "len": 2,
+      "axis": "h",
+      "target": true
+     },
+     {
+      "id": "A",
+      "r": 2,
+      "c": 0,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "B",
+      "r": 0,
+      "c": 1,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "C",
+      "r": 5,
+      "c": 1,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "D",
+      "r": 0,
+      "c": 2,
+      "len": 3,
+      "axis": "v"
+     },
+     {
+      "id": "E",
+      "r": 4,
+      "c": 3,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "F",
+      "r": 3,
+      "c": 1,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "G",
+      "r": 4,
+      "c": 5,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "H",
+      "r": 5,
+      "c": 3,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "J",
+      "r": 0,
+      "c": 0,
+      "len": 2,
+      "axis": "v"
+     }
+    ],
+    "gates": [
+     {
+      "target": "T",
+      "edge": "left",
+      "index": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "d3-parking-04",
+   "mode": "parking",
+   "destination": "d3",
+   "order": 4,
+   "title": "The Long Queue",
+   "difficulty": 5,
+   "twists": [],
+   "par": 17,
+   "solution": [
+    {
+     "id": "C",
+     "delta": 1
+    },
+    {
+     "id": "D",
+     "delta": -1
+    },
+    {
+     "id": "F",
+     "delta": 1
+    },
+    {
+     "id": "J",
+     "delta": -1
+    },
+    {
+     "id": "T",
+     "delta": 1
+    },
+    {
+     "id": "K",
+     "delta": -1
+    },
+    {
+     "id": "B",
+     "delta": -3
+    },
+    {
+     "id": "K",
+     "delta": 1
+    },
+    {
+     "id": "T",
+     "delta": -1
+    },
+    {
+     "id": "J",
+     "delta": 3
+    },
+    {
+     "id": "T",
+     "delta": 1
+    },
+    {
+     "id": "G",
+     "delta": 1
+    },
+    {
+     "id": "E",
+     "delta": 3
+    },
+    {
+     "id": "D",
+     "delta": -2
+    },
+    {
+     "id": "G",
+     "delta": -1
+    },
+    {
+     "id": "H",
+     "delta": -2
+    },
+    {
+     "id": "T",
+     "delta": -3
+    }
+   ],
+   "payload": {
+    "size": 6,
+    "vehicles": [
+     {
+      "id": "T",
+      "r": 3,
+      "c": 2,
+      "len": 2,
+      "axis": "h",
+      "target": true
+     },
+     {
+      "id": "A",
+      "r": 3,
+      "c": 5,
+      "len": 3,
+      "axis": "v"
+     },
+     {
+      "id": "B",
+      "r": 5,
+      "c": 3,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "C",
+      "r": 0,
+      "c": 2,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "D",
+      "r": 3,
+      "c": 0,
+      "len": 3,
+      "axis": "v"
+     },
+     {
+      "id": "E",
+      "r": 1,
+      "c": 0,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "F",
+      "r": 0,
+      "c": 0,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "G",
+      "r": 1,
+      "c": 2,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "H",
+      "r": 3,
+      "c": 1,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "J",
+      "r": 2,
+      "c": 4,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "K",
+      "r": 4,
+      "c": 2,
+      "len": 2,
+      "axis": "v"
+     }
+    ],
+    "gates": [
+     {
+      "target": "T",
+      "edge": "left",
+      "index": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "d3-parking-05",
+   "mode": "parking",
+   "destination": "d3",
+   "order": 5,
+   "title": "Two Gates",
+   "difficulty": 7,
+   "tutorial": "twist.second-gate",
+   "twists": [
+    "second-gate"
+   ],
+   "par": 18,
+   "solution": [
+    {
+     "id": "D",
+     "delta": 2
+    },
+    {
+     "id": "E",
+     "delta": 1
+    },
+    {
+     "id": "C",
+     "delta": -2
+    },
+    {
+     "id": "G",
+     "delta": -1
+    },
+    {
+     "id": "F",
+     "delta": -2
+    },
+    {
+     "id": "B",
+     "delta": 2
+    },
+    {
+     "id": "U",
+     "delta": 3
+    },
+    {
+     "id": "T",
+     "delta": 1
+    },
+    {
+     "id": "A",
+     "delta": 2
+    },
+    {
+     "id": "C",
+     "delta": 2
+    },
+    {
+     "id": "E",
+     "delta": -4
+    },
+    {
+     "id": "T",
+     "delta": -2
+    },
+    {
+     "id": "C",
+     "delta": -2
+    },
+    {
+     "id": "U",
+     "delta": -2
+    },
+    {
+     "id": "B",
+     "delta": -3
+    },
+    {
+     "id": "U",
+     "delta": 2
+    },
+    {
+     "id": "F",
+     "delta": 1
+    },
+    {
+     "id": "T",
+     "delta": 4
+    }
+   ],
+   "payload": {
+    "size": 6,
+    "vehicles": [
+     {
+      "id": "T",
+      "r": 2,
+      "c": 1,
+      "len": 2,
+      "axis": "h",
+      "target": true
+     },
+     {
+      "id": "U",
+      "r": 1,
+      "c": 3,
+      "len": 2,
+      "axis": "v",
+      "target": true
+     },
+     {
+      "id": "A",
+      "r": 1,
+      "c": 0,
+      "len": 3,
+      "axis": "h"
+     },
+     {
+      "id": "B",
+      "r": 4,
+      "c": 2,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "C",
+      "r": 3,
+      "c": 2,
+      "len": 3,
+      "axis": "h"
+     },
+     {
+      "id": "D",
+      "r": 2,
+      "c": 0,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "E",
+      "r": 3,
+      "c": 1,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "F",
+      "r": 4,
+      "c": 5,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "G",
+      "r": 1,
+      "c": 5,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "H",
+      "r": 0,
+      "c": 2,
+      "len": 2,
+      "axis": "h"
+     }
+    ],
+    "gates": [
+     {
+      "target": "T",
+      "edge": "right",
+      "index": 2
+     },
+     {
+      "target": "U",
+      "edge": "bottom",
+      "index": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "d3-parking-06",
+   "mode": "parking",
+   "destination": "d3",
+   "order": 6,
+   "title": "Grand Departure",
+   "difficulty": 9,
+   "twists": [
+    "second-gate"
+   ],
+   "par": 24,
+   "solution": [
+    {
+     "id": "T",
+     "delta": -1
+    },
+    {
+     "id": "D",
+     "delta": -1
+    },
+    {
+     "id": "U",
+     "delta": -1
+    },
+    {
+     "id": "G",
+     "delta": -1
+    },
+    {
+     "id": "B",
+     "delta": 2
+    },
+    {
+     "id": "H",
+     "delta": -1
+    },
+    {
+     "id": "F",
+     "delta": -1
+    },
+    {
+     "id": "K",
+     "delta": -1
+    },
+    {
+     "id": "E",
+     "delta": -2
+    },
+    {
+     "id": "C",
+     "delta": -2
+    },
+    {
+     "id": "A",
+     "delta": 2
+    },
+    {
+     "id": "U",
+     "delta": -1
+    },
+    {
+     "id": "T",
+     "delta": -3
+    },
+    {
+     "id": "U",
+     "delta": 1
+    },
+    {
+     "id": "A",
+     "delta": -3
+    },
+    {
+     "id": "C",
+     "delta": 3
+    },
+    {
+     "id": "A",
+     "delta": 3
+    },
+    {
+     "id": "E",
+     "delta": 1
+    },
+    {
+     "id": "F",
+     "delta": 1
+    },
+    {
+     "id": "U",
+     "delta": -3
+    },
+    {
+     "id": "A",
+     "delta": -3
+    },
+    {
+     "id": "B",
+     "delta": -3
+    },
+    {
+     "id": "C",
+     "delta": -1
+    },
+    {
+     "id": "T",
+     "delta": 4
+    }
+   ],
+   "payload": {
+    "size": 6,
+    "vehicles": [
+     {
+      "id": "T",
+      "r": 4,
+      "c": 4,
+      "len": 2,
+      "axis": "h",
+      "target": true
+     },
+     {
+      "id": "U",
+      "r": 4,
+      "c": 2,
+      "len": 2,
+      "axis": "v",
+      "target": true
+     },
+     {
+      "id": "A",
+      "r": 2,
+      "c": 1,
+      "len": 3,
+      "axis": "h"
+     },
+     {
+      "id": "B",
+      "r": 1,
+      "c": 5,
+      "len": 3,
+      "axis": "v"
+     },
+     {
+      "id": "C",
+      "r": 2,
+      "c": 4,
+      "len": 2,
+      "axis": "v"
+     },
+     {
+      "id": "D",
+      "r": 3,
+      "c": 1,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "E",
+      "r": 0,
+      "c": 4,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "F",
+      "r": 1,
+      "c": 3,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "G",
+      "r": 5,
+      "c": 3,
+      "len": 3,
+      "axis": "h"
+     },
+     {
+      "id": "H",
+      "r": 1,
+      "c": 1,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "J",
+      "r": 5,
+      "c": 0,
+      "len": 2,
+      "axis": "h"
+     },
+     {
+      "id": "K",
+      "r": 0,
+      "c": 1,
+      "len": 2,
+      "axis": "h"
+     }
+    ],
+    "gates": [
+     {
+      "target": "T",
+      "edge": "right",
+      "index": 4
+     },
+     {
+      "target": "U",
+      "edge": "top",
+      "index": 2
+     }
+    ]
+   }
+  }
+ ]
+}

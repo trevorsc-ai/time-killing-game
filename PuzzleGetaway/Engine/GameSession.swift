@@ -13,6 +13,9 @@ final class GameSession<R: PuzzleRules>: ObservableObject {
     /// Stored solution (from the level file), used as hint fallback.
     let storedSolution: [R.Move]
     let hintNodeBudget: Int
+    /// Optional mode-specific hint source, consulted before the generic bounded BFS (for modes whose state space is
+    /// too large to search, such as Flow Fix). Return nil to fall back to the generic solver.
+    var hintProvider: ((R.State) -> R.Move?)?
 
     @Published private(set) var state: R.State
     @Published private(set) var undoStack: [R.State] = []
@@ -71,7 +74,8 @@ final class GameSession<R: PuzzleRules>: ObservableObject {
     func hint() -> R.Move? {
         guard !isSolved else { return nil }
         if let active = activeHint { return active }
-        let move = HintSolver.hint(rules: rules, from: state, nodeBudget: hintNodeBudget)
+        let move = hintProvider?(state)
+            ?? HintSolver.hint(rules: rules, from: state, nodeBudget: hintNodeBudget)
             ?? HintSolver.solutionPathHint(rules: rules, initial: initial, solution: storedSolution, current: state)
         if let move = move {
             hintsUsed += 1
