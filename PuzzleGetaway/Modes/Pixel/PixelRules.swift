@@ -128,7 +128,7 @@ struct PixelRules: PuzzleRules {
     }
 
     func apply(_ m: PixelMove, to s: PixelState) -> PixelState? {
-        applyDetailed(m, to: s)?.state
+        applyDetailed(m, to: s)?.after
     }
 
     func isSolved(_ s: PixelState) -> Bool {
