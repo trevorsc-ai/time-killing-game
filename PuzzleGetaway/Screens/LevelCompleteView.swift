@@ -37,7 +37,6 @@ struct LevelCompleteView: View {
             .shadow(color: Color.black.opacity(0.2), radius: 18, x: 0, y: 8)
             .padding(20)
             .accessibilityAddTraits(.isModal)
-            .accessibilityIdentifier("levelComplete")
         }
         .onAppear { animateStars() }
     }

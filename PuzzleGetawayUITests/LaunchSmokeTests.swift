@@ -172,8 +172,9 @@ final class LaunchSmokeTests: XCTestCase {
         add3.tap()
         app.buttons["demoAdd1"].tap()
 
+        XCTAssertTrue(element(app, "levelCompleteTitle").waitForExistence(timeout: 8), "Level Complete should appear about a second after solving")
         let next = app.buttons["nextLevelButton"]
-        XCTAssertTrue(next.waitForExistence(timeout: 8), "Level Complete should appear about a second after solving")
+        XCTAssertTrue(next.waitForExistence(timeout: 3), "Next level button")
         XCTAssertTrue(app.buttons["replayButton"].exists)
         sleep(1)
         attach(app, name: "20-level-complete")
