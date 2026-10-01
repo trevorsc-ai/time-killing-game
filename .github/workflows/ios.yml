@@ -75,7 +75,7 @@ jobs:
           if-no-files-found: warn
 
   ipad:
-    name: Build + unit tests (iPad)
+    name: Build + unit + UI tests (iPad)
     runs-on: macos-15
     timeout-minutes: 45
     steps:
@@ -92,7 +92,7 @@ jobs:
       - name: Boot simulator
         run: xcrun simctl bootstatus ${{ steps.sim.outputs.udid }} -b
         timeout-minutes: 8
-      - name: Test (unit)
+      - name: Test (unit + UI)
         timeout-minutes: 25
         run: |
           set -o pipefail
@@ -100,7 +100,6 @@ jobs:
             -project PuzzleGetaway.xcodeproj \
             -scheme PuzzleGetaway \
             -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
-            -only-testing:PuzzleGetawayTests \
             -resultBundlePath "$RUNNER_TEMP/ipad.xcresult" \
             -test-timeouts-enabled YES -default-test-execution-time-allowance 60 -maximum-test-execution-time-allowance 120 \
             CODE_SIGNING_ALLOWED=NO \
@@ -112,6 +111,11 @@ jobs:
           mkdir -p "$RUNNER_TEMP/ipad-fail"
           xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-fail" || true
           for f in "$RUNNER_TEMP"/ipad-fail/*.txt; do echo "=== $f"; cat "$f"; done || true
+      - name: Export screenshots
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/ipad-attachments"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ipad.xcresult" --output-path "$RUNNER_TEMP/ipad-attachments" || true
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
@@ -119,5 +123,6 @@ jobs:
           name: ipad-results
           path: |
             ${{ runner.temp }}/ipad.xcresult
+            ${{ runner.temp }}/ipad-attachments
             ${{ runner.temp }}/ipad-build.log
           if-no-files-found: warn

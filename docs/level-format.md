@@ -158,11 +158,43 @@ Files: `relax-liquid`, `relax-pixel`, `relax-pipe`, `daily`. Entries are full en
   }]
 }
 ```
-Eight destinations `d1..d8`; `d5..d8` are `comingSoon: true` with no stages. `starsRequired` strictly increases within a destination. `scrapbookArtId` names a file `Art/<id>.json` (pixel char-grid art, to be authored by the shell/art work).
+Eight destinations `d1..d8`; `d5..d8` are `comingSoon: true` with no stages. `starsRequired` strictly increases within a destination. `scrapbookArtId` names a file `Art/scrapbook/<id>.json` (pixel char-grid art, see "Scrapbook art" below).
 
 ## Pixel-art scenes (reserved for the Pixel/Shell work)
 
 Not yet defined beyond: files live in `Resources/Art/<name>.json`, use palette ids per cell with `.` transparent, and are drawn nearest-neighbor. The author of the first art file documents the exact shape here.
+
+## Scrapbook art: `Resources/Art/scrapbook/<id>.json`
+
+One file per restoration stage; `<id>` is the stage's `scrapbookArtId` from `Destinations.json` (for example `d1-stage3`). The Scrapbook screen draws it nearest-neighbor with `PixelArtView` (`Core/PixelArtRenderer.swift`); locked items are shown as a flat silhouette of the same grid.
+
+```json
+{
+  "id": "d1-stage3",
+  "title": "Striped Awning",
+  "caption": "One or two warm sentences shown in the detail view.",
+  "width": 32,
+  "height": 32,
+  "rows": ["................................", "...", "(height strings, each exactly width characters)"],
+  "palette": { "d": "#4A3B52", "c": "#FFF6E2" }
+}
+```
+
+- `rows`: `height` strings of exactly `width` characters, row 0 at the top. `.` is transparent. Any other character is a color key.
+- Color keys come first from the shared palette (`Art/palette.json`, ids `r o y g t b i p k n w s`), then from the optional per-file `palette` map (single-character key to `#RRGGBB`), which adds to or overrides the shared one. The authoring script keeps the shared extra keys (outline `d`, cream `c`, wood `m l`, brass `e`, highlight `h`, ...) in `tools/forge/src/scrapbook.ts`, so each file stays self-contained.
+- Pieces are 32 by 32 and authored by `tools/forge/scripts/make-scrapbook.ts` (`npx tsx scripts/make-scrapbook.ts [--preview <dir>]` also writes PNG previews). The forge test `test/scrapbook.test.ts` checks that every stage has a well-formed file and that the committed JSON matches the script.
+
+## Tutorial tips: `Resources/Tips/<mode>.json`
+
+```json
+{ "tips": { "liquid.pour": { "title": "Pour to sort", "body": "Tap a tube, then tap another." }, "twist.hidden": { "title": "...", "body": "..." } } }
+```
+
+Keys are a level's `tutorial` value and `twist.<name>` for each entry of `twists`. The shell (`Core/Tips.swift`) shows the first unseen tip when a level opens, marks it seen when it is dismissed or the first move is made, and honors the "Tutorial tips" setting. A key not found in the level's own mode file is also looked up in the file named by the key's prefix (`liquid.pour` falls back to `liquid.json`).
+
+## Save file additions
+
+`SaveData` also stores `relaxPositions` (index of the next puzzle per Relax pool) and `lastPlayedLevelId` (what Continue resumes). Both decode with defaults, so older `.pgsave` files still import.
 
 ## Swift access
 

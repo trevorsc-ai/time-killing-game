@@ -13,6 +13,8 @@ struct SettingsValues: Codable, Equatable {
     var highContrast: Bool = false
     var leftHanded: Bool = false
     var showMoveCounter: Bool = false
+    /// First-time tutorial tip cards.
+    var showTips: Bool = true
 
     init() {}
 
@@ -26,6 +28,7 @@ struct SettingsValues: Codable, Equatable {
         highContrast = try c.decodeIfPresent(Bool.self, forKey: .highContrast) ?? d.highContrast
         leftHanded = try c.decodeIfPresent(Bool.self, forKey: .leftHanded) ?? d.leftHanded
         showMoveCounter = try c.decodeIfPresent(Bool.self, forKey: .showMoveCounter) ?? d.showMoveCounter
+        showTips = try c.decodeIfPresent(Bool.self, forKey: .showTips) ?? d.showTips
     }
 }
 
@@ -39,6 +42,7 @@ final class Settings: ObservableObject {
     @Published var highContrast: Bool = false
     @Published var leftHanded: Bool = false
     @Published var showMoveCounter: Bool = false
+    @Published var showTips: Bool = true
 
     init(values: SettingsValues = SettingsValues()) {
         self.values = values
@@ -54,6 +58,7 @@ final class Settings: ObservableObject {
             v.highContrast = highContrast
             v.leftHanded = leftHanded
             v.showMoveCounter = showMoveCounter
+            v.showTips = showTips
             return v
         }
         set {
@@ -64,6 +69,7 @@ final class Settings: ObservableObject {
             highContrast = newValue.highContrast
             leftHanded = newValue.leftHanded
             showMoveCounter = newValue.showMoveCounter
+            showTips = newValue.showTips
         }
     }
 
