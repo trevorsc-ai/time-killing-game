@@ -4,6 +4,7 @@ import { demo } from "./demo.js";
 // import { liquid } from "./liquid/index.js";
 import { parking } from "./parking/index.js";
 import { pipe } from "./pipe/index.js";
+import { pixel } from "./pixel/index.js";
 // === END MODE IMPORTS ===
 
 /**
@@ -15,6 +16,7 @@ export const MODE_HANDLERS: ModeHandlers[] = [
   // liquid,
   parking,
   pipe,
+  pixel,
   // === END MODE REGISTRATIONS ===
 ];
 

@@ -1,0 +1,16 @@
+{
+  "tips": {
+    "pixel.tap": {
+      "title": "Send a crate!",
+      "body": "Tap the front crate of a lane. It hops into the tray, and the Parcel Pals pack every matching block they can reach. Press and hold a crate to peek at what it would pack."
+    },
+    "twist.stone": {
+      "title": "Crumbly stones",
+      "body": "Gray stones block the way and never get packed. They crumble as soon as a block next to them is packed, which opens the path behind them."
+    },
+    "pixel.jam": {
+      "title": "The Pals are jammed",
+      "body": "Every tray slot is full of crates waiting for blocks that are still buried. Undo a few crates, then send the crates that clear the outside first. Keep a slot free for the crates that need to wait."
+    }
+  }
+}

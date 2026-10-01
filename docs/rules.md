@@ -83,6 +83,17 @@ Departing frees the slot immediately within the pass, but lanes never auto-advan
 - **Stuck:** not solved and no legal move (all slots full after `resolve()`, or all lanes empty). The app shows "The Pals are jammed" with Undo/Restart; there is no game over.
 - **Twists:** `stone` (blockers, from L7+); tighter slot counts (`slots` = 3).
 
+### Clarifications (normative)
+
+- **Empty cells.** `.` cells in the initial grid are cleared cells from move 0. A pixel next to one is exposed at once. Scenes with a transparent background therefore start with their silhouette exposed; scenes drawn on a solid background start with only the outer ring exposed.
+- **Exposure is sampled once per visit.** `pack` builds its BFS queue from the exposure at the start of that visit; pixels cleared during the visit only influence the visit through the chaining step (same-color neighbors). Other colors that become exposed wait for a later visit.
+- **Chaining ignores exposure.** A same-color neighbor of a packed pixel joins the queue even if it was buried, so one exposed pixel can open a whole connected region of its color.
+- **Crumble timing.** Stones crumble at the end of each `pack` visit that packed at least one pixel, using only that visit's packed pixels. Crumbled cells count as cleared from the next visit on (including the next slot in the same pass). A stone never counts as exposed and never exposes its neighbors.
+- **Events.** One slot visit that packed, crumbled, or departed is one *event* `{slot, color, cells, crumbled, departed}` in visit order. The Swift app animates from the same event list; animation never feeds back into the state.
+- **Preview ("would pack now").** The cells a front crate would pack are the union of `cells` over the events of the slot the crate would land in, computed by actually applying the tap to a copy of the state. If the tray is full the preview is empty.
+- **Moves after solved** are rejected. A solution may not contain taps after the board is clear.
+- **Stuck** is reported by the rules (`isStuck`): not solved and no legal tap, i.e. the tray is full after `resolve()` (the invariant guarantees a lane still holds a crate). The state "no crates left but pixels remain" cannot occur in a valid level and is also reported as stuck.
+
 ### Golden determinism requirements
 
 Both implementations must pick pixels strictly in the BFS order above. `lanes` are tapped by index; slots fill left to right. No randomness at play time.
