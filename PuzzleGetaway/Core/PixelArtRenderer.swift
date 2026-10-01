@@ -2,7 +2,7 @@ import SwiftUI
 
 /// A scrapbook illustration: a char grid where each character is a palette id and `.` is transparent.
 /// Files live in `Resources/Art/scrapbook/<id>.json`; the format is documented in docs/level-format.md.
-struct PixelArt: Codable, Equatable, Identifiable {
+struct ScrapbookArt: Codable, Equatable, Identifiable {
     var id: String
     var title: String
     var caption: String
@@ -14,13 +14,13 @@ struct PixelArt: Codable, Equatable, Identifiable {
 }
 
 enum PixelArtLibrary {
-    private static var cache: [String: PixelArt] = [:]
+    private static var cache: [String: ScrapbookArt] = [:]
 
     /// Loads `Art/scrapbook/<id>.json` through the content store (cached).
-    static func load(id: String, content: ContentStore) -> PixelArt? {
+    static func load(id: String, content: ContentStore) -> ScrapbookArt? {
         if let hit = cache[id] { return hit }
         guard let data = content.artData(named: "scrapbook/\(id)"),
-              let art = try? JSONDecoder().decode(PixelArt.self, from: data) else { return nil }
+              let art = try? JSONDecoder().decode(ScrapbookArt.self, from: data) else { return nil }
         cache[id] = art
         return art
     }
@@ -29,7 +29,7 @@ enum PixelArtLibrary {
 /// Crisp nearest-neighbor rendering of a char-grid illustration. Cells are snapped to whole device pixels so
 /// there is no blur or seams at any size.
 struct PixelArtView: View {
-    let art: PixelArt
+    let art: ScrapbookArt
     /// Shared palette (`Art/palette.json`); per-art `palette` entries win.
     let palette: Palette
     /// Draw a flat single-color silhouette instead of the art (locked scrapbook items).
