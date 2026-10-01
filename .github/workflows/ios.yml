@@ -38,6 +38,18 @@ jobs:
       - name: Boot simulator
         run: xcrun simctl bootstatus ${{ steps.sim.outputs.udid }} -b
         timeout-minutes: 8
+      - name: Debug install (temporary)
+        continue-on-error: true
+        run: |
+          xcodebuild build-for-testing -project PuzzleGetaway.xcodeproj -scheme PuzzleGetaway -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" CODE_SIGNING_ALLOWED=NO -quiet || true
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name PuzzleGetaway.app -path '*Debug-iphonesimulator*' | head -1)
+          echo "APP=$APP"; xcrun simctl list devices | grep ${{ steps.sim.outputs.udid }}
+          codesign -dv "$APP" 2>&1 | head -5 || true
+          xcrun simctl install ${{ steps.sim.outputs.udid }} "$APP" 2>&1 | head -20 || true
+          echo "--- with ad-hoc sign"
+          codesign --force --sign - --deep "$APP" 2>&1 | head -5 || true
+          xcrun simctl install ${{ steps.sim.outputs.udid }} "$APP" 2>&1 | head -20 || true
+          echo "installed? exit=$?"
       - name: Test (unit + UI)
         timeout-minutes: 25
         run: |
