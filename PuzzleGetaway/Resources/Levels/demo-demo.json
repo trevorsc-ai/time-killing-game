@@ -14,6 +14,30 @@
       "par": 3,
       "solution": [{ "delta": 3 }, { "delta": 3 }, { "delta": 1 }],
       "payload": { "start": 0, "target": 7, "deltas": [1, 3] }
+    },
+    {
+      "id": "demo-demo-02",
+      "mode": "demo",
+      "destination": "demo",
+      "order": 2,
+      "title": "Count to Ten",
+      "difficulty": 1,
+      "twists": [],
+      "par": 4,
+      "solution": [{ "delta": 3 }, { "delta": 3 }, { "delta": 2 }, { "delta": 2 }],
+      "payload": { "start": 0, "target": 10, "deltas": [2, 3] }
+    },
+    {
+      "id": "demo-demo-03",
+      "mode": "demo",
+      "destination": "demo",
+      "order": 3,
+      "title": "Count to Thirteen",
+      "difficulty": 2,
+      "twists": [],
+      "par": 3,
+      "solution": [{ "delta": 4 }, { "delta": 4 }, { "delta": 5 }],
+      "payload": { "start": 0, "target": 13, "deltas": [4, 5] }
     }
   ]
 }

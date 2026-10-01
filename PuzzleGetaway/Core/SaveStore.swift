@@ -24,6 +24,10 @@ struct SaveData: Codable, Equatable {
     /// Daily journeys the player has taken, keyed "yyyy-MM-dd" (local date). No streaks.
     var dailyJourneysTaken: Set<String> = []
     var tutorialsSeen: Set<String> = []
+    /// Relax pools: index of the next puzzle to play, keyed by pool name ("relax-liquid", ...).
+    var relaxPositions: [String: Int] = [:]
+    /// The level the player touched most recently (used by Continue).
+    var lastPlayedLevelId: String?
 
     init() {}
 
@@ -37,6 +41,8 @@ struct SaveData: Codable, Equatable {
         restorationStagesSeen = try c.decodeIfPresent(Set<String>.self, forKey: .restorationStagesSeen) ?? []
         dailyJourneysTaken = try c.decodeIfPresent(Set<String>.self, forKey: .dailyJourneysTaken) ?? []
         tutorialsSeen = try c.decodeIfPresent(Set<String>.self, forKey: .tutorialsSeen) ?? []
+        relaxPositions = try c.decodeIfPresent([String: Int].self, forKey: .relaxPositions) ?? [:]
+        lastPlayedLevelId = try c.decodeIfPresent(String.self, forKey: .lastPlayedLevelId)
     }
 
     var totalStars: Int { progress.values.reduce(0) { $0 + $1.stars } }

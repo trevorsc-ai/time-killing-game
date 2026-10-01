@@ -62,6 +62,15 @@ targets:
           - UIInterfaceOrientationLandscapeRight
         UIRequiresFullScreen: false
         UIStatusBarStyle: UIStatusBarStyleDefault
+        UTExportedTypeDeclarations:
+          - UTTypeIdentifier: com.example.puzzlegetaway.save
+            UTTypeDescription: Puzzle Getaway Progress
+            UTTypeConformsTo:
+              - public.json
+              - public.data
+            UTTypeTagSpecification:
+              public.filename-extension:
+                - pgsave
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.puzzlegetaway

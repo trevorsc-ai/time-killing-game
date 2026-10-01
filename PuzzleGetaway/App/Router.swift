@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Every screen reachable via NavigationStack. The Shell agent extends this enum (one case per screen).
+/// Every screen reachable via NavigationStack. In-game overlays (pause, level complete, tips) are not screens.
 enum Screen: Hashable {
     case game(levelId: String)
     case map
@@ -10,6 +10,7 @@ enum Screen: Hashable {
     case scrapbook
     case settings
     case backup
+    case restoration(destinationId: String)
 }
 
 /// Owns the NavigationStack path. Inject as an environment object.
@@ -20,4 +21,7 @@ final class Router: ObservableObject {
     func push(_ screen: Screen) { path.append(screen) }
     func pop() { if !path.isEmpty { path.removeLast() } }
     func popToRoot() { path.removeAll() }
+
+    /// Replaces the whole stack (e.g. jump back to a level list with the map underneath).
+    func set(_ screens: [Screen]) { path = screens }
 }
