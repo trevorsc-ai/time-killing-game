@@ -31,23 +31,47 @@ struct PixelLayout: Equatable {
         self.rows = max(1, rows)
         self.slotCount = max(1, slotCount)
         self.laneCount = max(1, laneCount)
-        compute()
+        compute(compact: false)
+        // Big pictures on small phones: trade tray/lane size for picture size so blocks stay readable.
+        if cell < Self.comfortableCell {
+            let normal = self
+            compute(compact: true)
+            if cell <= normal.cell { self = normal }
+        }
     }
 
-    private mutating func compute() {
+    /// Smallest block size (points) that still reads comfortably.
+    static let comfortableCell: CGFloat = 14
+
+    /// True when the fit-to-screen picture is below the comfortable block size (the board then offers a zoom toggle).
+    var isCramped: Bool { cell < Self.comfortableCell }
+
+    /// A scene height tall enough for a comfortable block size (used by the zoomed, scrollable board).
+    static func tallHeight(width: CGFloat, base: CGFloat, columns: Int, rows: Int, slotCount: Int, laneCount: Int) -> CGFloat {
+        let target = min(20, floor((width - 28) / CGFloat(max(columns, 1))))
+        var h = base
+        while h < base * 3 {
+            let l = PixelLayout(size: CGSize(width: width, height: h), columns: columns, rows: rows, slotCount: slotCount, laneCount: laneCount)
+            if l.cell >= target { return h }
+            h += 24
+        }
+        return base * 3
+    }
+
+    private mutating func compute(compact: Bool) {
         let W = max(size.width, 120)
         let H = max(size.height, 200)
-        let margin: CGFloat = 10
-        let gap: CGFloat = 10
+        let margin: CGFloat = compact ? 6 : 10
+        let gap: CGFloat = compact ? 6 : 10
 
         // Tray
-        let slotSide = min(max((W - 2 * margin - 16) / CGFloat(slotCount) - 8, 40), 64)
+        let slotSide = min(max((W - 2 * margin - 16) / CGFloat(slotCount) - 8, 40), compact ? 48 : 64)
         slotSize = slotSide
         let trayH = slotSide + 14
         let trayW = CGFloat(slotCount) * (slotSide + 8) + 8
         // Lanes
         let laneW = (W - 2 * margin) / CGFloat(laneCount)
-        let front = min(max(laneW - 20, 44), 80)
+        let front = min(max(laneW - 20, 44), compact ? 56 : 80)
         laneFrontSize = front
         let qs = front * laneQueueScale
         let queueStep = qs * 0.5

@@ -97,6 +97,12 @@ final class PipeController: SessionController<PipeRules> {
         return rules.destinationIndices.filter { reached[$0] }.count
     }
 
+    /// Fraction of destinations that currently receive flow.
+    override var progress: Double? {
+        let total = rules.destinationIndices.count
+        return total > 0 ? Double(litDestinationCount) / Double(total) : nil
+    }
+
     override var accessibilitySummary: String {
         let total = rules.destinationIndices.count
         return "Flow Fix board, \(rules.rows) rows by \(rules.cols) columns. \(litDestinationCount) of \(total) \(total == 1 ? "lamp" : "lamps") lit."

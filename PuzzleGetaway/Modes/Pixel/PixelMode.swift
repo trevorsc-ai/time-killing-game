@@ -57,6 +57,13 @@ final class PixelController: SessionController<PixelRules> {
         super.init(levelId: levelId, title: title, session: session, context: context)
     }
 
+    /// Fraction of picture blocks cleared so far.
+    override var progress: Double? {
+        let total = payload.grid.reduce(0) { n, row in n + row.utf8.filter { PixelCell.isPixel($0) }.count }
+        guard total > 0 else { return nil }
+        return 1 - Double(session.state.pixelsLeft) / Double(total)
+    }
+
     // MARK: Scene
 
     /// The SpriteKit scene, created on first use so that building a controller (tests, level lists) stays cheap.
@@ -88,6 +95,14 @@ final class PixelController: SessionController<PixelRules> {
         guard showTutorialArrow, session.moveCount == 0, !session.isSolved else { return nil }
         return session.storedSolution.first?.lane ?? 0
     }
+
+#if DEBUG
+    override func debugSolveStep() {
+        let solution = session.storedSolution
+        guard !session.isSolved, session.moveCount < solution.count else { return }
+        tapLane(solution[session.moveCount].lane)
+    }
+#endif
 
     // MARK: Moves
 
@@ -177,43 +192,38 @@ struct PixelBoardView: View {
         PixelScene.Appearance(dark: colorScheme == .dark, highContrast: settings.highContrast, showPatterns: settings.showPatterns)
     }
 
+    @State private var zoomed = false
+
     var body: some View {
         GeometryReader { geo in
             let state = controller.session.state
-            let layout = PixelLayout(
+            let fit = PixelLayout(
                 size: geo.size, columns: state.width, rows: state.height,
                 slotCount: state.slotColor.count, laneCount: controller.payload.lanes.count
             )
-            ZStack(alignment: .topLeading) {
-                SpriteView(scene: controller.scene, options: [.allowsTransparency])
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    .accessibilityHidden(true)
-                // VoiceOver proxies. Touches fall through to the SpriteKit scene.
-                Color.clear
-                    .frame(width: layout.gridRect.width, height: layout.gridRect.height)
-                    .position(x: layout.gridRect.midX, y: layout.gridRect.midY)
-                    .accessibilityElement(children: .ignore)
-                    .accessibilityLabel(controller.pictureLabel)
-                    .allowsHitTesting(false)
-                ForEach(0..<layout.slotCount, id: \.self) { i in
-                    Color.clear
-                        .frame(width: layout.slotRects[i].width, height: layout.slotRects[i].height)
-                        .position(x: layout.slotRects[i].midX, y: layout.slotRects[i].midY)
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityLabel(controller.slotLabel(i))
-                        .allowsHitTesting(false)
+            let tall = PixelLayout.tallHeight(
+                width: geo.size.width, base: geo.size.height, columns: state.width, rows: state.height,
+                slotCount: state.slotColor.count, laneCount: controller.payload.lanes.count
+            )
+            let boardSize = zoomed ? CGSize(width: geo.size.width, height: tall) : geo.size
+            ZStack(alignment: .topTrailing) {
+                ScrollView(.vertical, showsIndicators: zoomed) {
+                    boardContent(size: boardSize, state: state)
                 }
-                ForEach(0..<layout.laneCount, id: \.self) { l in
-                    let r = layout.laneHitRects[l]
-                    Color.clear
-                        .frame(width: max(r.width, Theme.minTapTarget), height: max(r.height, Theme.minTapTarget))
-                        .position(x: r.midX, y: r.midY)
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityLabel(controller.laneLabel(l))
-                        .accessibilityHint("Double tap to send this crate to the tray.")
-                        .accessibilityAddTraits(.isButton)
-                        .accessibilityAction(.default) { controller.tapLane(l) }
-                        .allowsHitTesting(false)
+                .scrollDisabled(!zoomed)
+                .frame(width: geo.size.width, height: geo.size.height)
+                if fit.isCramped {
+                    Button {
+                        zoomed.toggle()
+                    } label: {
+                        Image(systemName: zoomed ? "arrow.down.right.and.arrow.up.left" : "plus.magnifyingglass")
+                            .font(.system(size: 16, weight: .semibold))
+                            .frame(width: Theme.minTapTarget, height: Theme.minTapTarget)
+                            .background(Circle().fill(.ultraThinMaterial))
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(zoomed ? "Fit picture to screen" : "Zoom in on picture")
+                    .accessibilityIdentifier("pixelZoomToggle")
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -226,5 +236,45 @@ struct PixelBoardView: View {
         }
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Pixel Picnic board")
+    }
+
+    private func boardContent(size: CGSize, state: PixelState) -> some View {
+        let layout = PixelLayout(
+            size: size, columns: state.width, rows: state.height,
+            slotCount: state.slotColor.count, laneCount: controller.payload.lanes.count
+        )
+        return ZStack(alignment: .topLeading) {
+            SpriteView(scene: controller.scene, options: [.allowsTransparency])
+                .frame(width: size.width, height: size.height)
+                .accessibilityHidden(true)
+            // VoiceOver proxies. Touches fall through to the SpriteKit scene.
+            Color.clear
+                .frame(width: layout.gridRect.width, height: layout.gridRect.height)
+                .position(x: layout.gridRect.midX, y: layout.gridRect.midY)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(controller.pictureLabel)
+                .allowsHitTesting(false)
+            ForEach(0..<layout.slotCount, id: \.self) { i in
+                Color.clear
+                    .frame(width: layout.slotRects[i].width, height: layout.slotRects[i].height)
+                    .position(x: layout.slotRects[i].midX, y: layout.slotRects[i].midY)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel(controller.slotLabel(i))
+                    .allowsHitTesting(false)
+            }
+            ForEach(0..<layout.laneCount, id: \.self) { l in
+                let r = layout.laneHitRects[l]
+                Color.clear
+                    .frame(width: max(r.width, Theme.minTapTarget), height: max(r.height, Theme.minTapTarget))
+                    .position(x: r.midX, y: r.midY)
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel(controller.laneLabel(l))
+                    .accessibilityHint("Double tap to send this crate to the tray.")
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityAction(.default) { controller.tapLane(l) }
+                    .allowsHitTesting(false)
+            }
+        }
+        .frame(width: size.width, height: size.height)
     }
 }

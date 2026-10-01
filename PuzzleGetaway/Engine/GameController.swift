@@ -27,6 +27,13 @@ class AnyGameController: ObservableObject {
     var hintsUsed: Int { 0 }
     var undoCount: Int { 0 }
     var stars: Int { 0 }
+    /// Optional 0...1 completion fraction for the slim HUD progress bar. Nil hides the bar.
+    var progress: Double? { nil }
+
+#if DEBUG
+    /// UI-test hook: plays the next move of the stored solution through the mode's normal move path.
+    func debugSolveStep() {}
+#endif
 
     // Actions the HUD triggers.
     func undo() {}
@@ -83,6 +90,14 @@ class SessionController<R: PuzzleRules>: AnyGameController {
     }
 
     override func snapshot() -> Data { session.snapshot() }
+
+#if DEBUG
+    override func debugSolveStep() {
+        let solution = session.storedSolution
+        guard session.moveCount < solution.count else { return }
+        attempt(solution[session.moveCount])
+    }
+#endif
 
     /// Perform a move with standard haptics (light on legal, success on completion, soft warning on illegal)
     /// and notify the shell so it can debounce-save. Returns whether the move was legal.

@@ -97,6 +97,27 @@ final class SortController: SessionController<SortRules> {
 
     var rules: SortRules { session.rules }
 
+#if DEBUG
+    override func debugSolveStep() {
+        let solution = session.storedSolution
+        guard !session.isSolved, session.moveCount < solution.count else { return }
+        performPour(solution[session.moveCount])
+    }
+#endif
+
+    /// Fraction of colors that are fully gathered into one pure tube.
+    override var progress: Double? {
+        var totals: [String: Int] = [:]
+        for t in payload.tubes { for c in t { totals[c, default: 0] += 1 } }
+        guard !totals.isEmpty else { return nil }
+        var done = 0
+        for t in session.state.tubes {
+            guard let first = t.first, !first.hidden else { continue }
+            if t.allSatisfy({ $0.c == first.c && !$0.hidden }), t.count == totals[first.c] { done += 1 }
+        }
+        return min(1, Double(done) / Double(totals.count))
+    }
+
     private var now: Double { Date().timeIntervalSinceReferenceDate }
 
     var tutorialActive: Bool {

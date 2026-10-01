@@ -67,6 +67,14 @@ final class ParkingController: SessionController<ParkingRules> {
         return ok
     }
 
+    /// Fraction of target vehicles sitting at their gate; hidden on single-target boards (it would only jump 0 to 1).
+    override var progress: Double? {
+        let targets = rules.vehicles.indices.filter { rules.vehicles[$0].isTarget }
+        guard targets.count > 1 else { return nil }
+        let out = targets.filter { rules.isAtGate(session.state, vehicle: $0) }.count
+        return Double(out) / Double(targets.count)
+    }
+
     override var accessibilitySummary: String {
         let n = rules.size
         let targets = payload.gates.map { gate -> String in

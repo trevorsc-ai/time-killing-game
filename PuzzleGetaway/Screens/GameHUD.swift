@@ -65,6 +65,31 @@ struct HUDActionButton: View {
     }
 }
 
+/// Slim, quiet progress line under the top bar. Decorative for sighted players; VoiceOver reads it as a percentage.
+struct HUDProgressBar: View {
+    let fraction: Double
+    let reduceMotion: Bool
+    @Environment(\.theme) private var theme
+
+    var body: some View {
+        let clamped = min(max(fraction, 0), 1)
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule().fill(theme.stroke.opacity(0.25))
+                Capsule()
+                    .fill(theme.accent.opacity(0.75))
+                    .frame(width: max(clamped > 0 ? 4 : 0, geo.size.width * clamped))
+            }
+        }
+        .frame(height: 4)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.3), value: clamped)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Progress")
+        .accessibilityValue("\(Int((clamped * 100).rounded())) percent")
+        .accessibilityIdentifier("progressBar")
+    }
+}
+
 // MARK: - Cards
 
 /// First-time tutorial tip: dismissible, never blocks the board.
