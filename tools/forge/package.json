@@ -7,6 +7,8 @@
   "scripts": {
     "test": "node --import tsx --test \"src/**/*.test.ts\" \"test/**/*.test.ts\"",
     "validate": "tsx src/validate.ts",
+    "gen:sort": "tsx scripts/gen-sort.ts",
+    "gen:sort-golden": "tsx scripts/gen-sort-golden.ts",
     "build": "tsc -p tsconfig.json"
   },
   "devDependencies": {

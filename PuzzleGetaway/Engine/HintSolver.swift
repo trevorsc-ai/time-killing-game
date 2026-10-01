@@ -6,6 +6,7 @@ enum HintSolver {
     /// Returns `[]` if `start` is already solved.
     static func solve<R: PuzzleRules>(rules: R, from start: R.State, nodeBudget: Int = 50_000) -> [R.Move]? {
         if rules.isSolved(start) { return [] }
+        if let custom = rules.hintSolution(from: start, nodeBudget: nodeBudget) { return custom }
         var states: [R.State] = [start]
         var parent: [Int] = [-1]
         var moveInto: [R.Move?] = [nil]

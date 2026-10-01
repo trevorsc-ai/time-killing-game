@@ -44,8 +44,8 @@ enum ModeRegistry {
     /// Add exactly ONE line per mode, with a trailing comma. (Merge conflicts here are expected and trivial.)
     private static let plugins: [PuzzleModePlugin.Type] = [
         DemoMode.self,
-        // LiquidMode.self,
-        // BoltMode.self,
+        LiquidMode.self,
+        BoltMode.self,
         // PixelMode.self,
         // ParkingMode.self,
         // PipeMode.self,

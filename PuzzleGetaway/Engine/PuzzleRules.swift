@@ -16,10 +16,15 @@ protocol PuzzleRules {
     func isSolved(_ s: State) -> Bool
     /// No way forward (but not solved). Default: `!isSolved && legalMoves.isEmpty`.
     func isStuck(_ s: State) -> Bool
+    /// Optional mode-specific solver for hints (e.g. with canonical state hashing). Return nil to fall back to the
+    /// generic bounded BFS in `HintSolver`.
+    func hintSolution(from s: State, nodeBudget: Int) -> [Move]?
 }
 
 extension PuzzleRules {
     func isStuck(_ s: State) -> Bool {
         !isSolved(s) && legalMoves(s).isEmpty
     }
+
+    func hintSolution(from s: State, nodeBudget: Int) -> [Move]? { nil }
 }
