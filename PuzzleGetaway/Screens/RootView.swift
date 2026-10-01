@@ -23,6 +23,13 @@ struct RootView: View {
         }
         .background(theme.background.ignoresSafeArea())
         .onAppear {
+#if DEBUG
+            if let id = TestHooks.openLevelId {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    if router.path.isEmpty { router.push(.game(levelId: id)) }
+                }
+            }
+#endif
             if model.skipSplash || model.settings.effectiveReduceMotion { showSplash = false }
         }
     }

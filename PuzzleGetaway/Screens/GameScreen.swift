@@ -159,6 +159,21 @@ struct GameHost: View {
                 .padding(.horizontal, Theme.spacing)
                 .padding(.top, 6)
                 .padding(.bottom, 6)
+#if DEBUG
+            if TestHooks.enabled {
+                Button("Solve step") { controller.debugSolveStep() }
+                    .font(.system(size: 6))
+                    .frame(width: 80, height: 10)
+                    .opacity(0.02)
+                    .accessibilityIdentifier("solveStep")
+            }
+#endif
+            if let fraction = controller.progress {
+                HUDProgressBar(fraction: fraction, reduceMotion: settings.effectiveReduceMotion)
+                    .padding(.horizontal, Theme.spacing + 4)
+                    .padding(.bottom, 6)
+                    .frame(maxWidth: 560)
+            }
             if let tip = tip {
                 TipCardView(tip: tip, onDismiss: { dismissTip(chain: true) }, onHideTips: hideTips)
                     .padding(.horizontal, Theme.spacing)
@@ -391,8 +406,8 @@ struct GameHost: View {
                                       journeysTaken: model.save.dailyJourneysTaken.count, hasNext: hasNext)
         // Let the board's own flourish play first, then show the card.
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            // The mode already played the success haptic at the moment of solving; no second buzz here.
             summary = built
-            model.haptics.success()
         }
     }
 }
