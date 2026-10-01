@@ -1,0 +1,12 @@
+{
+  "tips": {
+    "parking.slide": {
+      "title": "Slide to clear the way",
+      "body": "Drag a vehicle along its lane, or tap it and then tap where it should stop. Get the golden cart to its gate and it rolls out."
+    },
+    "twist.second-gate": {
+      "title": "Two gates, two golden carts",
+      "body": "Both golden vehicles need to reach their own gates. Clear a path for one, then the other."
+    }
+  }
+}

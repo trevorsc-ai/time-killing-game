@@ -1,0 +1,12 @@
+{
+  "tips": {
+    "pipe.rotate": {
+      "title": "Tap to turn a pipe",
+      "body": "Each tap turns a pipe a quarter turn. Link the water tap to the lamp and the water will flow all the way through."
+    },
+    "twist.tee": {
+      "title": "Splitters share the flow",
+      "body": "A T-shaped pipe sends water three ways. Use one to reach more than one lamp, and light every lamp to finish."
+    }
+  }
+}
