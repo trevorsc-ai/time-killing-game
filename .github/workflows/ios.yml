@@ -1,0 +1,94 @@
+name: iOS
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  network-audit:
+    name: Network audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: .github/scripts/network_audit.sh
+
+  iphone:
+    name: Build + unit + UI tests (iPhone)
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tool versions
+        run: |
+          xcodebuild -version
+          xcrun simctl list runtimes available
+      - name: Install XcodeGen and xcbeautify
+        run: brew install xcodegen xcbeautify
+      - name: Generate project
+        run: xcodegen generate
+      - name: Pick iPhone simulator
+        id: sim
+        run: echo "udid=$(python3 .github/scripts/pick_sim.py iphone)" >> "$GITHUB_OUTPUT"
+      - name: Test (unit + UI)
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project PuzzleGetaway.xcodeproj \
+            -scheme PuzzleGetaway \
+            -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath "$RUNNER_TEMP/iphone.xcresult" \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee "$RUNNER_TEMP/iphone-build.log" | xcbeautify
+      - name: Export screenshots
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/iphone-attachments"
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/iphone.xcresult" --output-path "$RUNNER_TEMP/iphone-attachments" || true
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iphone-results
+          path: |
+            ${{ runner.temp }}/iphone.xcresult
+            ${{ runner.temp }}/iphone-attachments
+            ${{ runner.temp }}/iphone-build.log
+          if-no-files-found: warn
+
+  ipad:
+    name: Build + unit tests (iPad)
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen and xcbeautify
+        run: brew install xcodegen xcbeautify
+      - name: Generate project
+        run: xcodegen generate
+      - name: Pick iPad simulator
+        id: sim
+        run: echo "udid=$(python3 .github/scripts/pick_sim.py ipad)" >> "$GITHUB_OUTPUT"
+      - name: Test (unit)
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project PuzzleGetaway.xcodeproj \
+            -scheme PuzzleGetaway \
+            -destination "platform=iOS Simulator,id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:PuzzleGetawayTests \
+            -resultBundlePath "$RUNNER_TEMP/ipad.xcresult" \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee "$RUNNER_TEMP/ipad-build.log" | xcbeautify
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipad-results
+          path: |
+            ${{ runner.temp }}/ipad.xcresult
+            ${{ runner.temp }}/ipad-build.log
+          if-no-files-found: warn

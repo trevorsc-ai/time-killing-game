@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+.build/
+build/
+Generated/
+*.xcresult
+.DS_Store

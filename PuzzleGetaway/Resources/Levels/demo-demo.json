@@ -1,0 +1,19 @@
+{
+  "destination": "demo",
+  "mode": "demo",
+  "levels": [
+    {
+      "id": "demo-demo-01",
+      "mode": "demo",
+      "destination": "demo",
+      "order": 1,
+      "title": "Count to Seven",
+      "difficulty": 1,
+      "tutorial": "demo.counter",
+      "twists": [],
+      "par": 3,
+      "solution": [{ "delta": 3 }, { "delta": 3 }, { "delta": 1 }],
+      "payload": { "start": 0, "target": 7, "deltas": [1, 3] }
+    }
+  ]
+}
