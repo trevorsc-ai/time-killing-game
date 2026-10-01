@@ -1,0 +1,76 @@
+{
+  "destination": "d1", "mode": "liquid",
+  "levels": [
+    {
+      "id": "d1-liquid-01",
+      "mode": "liquid", "destination": "d1", "order": 1, "title": "Lemonade Line-up", "difficulty": 1,
+      "tutorial": "liquid.pour",
+      "twists": [], "par": 5,
+      "solution": [{"from":0,"to":3},{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":0},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","w","w","b"],["b","b","w","r"],["r","r","r","b"],[],[]]}
+    },
+    {
+      "id": "d1-liquid-03",
+      "mode": "liquid", "destination": "d1", "order": 3, "title": "Teapot Shuffle", "difficulty": 1,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":3},{"from":2,"to":3},{"from":1,"to":4},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":3},{"from":2,"to":4},{"from":2,"to":1},{"from":2,"to":4},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["i","o","i","o"],["i","o","s","s"],["s","i","s","o"],[],[]]}
+    },
+    {
+      "id": "d1-liquid-05",
+      "mode": "liquid", "destination": "d1", "order": 5, "title": "Berry Soda Fizz", "difficulty": 2,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":4},{"from":3,"to":4},{"from":2,"to":0},{"from":1,"to":2},{"from":3,"to":1},{"from":3,"to":4},{"from":0,"to":3},{"from":2,"to":0},{"from":1,"to":2},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["p","r","y","y"],["p","b","b","p"],["b","p","r","r"],["r","y","b","y"],[],[]]}
+    },
+    {
+      "id": "d1-liquid-07",
+      "mode": "liquid", "destination": "d1", "order": 7, "title": "Mint Condition", "difficulty": 3,
+      "twists": [], "par": 13,
+      "solution": [{"from":0,"to":5},{"from":4,"to":5},{"from":2,"to":5},{"from":3,"to":2},{"from":3,"to":6},{"from":4,"to":6},{"from":4,"to":2},{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":4},{"from":1,"to":6},{"from":1,"to":4},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["s","s","k","g"],["k","o","k","s"],["i","i","g","g"],["s","o","o","i"],["k","i","o","g"],[],[]]}
+    },
+    {
+      "id": "d1-liquid-09",
+      "mode": "liquid", "destination": "d1", "order": 9, "title": "Cocoa Corner", "difficulty": 4,
+      "twists": [], "par": 15,
+      "solution": [{"from":1,"to":5},{"from":2,"to":5},{"from":1,"to":2},{"from":4,"to":5},{"from":3,"to":1},{"from":3,"to":6},{"from":4,"to":3},{"from":4,"to":6},{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":3},{"from":2,"to":1},{"from":2,"to":6},{"from":0,"to":4},{"from":2,"to":5}],
+      "payload": {"capacity":4,"tubes":[["r","n","n","y"],["y","r","y","t"],["t","p","y","t"],["n","p","p","r"],["r","p","n","t"],[],[]]}
+    },
+    {
+      "id": "d1-liquid-11",
+      "mode": "liquid", "destination": "d1", "order": 11, "title": "Cart Rush Hour", "difficulty": 4,
+      "twists": [], "par": 18,
+      "solution": [{"from":4,"to":6},{"from":4,"to":7},{"from":1,"to":4},{"from":1,"to":6},{"from":1,"to":7},{"from":2,"to":1},{"from":2,"to":7},{"from":2,"to":6},{"from":5,"to":6},{"from":0,"to":5},{"from":0,"to":7},{"from":5,"to":0},{"from":3,"to":5},{"from":3,"to":2},{"from":4,"to":3},{"from":5,"to":4},{"from":3,"to":5},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["g","g","o","g"],["w","o","k","i"],["w","k","o","w"],["i","w","b","b"],["b","i","o","k"],["i","b","g","k"],[],[]]}
+    },
+    {
+      "id": "d1-liquid-13",
+      "mode": "liquid", "destination": "d1", "order": 13, "title": "Mystery Cups", "difficulty": 5,
+      "twists": ["hidden"], "par": 19,
+      "solution": [{"from":0,"to":6},{"from":4,"to":7},{"from":1,"to":7},{"from":1,"to":6},{"from":2,"to":6},{"from":0,"to":2},{"from":3,"to":0},{"from":5,"to":7},{"from":3,"to":5},{"from":4,"to":3},{"from":4,"to":1},{"from":0,"to":4},{"from":3,"to":0},{"from":1,"to":3},{"from":2,"to":1},{"from":5,"to":1},{"from":5,"to":0},{"from":2,"to":4},{"from":3,"to":5}],
+      "payload": {"capacity":4,"tubes":[["t","p","i","y"],["n","y","s","s"],["p","i","y","y"],["n","t","i","p"],["p","n","t","s"],["n","t","i","s"],[],[]],"hidden":[[1,0],[4,0],[4,1]]}
+    },
+    {
+      "id": "d1-liquid-15",
+      "mode": "liquid", "destination": "d1", "order": 15, "title": "Syrup Sorting", "difficulty": 6,
+      "twists": [], "par": 18,
+      "solution": [{"from":4,"to":6},{"from":2,"to":6},{"from":5,"to":4},{"from":5,"to":2},{"from":1,"to":5},{"from":3,"to":5},{"from":0,"to":3},{"from":0,"to":1},{"from":6,"to":0},{"from":1,"to":6},{"from":4,"to":1},{"from":2,"to":4},{"from":2,"to":6},{"from":3,"to":2},{"from":4,"to":3},{"from":5,"to":4},{"from":0,"to":5},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["p","k","b","w"],["p","b","b","r"],["w","b","g","k"],["g","w","w","r"],["r","g","p","k"],["k","r","g","p"],[]]}
+    },
+    {
+      "id": "d1-liquid-18",
+      "mode": "liquid", "destination": "d1", "order": 18, "title": "The Locked Cooler", "difficulty": 7,
+      "twists": ["lock"], "par": 24,
+      "solution": [{"from":0,"to":7},{"from":2,"to":8},{"from":1,"to":7},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":7},{"from":3,"to":2},{"from":3,"to":8},{"from":1,"to":3},{"from":6,"to":2},{"from":1,"to":6},{"from":0,"to":1},{"from":3,"to":0},{"from":4,"to":3},{"from":4,"to":1},{"from":6,"to":4},{"from":6,"to":0},{"from":6,"to":8},{"from":4,"to":6},{"from":5,"to":4},{"from":5,"to":2},{"from":5,"to":6},{"from":2,"to":5},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","k","y","y"],["t","o","k","y"],["y","t","i","i"],["n","k","i","s"],["n","o","t","n"],["s","o","s","n"],["i","k","o","s"],[],[]],"locks":[{"tube":5,"color":"k"}]}
+    },
+    {
+      "id": "d1-liquid-21",
+      "mode": "liquid", "destination": "d1", "order": 21, "title": "Grand Rainbow Spritzer", "difficulty": 8,
+      "twists": ["hidden","lock"], "par": 24,
+      "solution": [{"from":0,"to":7},{"from":5,"to":8},{"from":4,"to":8},{"from":1,"to":8},{"from":2,"to":7},{"from":2,"to":5},{"from":2,"to":7},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":7},{"from":3,"to":0},{"from":5,"to":2},{"from":3,"to":5},{"from":1,"to":3},{"from":4,"to":1},{"from":4,"to":5},{"from":6,"to":1},{"from":6,"to":0},{"from":2,"to":4},{"from":3,"to":2},{"from":6,"to":2},{"from":5,"to":6},{"from":5,"to":8},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["n","w","p","w"],["g","g","b","y"],["b","w","p","w"],["n","b","r","n"],["p","r","g","y"],["y","r","p","y"],["r","b","n","g"],[],[]],"hidden":[[0,2],[1,1]],"locks":[{"tube":6,"color":"w"}]}
+    }
+  ]
+}

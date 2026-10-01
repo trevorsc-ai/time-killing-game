@@ -81,11 +81,13 @@ These are the contracts the mode owners implement (TypeScript type, Swift Codabl
   "locks": [{"tube": 3, "color": "r"}]
 }
 ```
-`tubes`: layers bottom to top as palette ids. `hidden` (optional): `[tubeIndex, layerIndex]` pairs (layer 0 = bottom). `locks` (optional). Move: `{"from": 0, "to": 2}`.
+`tubes`: layers bottom to top as palette ids; every color appears exactly `capacity` times. `hidden` (optional): `[tubeIndex, layerIndex]` pairs (layer 0 = bottom); a hidden layer must not be the top layer of its tube (tops are always revealed). `locks` (optional): the named color must not sit inside the locked tube. Level `twists` must name every twist the payload uses (`hidden`, `lock`). Move: `{"from": 0, "to": 2}`. Hint/solver note: the forge solver and the Swift hint solver treat hidden colors as known (generation guarantees solvability).
 
 ### bolt
 
-Same as liquid, plus optional `"capacities": [4,4,3,...]` (per bolt) and `"rusty": [{"bolt":1,"index":0,"color":"g"}]`. Move: `{"from": 0, "to": 2}`.
+Same as liquid, plus optional `"capacities": [5,5,3,...]` (per bolt; twist `capped`; colors may then appear fewer times than the tallest bolt holds, never more) and `"rusty": [{"bolt":1,"index":0,"color":"g"}]` (twist `rusty`; `color` is the tag color that must be completed first). Bundled bolt levels use `capacity` 5. Move: `{"from": 0, "to": 2}`.
+
+Content for both modes is regenerated deterministically with `cd tools/forge && npm run gen:sort` (seeds live in `scripts/gen-sort.ts`). Tutorial/twist tip copy lives in `Resources/Tips/liquid.json` and `bolt.json` (keys `liquid.pour`, `bolt.move`, `twist.hidden`, `twist.lock`, `twist.capped`, `twist.rusty`).
 
 ### pixel
 

@@ -1,0 +1,16 @@
+{
+  "tips": {
+    "bolt.move": {
+      "title": "Move the nuts",
+      "body": "Tap a bolt to lift its top nuts, then tap another bolt to slide them over. Nuts stack on an empty bolt or on a nut of the same color. Give every color a bolt of its own."
+    },
+    "twist.capped": {
+      "title": "Short bolts",
+      "body": "Bolts with an orange end cap are shorter and hold fewer nuts. They make a handy parking spot, but they can never hold a full color."
+    },
+    "twist.rusty": {
+      "title": "Rusty nuts",
+      "body": "A rusty nut is stuck fast. Its little tag shows which color to finish first. Once that color sits together on one bolt, the rust lets go."
+    }
+  }
+}

@@ -1,4 +1,1055 @@
 {
   "pool": "relax-liquid",
-  "entries": []
+  "entries": [
+    {
+      "id": "relax-liquid-001",
+      "mode": "liquid", "destination": "relax-liquid", "order": 1, "title": "Sunny Spritz", "difficulty": 1,
+      "twists": [], "par": 5,
+      "solution": [{"from":1,"to":3},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":3},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["r","w","b","b"],["r","w","w","w"],["b","b","r","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-002",
+      "mode": "liquid", "destination": "relax-liquid", "order": 2, "title": "Cozy Spritz", "difficulty": 1,
+      "twists": [], "par": 8,
+      "solution": [{"from":1,"to":4},{"from":3,"to":4},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":1},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["r","r","b","r"],["w","r","b","p"],["b","b","p","p"],["w","w","w","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-003",
+      "mode": "liquid", "destination": "relax-liquid", "order": 3, "title": "Fizzy Spritz", "difficulty": 1,
+      "twists": [], "par": 10,
+      "solution": [{"from":3,"to":5},{"from":1,"to":5},{"from":2,"to":3},{"from":3,"to":6},{"from":4,"to":6},{"from":0,"to":4},{"from":0,"to":3},{"from":4,"to":0},{"from":3,"to":4},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["w","b","b","w"],["y","y","r","r"],["y","y","p","p"],["b","p","r","r"],["b","w","w","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-004",
+      "mode": "liquid", "destination": "relax-liquid", "order": 4, "title": "Frosty Spritz", "difficulty": 1,
+      "twists": [], "par": 15,
+      "solution": [{"from":0,"to":6},{"from":5,"to":7},{"from":2,"to":7},{"from":0,"to":2},{"from":3,"to":7},{"from":3,"to":6},{"from":1,"to":3},{"from":1,"to":5},{"from":2,"to":1},{"from":4,"to":3},{"from":4,"to":6},{"from":5,"to":4},{"from":1,"to":5},{"from":1,"to":3},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["p","p","w","b"],["r","w","y","r"],["p","p","w","n"],["r","b","n","n"],["y","b","b","r"],["w","y","y","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-005",
+      "mode": "liquid", "destination": "relax-liquid", "order": 5, "title": "Minty Spritz", "difficulty": 1,
+      "twists": [], "par": 17,
+      "solution": [{"from":3,"to":7},{"from":3,"to":8},{"from":5,"to":7},{"from":0,"to":5},{"from":0,"to":3},{"from":2,"to":0},{"from":2,"to":5},{"from":2,"to":8},{"from":6,"to":2},{"from":1,"to":6},{"from":4,"to":6},{"from":4,"to":0},{"from":3,"to":4},{"from":1,"to":3},{"from":1,"to":2},{"from":0,"to":1},{"from":3,"to":8}],
+      "payload": {"capacity":4,"tubes":[["w","y","n","n"],["w","b","p","t"],["b","p","n","w"],["p","y","p","r"],["y","y","w","t"],["n","r","r","r"],["t","t","b","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-006",
+      "mode": "liquid", "destination": "relax-liquid", "order": 6, "title": "Honeyed Spritz", "difficulty": 1,
+      "twists": [], "par": 5,
+      "solution": [{"from":1,"to":3},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":1},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["s","s","t","n"],["t","t","s","s"],["n","n","n","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-007",
+      "mode": "liquid", "destination": "relax-liquid", "order": 7, "title": "Velvet Spritz", "difficulty": 1,
+      "twists": [], "par": 8,
+      "solution": [{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":5},{"from":2,"to":5},{"from":1,"to":2},{"from":1,"to":3},{"from":1,"to":2},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["i","s","t","t"],["n","n","t","n"],["n","s","s","s"],["t","i","i","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-008",
+      "mode": "liquid", "destination": "relax-liquid", "order": 8, "title": "Zesty Spritz", "difficulty": 1,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":5},{"from":4,"to":5},{"from":2,"to":5},{"from":0,"to":2},{"from":1,"to":0},{"from":3,"to":4},{"from":3,"to":1},{"from":0,"to":3},{"from":4,"to":0},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","o","n","s"],["i","i","i","o"],["n","n","s","s"],["o","o","i","t"],["n","t","t","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-009",
+      "mode": "liquid", "destination": "relax-liquid", "order": 9, "title": "Dreamy Spritz", "difficulty": 1,
+      "twists": [], "par": 15,
+      "solution": [{"from":2,"to":6},{"from":4,"to":2},{"from":4,"to":7},{"from":4,"to":6},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":7},{"from":2,"to":1},{"from":2,"to":7},{"from":5,"to":7},{"from":5,"to":6},{"from":1,"to":2},{"from":0,"to":5}],
+      "payload": {"capacity":4,"tubes":[["i","n","t","t"],["k","o","i","i"],["k","o","k","s"],["t","t","n","n"],["n","s","o","k"],["i","s","s","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-010",
+      "mode": "liquid", "destination": "relax-liquid", "order": 10, "title": "Breezy Spritz", "difficulty": 1,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":7},{"from":4,"to":8},{"from":5,"to":8},{"from":3,"to":5},{"from":3,"to":7},{"from":0,"to":3},{"from":6,"to":7},{"from":6,"to":3},{"from":5,"to":6},{"from":5,"to":8},{"from":6,"to":5},{"from":0,"to":6},{"from":1,"to":0},{"from":2,"to":0},{"from":2,"to":6},{"from":4,"to":2},{"from":4,"to":8},{"from":1,"to":6}],
+      "payload": {"capacity":4,"tubes":[["s","o","g","g"],["s","n","n","n"],["k","k","s","n"],["o","o","g","t"],["i","k","k","i"],["t","i","t","i"],["s","t","o","g"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-011",
+      "mode": "liquid", "destination": "relax-liquid", "order": 11, "title": "Toasty Spritz", "difficulty": 1,
+      "twists": [], "par": 6,
+      "solution": [{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":1},{"from":2,"to":3},{"from":2,"to":0},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["g","g","g","w"],["w","k","k","k"],["w","g","k","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-012",
+      "mode": "liquid", "destination": "relax-liquid", "order": 12, "title": "Golden Spritz", "difficulty": 1,
+      "twists": [], "par": 9,
+      "solution": [{"from":0,"to":4},{"from":1,"to":4},{"from":3,"to":1},{"from":2,"to":4},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["w","b","g","b"],["g","w","w","b"],["g","g","k","b"],["k","k","k","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-013",
+      "mode": "liquid", "destination": "relax-liquid", "order": 13, "title": "Misty Spritz", "difficulty": 1,
+      "twists": [], "par": 13,
+      "solution": [{"from":0,"to":5},{"from":3,"to":6},{"from":1,"to":0},{"from":1,"to":6},{"from":2,"to":6},{"from":2,"to":3},{"from":2,"to":1},{"from":4,"to":5},{"from":0,"to":4},{"from":3,"to":0},{"from":3,"to":4},{"from":2,"to":6},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","w","k","r"],["b","b","g","k"],["g","b","w","g"],["b","k","w","g"],["k","r","r","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-014",
+      "mode": "liquid", "destination": "relax-liquid", "order": 14, "title": "Sugared Spritz", "difficulty": 1,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":6},{"from":0,"to":7},{"from":1,"to":6},{"from":2,"to":0},{"from":3,"to":7},{"from":4,"to":1},{"from":2,"to":4},{"from":2,"to":3},{"from":5,"to":0},{"from":5,"to":7},{"from":1,"to":5},{"from":3,"to":1},{"from":4,"to":3},{"from":5,"to":4},{"from":2,"to":6},{"from":0,"to":5}],
+      "payload": {"capacity":4,"tubes":[["k","r","g","g"],["b","b","p","g"],["g","b","w","k"],["w","b","r","r"],["p","w","w","p"],["k","p","r","k"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-015",
+      "mode": "liquid", "destination": "relax-liquid", "order": 15, "title": "Sparkling Spritz", "difficulty": 1,
+      "twists": [], "par": 20,
+      "solution": [{"from":3,"to":7},{"from":2,"to":8},{"from":6,"to":7},{"from":6,"to":8},{"from":2,"to":6},{"from":3,"to":2},{"from":3,"to":7},{"from":0,"to":3},{"from":0,"to":6},{"from":1,"to":0},{"from":1,"to":8},{"from":4,"to":3},{"from":4,"to":2},{"from":5,"to":3},{"from":5,"to":7},{"from":6,"to":1},{"from":0,"to":6},{"from":2,"to":0},{"from":2,"to":6},{"from":4,"to":5}],
+      "payload": {"capacity":4,"tubes":[["g","r","k","b"],["k","p","p","r"],["r","g","k","p"],["b","y","g","y"],["w","w","g","b"],["w","w","y","b"],["r","k","p","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-016",
+      "mode": "liquid", "destination": "relax-liquid", "order": 16, "title": "Sunny Cooler", "difficulty": 1,
+      "twists": [], "par": 6,
+      "solution": [{"from":0,"to":3},{"from":1,"to":3},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":3},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["y","n","y","n"],["p","p","n","n"],["y","y","p","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-017",
+      "mode": "liquid", "destination": "relax-liquid", "order": 17, "title": "Cozy Cooler", "difficulty": 1,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":4},{"from":0,"to":5},{"from":1,"to":0},{"from":2,"to":0},{"from":2,"to":5},{"from":2,"to":1},{"from":3,"to":2},{"from":3,"to":5},{"from":0,"to":3},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["n","t","y","y"],["p","p","p","n"],["y","p","t","n"],["n","t","t","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-018",
+      "mode": "liquid", "destination": "relax-liquid", "order": 18, "title": "Fizzy Cooler", "difficulty": 1,
+      "twists": [], "par": 13,
+      "solution": [{"from":3,"to":5},{"from":0,"to":3},{"from":0,"to":6},{"from":2,"to":3},{"from":4,"to":2},{"from":4,"to":5},{"from":4,"to":6},{"from":2,"to":4},{"from":3,"to":2},{"from":1,"to":3},{"from":1,"to":6},{"from":1,"to":3},{"from":0,"to":5}],
+      "payload": {"capacity":4,"tubes":[["n","p","p","s"],["y","y","p","y"],["s","t","t","s"],["y","s","n","n"],["t","p","n","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-019",
+      "mode": "liquid", "destination": "relax-liquid", "order": 19, "title": "Frosty Cooler", "difficulty": 1,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":6},{"from":5,"to":7},{"from":1,"to":7},{"from":2,"to":5},{"from":3,"to":2},{"from":3,"to":5},{"from":3,"to":7},{"from":0,"to":3},{"from":1,"to":0},{"from":2,"to":1},{"from":2,"to":6},{"from":5,"to":2},{"from":3,"to":5},{"from":1,"to":3},{"from":4,"to":3},{"from":4,"to":6},{"from":4,"to":5},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["y","y","s","n"],["y","i","y","t"],["p","n","i","p"],["s","t","p","i"],["s","n","n","i"],["s","p","t","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-020",
+      "mode": "liquid", "destination": "relax-liquid", "order": 20, "title": "Minty Cooler", "difficulty": 1,
+      "twists": [], "par": 20,
+      "solution": [{"from":4,"to":7},{"from":4,"to":8},{"from":3,"to":4},{"from":3,"to":8},{"from":2,"to":3},{"from":2,"to":4},{"from":2,"to":7},{"from":0,"to":2},{"from":0,"to":7},{"from":1,"to":0},{"from":1,"to":7},{"from":5,"to":3},{"from":5,"to":8},{"from":5,"to":1},{"from":6,"to":1},{"from":6,"to":8},{"from":6,"to":0},{"from":3,"to":6},{"from":1,"to":3},{"from":2,"to":5}],
+      "payload": {"capacity":4,"tubes":[["i","p","o","o"],["t","p","i","i"],["o","p","n","s"],["t","s","y","n"],["n","n","y","p"],["o","t","y","s"],["s","i","y","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-021",
+      "mode": "liquid", "destination": "relax-liquid", "order": 21, "title": "Honeyed Cooler", "difficulty": 1,
+      "twists": [], "par": 6,
+      "solution": [{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":4},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["o","i","k","k"],["o","i","i","i"],["o","o","k","k"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-022",
+      "mode": "liquid", "destination": "relax-liquid", "order": 22, "title": "Velvet Cooler", "difficulty": 1,
+      "twists": [], "par": 10,
+      "solution": [{"from":1,"to":4},{"from":0,"to":1},{"from":3,"to":0},{"from":3,"to":4},{"from":2,"to":3},{"from":2,"to":4},{"from":0,"to":2},{"from":3,"to":0},{"from":2,"to":3},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["o","o","i","g"],["g","g","k","k"],["g","i","k","o"],["i","o","k","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-023",
+      "mode": "liquid", "destination": "relax-liquid", "order": 23, "title": "Zesty Cooler", "difficulty": 2,
+      "twists": [], "par": 11,
+      "solution": [{"from":3,"to":5},{"from":2,"to":5},{"from":4,"to":3},{"from":0,"to":4},{"from":2,"to":0},{"from":2,"to":5},{"from":0,"to":2},{"from":4,"to":0},{"from":1,"to":4},{"from":3,"to":1},{"from":3,"to":5}],
+      "payload": {"capacity":4,"tubes":[["k","i","i","k"],["g","w","w","w"],["i","o","i","o"],["o","g","g","o"],["w","k","k","g"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-024",
+      "mode": "liquid", "destination": "relax-liquid", "order": 24, "title": "Dreamy Cooler", "difficulty": 2,
+      "twists": [], "par": 17,
+      "solution": [{"from":0,"to":6},{"from":0,"to":7},{"from":1,"to":6},{"from":4,"to":7},{"from":3,"to":4},{"from":2,"to":3},{"from":2,"to":6},{"from":3,"to":2},{"from":1,"to":3},{"from":1,"to":4},{"from":0,"to":1},{"from":2,"to":0},{"from":5,"to":1},{"from":5,"to":6},{"from":5,"to":7},{"from":1,"to":5},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["i","w","g","k"],["w","b","o","k"],["o","i","k","i"],["o","o","i","b"],["b","b","g","g"],["w","g","k","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-025",
+      "mode": "liquid", "destination": "relax-liquid", "order": 25, "title": "Breezy Cooler", "difficulty": 2,
+      "twists": [], "par": 19,
+      "solution": [{"from":0,"to":7},{"from":4,"to":7},{"from":1,"to":8},{"from":1,"to":4},{"from":0,"to":1},{"from":3,"to":0},{"from":3,"to":8},{"from":2,"to":3},{"from":2,"to":8},{"from":4,"to":2},{"from":4,"to":7},{"from":5,"to":3},{"from":5,"to":4},{"from":5,"to":3},{"from":6,"to":1},{"from":6,"to":5},{"from":6,"to":7},{"from":1,"to":6},{"from":4,"to":5}],
+      "payload": {"capacity":4,"tubes":[["o","o","r","k"],["r","w","i","i"],["w","w","i","b"],["b","i","o","o"],["g","k","w","k"],["g","b","g","b"],["r","k","g","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-026",
+      "mode": "liquid", "destination": "relax-liquid", "order": 26, "title": "Toasty Cooler", "difficulty": 2,
+      "twists": [], "par": 7,
+      "solution": [{"from":0,"to":3},{"from":1,"to":0},{"from":1,"to":3},{"from":2,"to":1},{"from":2,"to":0},{"from":2,"to":3},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["p","p","b","b"],["r","r","b","p"],["r","b","p","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-027",
+      "mode": "liquid", "destination": "relax-liquid", "order": 27, "title": "Golden Cooler", "difficulty": 2,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":1,"to":4},{"from":1,"to":5},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":5},{"from":1,"to":2},{"from":3,"to":4},{"from":3,"to":5},{"from":0,"to":1},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["b","b","p","r"],["b","p","y","r"],["p","y","y","b"],["p","y","r","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-028",
+      "mode": "liquid", "destination": "relax-liquid", "order": 28, "title": "Misty Cooler", "difficulty": 2,
+      "twists": [], "par": 14,
+      "solution": [{"from":2,"to":5},{"from":1,"to":5},{"from":0,"to":1},{"from":0,"to":6},{"from":1,"to":0},{"from":1,"to":5},{"from":4,"to":1},{"from":4,"to":0},{"from":4,"to":6},{"from":3,"to":4},{"from":3,"to":2},{"from":3,"to":6},{"from":2,"to":3},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["n","b","b","n"],["r","p","n","p"],["y","y","p","p"],["y","b","y","r"],["r","b","n","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-029",
+      "mode": "liquid", "destination": "relax-liquid", "order": 29, "title": "Sugared Cooler", "difficulty": 2,
+      "twists": [], "par": 18,
+      "solution": [{"from":4,"to":6},{"from":2,"to":7},{"from":2,"to":6},{"from":0,"to":2},{"from":5,"to":4},{"from":5,"to":7},{"from":5,"to":6},{"from":0,"to":5},{"from":1,"to":0},{"from":1,"to":2},{"from":1,"to":5},{"from":4,"to":1},{"from":4,"to":7},{"from":3,"to":4},{"from":3,"to":7},{"from":3,"to":6},{"from":1,"to":3},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["y","r","r","b"],["p","r","b","y"],["b","b","t","n"],["p","t","n","y"],["y","n","p","t"],["r","t","n","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-030",
+      "mode": "liquid", "destination": "relax-liquid", "order": 30, "title": "Sparkling Cooler", "difficulty": 2,
+      "twists": [], "par": 19,
+      "solution": [{"from":2,"to":7},{"from":1,"to":8},{"from":1,"to":7},{"from":3,"to":1},{"from":2,"to":3},{"from":5,"to":7},{"from":0,"to":5},{"from":6,"to":1},{"from":4,"to":6},{"from":4,"to":2},{"from":3,"to":4},{"from":0,"to":3},{"from":5,"to":0},{"from":5,"to":2},{"from":3,"to":5},{"from":4,"to":3},{"from":0,"to":4},{"from":1,"to":8},{"from":0,"to":5}],
+      "payload": {"capacity":4,"tubes":[["y","p","y","p"],["t","s","s","t"],["r","r","b","s"],["b","y","b","t"],["p","b","r","n"],["y","r","p","s"],["n","n","n","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-031",
+      "mode": "liquid", "destination": "relax-liquid", "order": 31, "title": "Sunny Float", "difficulty": 2,
+      "twists": [], "par": 7,
+      "solution": [{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":3},{"from":2,"to":0},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["t","s","s","i"],["i","i","i","t"],["s","t","s","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-032",
+      "mode": "liquid", "destination": "relax-liquid", "order": 32, "title": "Cozy Float", "difficulty": 2,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":4},{"from":3,"to":4},{"from":1,"to":5},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":5},{"from":2,"to":0},{"from":3,"to":1},{"from":1,"to":2},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","o","t","s"],["i","o","o","o"],["i","t","t","i"],["s","s","i","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-033",
+      "mode": "liquid", "destination": "relax-liquid", "order": 33, "title": "Fizzy Float", "difficulty": 2,
+      "twists": [], "par": 14,
+      "solution": [{"from":0,"to":5},{"from":2,"to":5},{"from":1,"to":6},{"from":0,"to":1},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":5},{"from":3,"to":0},{"from":4,"to":1},{"from":2,"to":4},{"from":2,"to":5},{"from":4,"to":2},{"from":1,"to":4},{"from":3,"to":6}],
+      "payload": {"capacity":4,"tubes":[["k","t","k","i"],["o","i","k","s"],["t","i","t","i"],["s","s","s","k"],["o","t","o","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-034",
+      "mode": "liquid", "destination": "relax-liquid", "order": 34, "title": "Frosty Float", "difficulty": 2,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":6},{"from":2,"to":6},{"from":2,"to":7},{"from":4,"to":7},{"from":4,"to":6},{"from":5,"to":2},{"from":3,"to":5},{"from":0,"to":3},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":2},{"from":3,"to":0},{"from":3,"to":7},{"from":5,"to":1},{"from":3,"to":5},{"from":4,"to":5}],
+      "payload": {"capacity":4,"tubes":[["k","g","k","s"],["o","o","g","k"],["g","t","s","s"],["i","t","k","o"],["i","s","t","t"],["i","i","o","g"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-035",
+      "mode": "liquid", "destination": "relax-liquid", "order": 35, "title": "Minty Float", "difficulty": 2,
+      "twists": [], "par": 21,
+      "solution": [{"from":1,"to":7},{"from":1,"to":8},{"from":2,"to":7},{"from":3,"to":8},{"from":4,"to":3},{"from":4,"to":7},{"from":5,"to":4},{"from":5,"to":8},{"from":4,"to":5},{"from":2,"to":4},{"from":2,"to":7},{"from":3,"to":2},{"from":0,"to":3},{"from":0,"to":1},{"from":0,"to":4},{"from":6,"to":1},{"from":6,"to":8},{"from":6,"to":4},{"from":1,"to":6},{"from":0,"to":1},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["t","w","g","t"],["t","g","o","i"],["s","i","w","i"],["t","s","s","o"],["w","k","i","s"],["k","o","k","k"],["g","w","o","g"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-036",
+      "mode": "liquid", "destination": "relax-liquid", "order": 36, "title": "Honeyed Float", "difficulty": 2,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":1,"to":4},{"from":1,"to":3},{"from":1,"to":0},{"from":2,"to":4},{"from":2,"to":0},{"from":1,"to":3},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["w","w","g","g"],["g","w","g","b"],["b","w","b","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-037",
+      "mode": "liquid", "destination": "relax-liquid", "order": 37, "title": "Velvet Float", "difficulty": 2,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":0,"to":5},{"from":1,"to":5},{"from":2,"to":4},{"from":2,"to":0},{"from":3,"to":1},{"from":3,"to":5},{"from":1,"to":3},{"from":1,"to":0},{"from":1,"to":3},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["r","g","b","b"],["w","r","w","g"],["b","r","r","b"],["w","g","g","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-038",
+      "mode": "liquid", "destination": "relax-liquid", "order": 38, "title": "Zesty Float", "difficulty": 2,
+      "twists": [], "par": 14,
+      "solution": [{"from":0,"to":5},{"from":0,"to":6},{"from":1,"to":5},{"from":3,"to":0},{"from":3,"to":5},{"from":2,"to":3},{"from":2,"to":5},{"from":1,"to":2},{"from":1,"to":0},{"from":4,"to":0},{"from":4,"to":6},{"from":3,"to":4},{"from":1,"to":3},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","b","b","p"],["g","w","g","p"],["g","p","r","r"],["g","r","p","w"],["r","b","b","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-039",
+      "mode": "liquid", "destination": "relax-liquid", "order": 39, "title": "Dreamy Float", "difficulty": 2,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":6},{"from":3,"to":7},{"from":4,"to":7},{"from":5,"to":6},{"from":5,"to":7},{"from":3,"to":5},{"from":3,"to":7},{"from":1,"to":3},{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":5},{"from":2,"to":3},{"from":2,"to":0},{"from":2,"to":3},{"from":4,"to":0},{"from":1,"to":4},{"from":1,"to":6},{"from":2,"to":5}],
+      "payload": {"capacity":4,"tubes":[["y","p","g","w"],["w","g","y","b"],["p","b","y","b"],["b","r","p","r"],["g","g","y","r"],["p","r","w","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-040",
+      "mode": "liquid", "destination": "relax-liquid", "order": 40, "title": "Breezy Float", "difficulty": 2,
+      "twists": [], "par": 20,
+      "solution": [{"from":0,"to":7},{"from":4,"to":7},{"from":1,"to":4},{"from":4,"to":8},{"from":5,"to":4},{"from":5,"to":8},{"from":2,"to":5},{"from":1,"to":2},{"from":0,"to":1},{"from":0,"to":5},{"from":1,"to":0},{"from":2,"to":1},{"from":4,"to":2},{"from":3,"to":4},{"from":3,"to":0},{"from":6,"to":1},{"from":6,"to":7},{"from":6,"to":5},{"from":3,"to":4},{"from":6,"to":7}],
+      "payload": {"capacity":4,"tubes":[["w","y","w","b"],["r","w","r","n"],["p","p","r","y"],["g","w","g","g"],["g","p","n","b"],["y","n","n","p"],["b","y","b","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-041",
+      "mode": "liquid", "destination": "relax-liquid", "order": 41, "title": "Toasty Float", "difficulty": 2,
+      "twists": [], "par": 7,
+      "solution": [{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":1},{"from":2,"to":0},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["y","t","t","n"],["n","n","y","y"],["t","y","t","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-042",
+      "mode": "liquid", "destination": "relax-liquid", "order": 42, "title": "Golden Float", "difficulty": 2,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":0,"to":5},{"from":2,"to":4},{"from":0,"to":2},{"from":1,"to":0},{"from":2,"to":1},{"from":3,"to":2},{"from":3,"to":0},{"from":3,"to":4},{"from":2,"to":3},{"from":3,"to":5}],
+      "payload": {"capacity":4,"tubes":[["t","y","s","n"],["y","y","t","t"],["s","y","n","n"],["s","n","t","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-043",
+      "mode": "liquid", "destination": "relax-liquid", "order": 43, "title": "Misty Float", "difficulty": 2,
+      "twists": [], "par": 15,
+      "solution": [{"from":4,"to":5},{"from":1,"to":6},{"from":1,"to":5},{"from":2,"to":1},{"from":2,"to":5},{"from":4,"to":6},{"from":4,"to":2},{"from":0,"to":4},{"from":0,"to":2},{"from":0,"to":1},{"from":3,"to":4},{"from":3,"to":6},{"from":3,"to":5},{"from":3,"to":4},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["y","i","y","s"],["i","n","t","t"],["y","n","i","i"],["s","n","t","s"],["s","y","t","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-044",
+      "mode": "liquid", "destination": "relax-liquid", "order": 44, "title": "Sugared Float", "difficulty": 3,
+      "twists": [], "par": 16,
+      "solution": [{"from":4,"to":6},{"from":2,"to":6},{"from":1,"to":2},{"from":5,"to":1},{"from":4,"to":5},{"from":5,"to":7},{"from":4,"to":5},{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":2},{"from":3,"to":4},{"from":3,"to":7},{"from":3,"to":2},{"from":5,"to":0},{"from":1,"to":3},{"from":5,"to":7}],
+      "payload": {"capacity":4,"tubes":[["i","i","s","t"],["t","t","y","s"],["s","o","o","o"],["t","s","n","y"],["y","i","n","o"],["n","i","n","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-045",
+      "mode": "liquid", "destination": "relax-liquid", "order": 45, "title": "Sparkling Float", "difficulty": 3,
+      "twists": [], "par": 21,
+      "solution": [{"from":3,"to":7},{"from":5,"to":8},{"from":6,"to":5},{"from":3,"to":6},{"from":2,"to":3},{"from":2,"to":8},{"from":2,"to":7},{"from":4,"to":3},{"from":4,"to":2},{"from":5,"to":4},{"from":6,"to":2},{"from":5,"to":6},{"from":4,"to":5},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":7},{"from":1,"to":3},{"from":1,"to":0},{"from":1,"to":6},{"from":1,"to":3},{"from":0,"to":8}],
+      "payload": {"capacity":4,"tubes":[["n","s","s","o"],["o","k","n","o"],["i","s","n","t"],["o","t","i","s"],["t","y","i","t"],["y","k","y","n"],["k","k","i","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-046",
+      "mode": "liquid", "destination": "relax-liquid", "order": 46, "title": "Sunny Punch", "difficulty": 3,
+      "twists": [], "par": 7,
+      "solution": [{"from":0,"to":3},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":3},{"from":2,"to":0},{"from":1,"to":2},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["g","o","g","o"],["o","k","k","k"],["k","g","g","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-047",
+      "mode": "liquid", "destination": "relax-liquid", "order": 47, "title": "Cozy Punch", "difficulty": 3,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":2,"to":4},{"from":2,"to":0},{"from":1,"to":2},{"from":1,"to":5},{"from":0,"to":1},{"from":0,"to":5},{"from":3,"to":2},{"from":3,"to":5},{"from":1,"to":3},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["o","k","w","o"],["w","k","k","g"],["g","w","o","o"],["w","k","g","g"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-048",
+      "mode": "liquid", "destination": "relax-liquid", "order": 48, "title": "Fizzy Punch", "difficulty": 3,
+      "twists": [], "par": 14,
+      "solution": [{"from":0,"to":5},{"from":1,"to":6},{"from":3,"to":1},{"from":3,"to":6},{"from":1,"to":3},{"from":2,"to":1},{"from":2,"to":0},{"from":2,"to":1},{"from":3,"to":2},{"from":4,"to":6},{"from":4,"to":5},{"from":4,"to":0},{"from":1,"to":4},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["g","w","w","w"],["o","k","b","b"],["k","o","g","o"],["g","k","b","k"],["o","g","w","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-049",
+      "mode": "liquid", "destination": "relax-liquid", "order": 49, "title": "Frosty Punch", "difficulty": 3,
+      "twists": [], "par": 17,
+      "solution": [{"from":0,"to":6},{"from":0,"to":7},{"from":1,"to":7},{"from":1,"to":6},{"from":2,"to":6},{"from":2,"to":1},{"from":3,"to":7},{"from":3,"to":0},{"from":2,"to":3},{"from":4,"to":3},{"from":4,"to":0},{"from":2,"to":4},{"from":3,"to":2},{"from":5,"to":2},{"from":5,"to":7},{"from":3,"to":4},{"from":1,"to":5}],
+      "payload": {"capacity":4,"tubes":[["b","b","o","w"],["g","w","w","o"],["k","r","g","w"],["k","r","b","o"],["k","k","b","r"],["g","g","o","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-050",
+      "mode": "liquid", "destination": "relax-liquid", "order": 50, "title": "Minty Punch", "difficulty": 3,
+      "twists": [], "par": 22,
+      "solution": [{"from":1,"to":7},{"from":3,"to":8},{"from":0,"to":3},{"from":0,"to":1},{"from":0,"to":7},{"from":5,"to":0},{"from":5,"to":7},{"from":3,"to":5},{"from":6,"to":8},{"from":6,"to":0},{"from":2,"to":6},{"from":2,"to":0},{"from":3,"to":2},{"from":1,"to":3},{"from":1,"to":7},{"from":2,"to":1},{"from":4,"to":3},{"from":4,"to":1},{"from":4,"to":8},{"from":5,"to":2},{"from":4,"to":5},{"from":5,"to":6}],
+      "payload": {"capacity":4,"tubes":[["r","b","g","k"],["w","b","g","b"],["k","w","r","o"],["g","w","k","p"],["o","p","w","g"],["o","k","b","r"],["o","r","p","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-051",
+      "mode": "liquid", "destination": "relax-liquid", "order": 51, "title": "Honeyed Punch", "difficulty": 3,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":4},{"from":0,"to":1},{"from":2,"to":3},{"from":2,"to":1},{"from":2,"to":3},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["r","y","r","p"],["y","y","r","r"],["p","y","p","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-052",
+      "mode": "liquid", "destination": "relax-liquid", "order": 52, "title": "Velvet Punch", "difficulty": 3,
+      "twists": [], "par": 10,
+      "solution": [{"from":2,"to":4},{"from":1,"to":2},{"from":1,"to":4},{"from":1,"to":2},{"from":0,"to":1},{"from":0,"to":4},{"from":0,"to":1},{"from":2,"to":0},{"from":3,"to":2},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["p","n","r","n"],["n","p","r","p"],["y","p","r","r"],["n","y","y","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-053",
+      "mode": "liquid", "destination": "relax-liquid", "order": 53, "title": "Zesty Punch", "difficulty": 3,
+      "twists": ["hidden"], "par": 14,
+      "solution": [{"from":3,"to":5},{"from":2,"to":6},{"from":2,"to":5},{"from":0,"to":2},{"from":3,"to":6},{"from":1,"to":3},{"from":1,"to":6},{"from":4,"to":5},{"from":4,"to":3},{"from":4,"to":5},{"from":1,"to":4},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["y","y","n","n"],["y","n","t","r"],["y","n","p","t"],["r","t","t","p"],["p","r","r","p"],[],[]],"hidden":[[1,2],[4,2]]}
+    },
+    {
+      "id": "relax-liquid-054",
+      "mode": "liquid", "destination": "relax-liquid", "order": 54, "title": "Dreamy Punch", "difficulty": 3,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":6},{"from":5,"to":6},{"from":2,"to":7},{"from":1,"to":2},{"from":1,"to":7},{"from":0,"to":1},{"from":0,"to":7},{"from":3,"to":0},{"from":3,"to":5},{"from":2,"to":3},{"from":2,"to":1},{"from":4,"to":0},{"from":4,"to":3},{"from":4,"to":1},{"from":5,"to":4},{"from":5,"to":2},{"from":4,"to":5},{"from":2,"to":6}],
+      "payload": {"capacity":4,"tubes":[["r","s","p","n"],["p","s","s","y"],["n","p","y","s"],["y","t","r","r"],["t","p","y","r"],["t","n","t","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-055",
+      "mode": "liquid", "destination": "relax-liquid", "order": 55, "title": "Breezy Punch", "difficulty": 3,
+      "twists": [], "par": 20,
+      "solution": [{"from":0,"to":7},{"from":4,"to":8},{"from":1,"to":8},{"from":0,"to":1},{"from":2,"to":4},{"from":3,"to":8},{"from":5,"to":7},{"from":3,"to":7},{"from":6,"to":5},{"from":0,"to":6},{"from":4,"to":0},{"from":4,"to":7},{"from":1,"to":4},{"from":5,"to":1},{"from":5,"to":4},{"from":3,"to":5},{"from":2,"to":3},{"from":6,"to":3},{"from":0,"to":6},{"from":2,"to":5}],
+      "payload": {"capacity":4,"tubes":[["i","r","s","n"],["t","t","s","y"],["p","p","r","i"],["p","n","y","y"],["s","n","i","y"],["p","s","t","n"],["i","r","r","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-056",
+      "mode": "liquid", "destination": "relax-liquid", "order": 56, "title": "Toasty Punch", "difficulty": 3,
+      "twists": [], "par": 8,
+      "solution": [{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":3},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":3},{"from":2,"to":0},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["s","s","i","s"],["o","o","i","o"],["i","s","o","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-057",
+      "mode": "liquid", "destination": "relax-liquid", "order": 57, "title": "Golden Punch", "difficulty": 3,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":1,"to":5},{"from":1,"to":4},{"from":2,"to":1},{"from":3,"to":2},{"from":0,"to":3},{"from":2,"to":0},{"from":3,"to":2},{"from":3,"to":4},{"from":1,"to":5},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["s","o","k","k"],["i","i","k","i"],["o","s","s","i"],["o","k","o","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-058",
+      "mode": "liquid", "destination": "relax-liquid", "order": 58, "title": "Misty Punch", "difficulty": 3,
+      "twists": [], "par": 13,
+      "solution": [{"from":0,"to":5},{"from":4,"to":5},{"from":1,"to":4},{"from":1,"to":5},{"from":2,"to":0},{"from":2,"to":6},{"from":0,"to":2},{"from":3,"to":0},{"from":3,"to":6},{"from":4,"to":1},{"from":4,"to":0},{"from":4,"to":5},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["o","o","i","g"],["k","k","g","k"],["i","s","s","i"],["i","s","s","o"],["g","o","k","g"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-059",
+      "mode": "liquid", "destination": "relax-liquid", "order": 59, "title": "Sugared Punch", "difficulty": 3,
+      "twists": [], "par": 19,
+      "solution": [{"from":0,"to":6},{"from":1,"to":7},{"from":1,"to":6},{"from":2,"to":1},{"from":2,"to":0},{"from":2,"to":6},{"from":4,"to":2},{"from":4,"to":1},{"from":0,"to":4},{"from":5,"to":2},{"from":5,"to":7},{"from":3,"to":5},{"from":3,"to":6},{"from":3,"to":7},{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":3},{"from":0,"to":2},{"from":1,"to":5}],
+      "payload": {"capacity":4,"tubes":[["s","w","o","i"],["g","w","i","k"],["s","i","o","w"],["g","k","i","g"],["o","o","w","s"],["g","k","k","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-060",
+      "mode": "liquid", "destination": "relax-liquid", "order": 60, "title": "Sparkling Punch", "difficulty": 3,
+      "twists": ["hidden"], "par": 21,
+      "solution": [{"from":6,"to":7},{"from":2,"to":7},{"from":2,"to":8},{"from":2,"to":6},{"from":4,"to":2},{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":8},{"from":1,"to":2},{"from":5,"to":7},{"from":6,"to":1},{"from":5,"to":6},{"from":0,"to":5},{"from":3,"to":5},{"from":3,"to":6},{"from":3,"to":1},{"from":4,"to":3},{"from":0,"to":4},{"from":6,"to":0},{"from":2,"to":6},{"from":4,"to":8}],
+      "payload": {"capacity":4,"tubes":[["i","k","s","o"],["w","b","k","s"],["b","w","k","g"],["o","w","i","s"],["k","o","o","b"],["s","i","g","g"],["b","i","w","g"],[],[]],"hidden":[[0,1],[4,0]]}
+    },
+    {
+      "id": "relax-liquid-061",
+      "mode": "liquid", "destination": "relax-liquid", "order": 61, "title": "Sunny Tonic", "difficulty": 3,
+      "twists": [], "par": 8,
+      "solution": [{"from":1,"to":3},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":3},{"from":1,"to":0},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","b","w","r"],["r","b","b","w"],["b","r","r","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-062",
+      "mode": "liquid", "destination": "relax-liquid", "order": 62, "title": "Cozy Tonic", "difficulty": 3,
+      "twists": [], "par": 12,
+      "solution": [{"from":3,"to":4},{"from":3,"to":5},{"from":2,"to":5},{"from":2,"to":3},{"from":2,"to":4},{"from":0,"to":2},{"from":0,"to":5},{"from":1,"to":2},{"from":1,"to":4},{"from":1,"to":5},{"from":0,"to":3},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","p","r","r"],["w","p","b","r"],["r","b","w","p"],["w","p","b","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-063",
+      "mode": "liquid", "destination": "relax-liquid", "order": 63, "title": "Fizzy Tonic", "difficulty": 3,
+      "twists": [], "par": 13,
+      "solution": [{"from":4,"to":5},{"from":1,"to":4},{"from":1,"to":5},{"from":0,"to":1},{"from":2,"to":1},{"from":3,"to":0},{"from":3,"to":5},{"from":2,"to":3},{"from":4,"to":2},{"from":4,"to":1},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["p","b","b","r"],["r","w","w","y"],["y","y","p","r"],["b","p","w","b"],["p","r","y","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-064",
+      "mode": "liquid", "destination": "relax-liquid", "order": 64, "title": "Frosty Tonic", "difficulty": 3,
+      "twists": [], "par": 19,
+      "solution": [{"from":4,"to":6},{"from":1,"to":7},{"from":1,"to":6},{"from":1,"to":7},{"from":2,"to":4},{"from":2,"to":1},{"from":2,"to":7},{"from":3,"to":2},{"from":3,"to":7},{"from":4,"to":3},{"from":4,"to":1},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":6},{"from":5,"to":3},{"from":5,"to":0},{"from":5,"to":1},{"from":0,"to":2},{"from":5,"to":6}],
+      "payload": {"capacity":4,"tubes":[["n","r","b","b"],["p","w","r","w"],["n","w","p","y"],["b","y","w","n"],["y","p","y","r"],["r","p","n","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-065",
+      "mode": "liquid", "destination": "relax-liquid", "order": 65, "title": "Minty Tonic", "difficulty": 3,
+      "twists": [], "par": 21,
+      "solution": [{"from":6,"to":7},{"from":1,"to":7},{"from":1,"to":8},{"from":3,"to":8},{"from":1,"to":3},{"from":6,"to":1},{"from":4,"to":6},{"from":4,"to":8},{"from":3,"to":4},{"from":3,"to":8},{"from":2,"to":3},{"from":2,"to":7},{"from":2,"to":1},{"from":4,"to":2},{"from":5,"to":6},{"from":0,"to":5},{"from":0,"to":4},{"from":5,"to":0},{"from":5,"to":7},{"from":1,"to":5},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","t","y","t"],["n","b","w","r"],["b","n","r","y"],["y","w","b","w"],["y","b","w","p"],["n","r","t","p"],["p","p","n","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-066",
+      "mode": "liquid", "destination": "relax-liquid", "order": 66, "title": "Honeyed Tonic", "difficulty": 4,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":1,"to":3},{"from":2,"to":3},{"from":1,"to":2},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":3},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["t","t","n","s"],["n","n","t","s"],["n","s","t","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-067",
+      "mode": "liquid", "destination": "relax-liquid", "order": 67, "title": "Velvet Tonic", "difficulty": 4,
+      "twists": [], "par": 12,
+      "solution": [{"from":0,"to":4},{"from":1,"to":5},{"from":0,"to":1},{"from":0,"to":5},{"from":2,"to":0},{"from":2,"to":5},{"from":1,"to":2},{"from":3,"to":0},{"from":3,"to":1},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","n","s","i"],["i","s","n","n"],["t","s","n","t"],["s","i","i","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-068",
+      "mode": "liquid", "destination": "relax-liquid", "order": 68, "title": "Zesty Tonic", "difficulty": 4,
+      "twists": [], "par": 14,
+      "solution": [{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":3},{"from":2,"to":6},{"from":4,"to":1},{"from":4,"to":5},{"from":4,"to":6},{"from":1,"to":4},{"from":1,"to":0},{"from":2,"to":4},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":5},{"from":1,"to":6}],
+      "payload": {"capacity":4,"tubes":[["o","t","t","n"],["s","t","i","n"],["t","s","i","s"],["n","n","o","o"],["i","s","o","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-069",
+      "mode": "liquid", "destination": "relax-liquid", "order": 69, "title": "Dreamy Tonic", "difficulty": 4,
+      "twists": [], "par": 16,
+      "solution": [{"from":2,"to":6},{"from":1,"to":6},{"from":0,"to":1},{"from":3,"to":2},{"from":4,"to":3},{"from":4,"to":7},{"from":2,"to":4},{"from":3,"to":2},{"from":3,"to":4},{"from":0,"to":3},{"from":1,"to":0},{"from":1,"to":6},{"from":5,"to":3},{"from":5,"to":1},{"from":2,"to":5},{"from":1,"to":7}],
+      "payload": {"capacity":4,"tubes":[["s","s","t","s"],["i","o","s","o"],["n","k","o","o"],["t","k","n","k"],["k","i","i","n"],["n","i","t","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-070",
+      "mode": "liquid", "destination": "relax-liquid", "order": 70, "title": "Breezy Tonic", "difficulty": 4,
+      "twists": [], "par": 21,
+      "solution": [{"from":3,"to":7},{"from":0,"to":3},{"from":0,"to":8},{"from":1,"to":8},{"from":2,"to":7},{"from":3,"to":0},{"from":3,"to":7},{"from":4,"to":3},{"from":5,"to":4},{"from":5,"to":2},{"from":6,"to":3},{"from":5,"to":6},{"from":1,"to":5},{"from":4,"to":5},{"from":4,"to":8},{"from":6,"to":4},{"from":3,"to":6},{"from":1,"to":3},{"from":2,"to":3},{"from":1,"to":7},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["k","i","i","k"],["g","n","s","i"],["k","n","n","g"],["t","g","k","g"],["o","i","s","t"],["s","o","n","s"],["t","o","o","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-071",
+      "mode": "liquid", "destination": "relax-liquid", "order": 71, "title": "Toasty Tonic", "difficulty": 4,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":4},{"from":2,"to":1},{"from":2,"to":4},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["k","g","w","k"],["g","g","k","k"],["w","g","w","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-072",
+      "mode": "liquid", "destination": "relax-liquid", "order": 72, "title": "Golden Tonic", "difficulty": 4,
+      "twists": [], "par": 11,
+      "solution": [{"from":1,"to":4},{"from":2,"to":1},{"from":2,"to":4},{"from":0,"to":2},{"from":3,"to":0},{"from":3,"to":1},{"from":3,"to":2},{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["k","g","b","w"],["b","k","g","g"],["w","w","g","k"],["b","w","k","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-073",
+      "mode": "liquid", "destination": "relax-liquid", "order": 73, "title": "Misty Tonic", "difficulty": 4,
+      "twists": [], "par": 15,
+      "solution": [{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":0},{"from":1,"to":5},{"from":1,"to":6},{"from":4,"to":6},{"from":4,"to":1},{"from":4,"to":5},{"from":2,"to":4},{"from":2,"to":6},{"from":0,"to":2},{"from":0,"to":5},{"from":3,"to":4},{"from":1,"to":3},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["w","g","w","b"],["k","r","g","w"],["w","r","r","b"],["k","k","b","g"],["b","g","k","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-074",
+      "mode": "liquid", "destination": "relax-liquid", "order": 74, "title": "Sugared Tonic", "difficulty": 4,
+      "twists": ["hidden"], "par": 17,
+      "solution": [{"from":0,"to":6},{"from":1,"to":0},{"from":1,"to":6},{"from":1,"to":7},{"from":2,"to":7},{"from":4,"to":7},{"from":2,"to":4},{"from":2,"to":6},{"from":3,"to":2},{"from":3,"to":0},{"from":3,"to":1},{"from":4,"to":2},{"from":5,"to":1},{"from":5,"to":7},{"from":0,"to":5},{"from":0,"to":4},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["b","w","k","k"],["r","g","k","w"],["p","k","p","g"],["b","r","w","p"],["b","b","p","g"],["w","g","r","r"],[],[]],"hidden":[[1,0],[3,2]]}
+    },
+    {
+      "id": "relax-liquid-075",
+      "mode": "liquid", "destination": "relax-liquid", "order": 75, "title": "Sparkling Tonic", "difficulty": 4,
+      "twists": [], "par": 21,
+      "solution": [{"from":1,"to":7},{"from":5,"to":1},{"from":5,"to":7},{"from":5,"to":8},{"from":2,"to":5},{"from":3,"to":5},{"from":3,"to":8},{"from":4,"to":3},{"from":4,"to":8},{"from":4,"to":5},{"from":0,"to":4},{"from":1,"to":4},{"from":2,"to":0},{"from":1,"to":2},{"from":6,"to":3},{"from":6,"to":2},{"from":6,"to":8},{"from":0,"to":6},{"from":2,"to":0},{"from":1,"to":2},{"from":2,"to":7}],
+      "payload": {"capacity":4,"tubes":[["r","y","y","p"],["b","r","p","b"],["b","r","y","w"],["k","k","g","w"],["p","w","g","k"],["w","g","b","p"],["y","g","r","k"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-076",
+      "mode": "liquid", "destination": "relax-liquid", "order": 76, "title": "Sunny Cordial", "difficulty": 4,
+      "twists": [], "par": 9,
+      "solution": [{"from":0,"to":3},{"from":2,"to":3},{"from":2,"to":0},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":2},{"from":1,"to":0},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["y","y","n","p"],["p","y","n","y"],["n","p","n","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-077",
+      "mode": "liquid", "destination": "relax-liquid", "order": 77, "title": "Cozy Cordial", "difficulty": 4,
+      "twists": [], "par": 11,
+      "solution": [{"from":1,"to":4},{"from":0,"to":1},{"from":2,"to":1},{"from":2,"to":5},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":5},{"from":3,"to":4},{"from":3,"to":5},{"from":0,"to":2},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["y","t","y","n"],["n","p","p","p"],["y","n","t","n"],["y","t","t","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-078",
+      "mode": "liquid", "destination": "relax-liquid", "order": 78, "title": "Fizzy Cordial", "difficulty": 4,
+      "twists": [], "par": 13,
+      "solution": [{"from":4,"to":5},{"from":1,"to":5},{"from":3,"to":5},{"from":2,"to":1},{"from":2,"to":4},{"from":2,"to":6},{"from":1,"to":2},{"from":3,"to":2},{"from":0,"to":3},{"from":4,"to":1},{"from":4,"to":0},{"from":4,"to":5},{"from":0,"to":6}],
+      "payload": {"capacity":4,"tubes":[["p","p","y","y"],["t","t","n","s"],["n","p","t","n"],["y","y","n","s"],["s","p","t","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-079",
+      "mode": "liquid", "destination": "relax-liquid", "order": 79, "title": "Frosty Cordial", "difficulty": 4,
+      "twists": [], "par": 18,
+      "solution": [{"from":3,"to":6},{"from":1,"to":6},{"from":4,"to":7},{"from":0,"to":4},{"from":0,"to":7},{"from":5,"to":1},{"from":5,"to":4},{"from":5,"to":6},{"from":1,"to":5},{"from":2,"to":5},{"from":2,"to":6},{"from":2,"to":1},{"from":0,"to":2},{"from":3,"to":1},{"from":3,"to":2},{"from":4,"to":3},{"from":0,"to":7},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["n","t","n","s"],["i","i","y","p"],["t","i","p","y"],["s","t","i","p"],["t","s","n","n"],["y","p","s","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-080",
+      "mode": "liquid", "destination": "relax-liquid", "order": 80, "title": "Minty Cordial", "difficulty": 4,
+      "twists": [], "par": 22,
+      "solution": [{"from":0,"to":7},{"from":4,"to":7},{"from":2,"to":8},{"from":6,"to":0},{"from":6,"to":4},{"from":6,"to":2},{"from":3,"to":6},{"from":3,"to":8},{"from":4,"to":6},{"from":4,"to":7},{"from":1,"to":4},{"from":1,"to":8},{"from":1,"to":7},{"from":0,"to":1},{"from":0,"to":4},{"from":2,"to":0},{"from":2,"to":3},{"from":5,"to":4},{"from":5,"to":8},{"from":5,"to":3},{"from":1,"to":5},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["s","y","t","p"],["t","p","o","y"],["s","i","s","o"],["i","i","o","n"],["y","p","n","p"],["t","i","o","y"],["n","s","n","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-081",
+      "mode": "liquid", "destination": "relax-liquid", "order": 81, "title": "Honeyed Cordial", "difficulty": 4,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":1,"to":4},{"from":1,"to":3},{"from":1,"to":4},{"from":2,"to":0},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["i","o","o","o"],["i","k","o","k"],["i","k","k","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-082",
+      "mode": "liquid", "destination": "relax-liquid", "order": 82, "title": "Velvet Cordial", "difficulty": 4,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":2,"to":0},{"from":1,"to":0},{"from":2,"to":4},{"from":1,"to":2},{"from":3,"to":1},{"from":3,"to":2},{"from":3,"to":4},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["o","i","g","g"],["i","o","k","i"],["k","k","g","i"],["o","g","k","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-083",
+      "mode": "liquid", "destination": "relax-liquid", "order": 83, "title": "Zesty Cordial", "difficulty": 4,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":5},{"from":2,"to":6},{"from":0,"to":2},{"from":1,"to":5},{"from":1,"to":6},{"from":3,"to":0},{"from":3,"to":5},{"from":2,"to":3},{"from":1,"to":2},{"from":3,"to":1},{"from":4,"to":2},{"from":4,"to":6},{"from":4,"to":5},{"from":2,"to":4},{"from":0,"to":3},{"from":2,"to":6}],
+      "payload": {"capacity":4,"tubes":[["o","o","i","k"],["i","w","g","k"],["g","w","i","g"],["o","i","k","o"],["w","k","g","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-084",
+      "mode": "liquid", "destination": "relax-liquid", "order": 84, "title": "Dreamy Cordial", "difficulty": 4,
+      "twists": [], "par": 19,
+      "solution": [{"from":0,"to":6},{"from":1,"to":0},{"from":1,"to":7},{"from":2,"to":1},{"from":3,"to":2},{"from":3,"to":7},{"from":3,"to":6},{"from":4,"to":3},{"from":4,"to":6},{"from":2,"to":4},{"from":0,"to":2},{"from":0,"to":7},{"from":1,"to":0},{"from":5,"to":4},{"from":5,"to":7},{"from":5,"to":3},{"from":2,"to":5},{"from":0,"to":2},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["o","i","w","k"],["g","o","i","w"],["o","w","b","o"],["g","k","i","b"],["b","k","k","g"],["w","g","i","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-085",
+      "mode": "liquid", "destination": "relax-liquid", "order": 85, "title": "Breezy Cordial", "difficulty": 4,
+      "twists": [], "par": 21,
+      "solution": [{"from":0,"to":7},{"from":2,"to":0},{"from":5,"to":8},{"from":1,"to":5},{"from":2,"to":8},{"from":2,"to":1},{"from":4,"to":2},{"from":4,"to":8},{"from":3,"to":4},{"from":3,"to":7},{"from":5,"to":2},{"from":5,"to":7},{"from":1,"to":5},{"from":6,"to":5},{"from":6,"to":1},{"from":6,"to":7},{"from":4,"to":6},{"from":0,"to":4},{"from":1,"to":4},{"from":0,"to":3},{"from":1,"to":6}],
+      "payload": {"capacity":4,"tubes":[["k","k","g","w"],["b","g","o","i"],["i","o","r","g"],["k","k","w","b"],["b","r","r","i"],["o","w","i","r"],["b","w","g","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-086",
+      "mode": "liquid", "destination": "relax-liquid", "order": 86, "title": "Toasty Cordial", "difficulty": 4,
+      "twists": [], "par": 9,
+      "solution": [{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":3},{"from":1,"to":0},{"from":2,"to":1},{"from":2,"to":3},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["r","r","b","r"],["p","r","b","p"],["p","b","p","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-087",
+      "mode": "liquid", "destination": "relax-liquid", "order": 87, "title": "Golden Cordial", "difficulty": 5,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":2,"to":4},{"from":1,"to":2},{"from":3,"to":2},{"from":3,"to":4},{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":0},{"from":3,"to":2},{"from":1,"to":3},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["p","y","y","b"],["r","y","r","p"],["r","p","b","b"],["y","r","b","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-088",
+      "mode": "liquid", "destination": "relax-liquid", "order": 88, "title": "Misty Cordial", "difficulty": 5,
+      "twists": ["hidden"], "par": 15,
+      "solution": [{"from":1,"to":5},{"from":2,"to":5},{"from":4,"to":2},{"from":1,"to":4},{"from":1,"to":6},{"from":3,"to":1},{"from":3,"to":6},{"from":2,"to":3},{"from":2,"to":6},{"from":4,"to":1},{"from":0,"to":4},{"from":0,"to":6},{"from":4,"to":0},{"from":2,"to":4},{"from":4,"to":5}],
+      "payload": {"capacity":4,"tubes":[["b","p","b","b"],["n","p","n","y"],["y","p","r","y"],["r","r","p","n"],["y","b","n","r"],[],[]],"hidden":[[2,2],[4,2]]}
+    },
+    {
+      "id": "relax-liquid-089",
+      "mode": "liquid", "destination": "relax-liquid", "order": 89, "title": "Sugared Cordial", "difficulty": 5,
+      "twists": [], "par": 20,
+      "solution": [{"from":3,"to":6},{"from":3,"to":7},{"from":4,"to":7},{"from":1,"to":4},{"from":1,"to":6},{"from":1,"to":7},{"from":2,"to":1},{"from":2,"to":3},{"from":4,"to":2},{"from":4,"to":6},{"from":0,"to":4},{"from":0,"to":1},{"from":0,"to":7},{"from":2,"to":0},{"from":5,"to":4},{"from":5,"to":3},{"from":5,"to":6},{"from":3,"to":5},{"from":1,"to":2},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["p","r","n","t"],["n","r","y","p"],["n","p","b","n"],["t","b","r","y"],["t","y","p","r"],["b","y","b","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-090",
+      "mode": "liquid", "destination": "relax-liquid", "order": 90, "title": "Sparkling Cordial", "difficulty": 5,
+      "twists": [], "par": 23,
+      "solution": [{"from":4,"to":7},{"from":1,"to":4},{"from":1,"to":8},{"from":1,"to":7},{"from":2,"to":8},{"from":2,"to":7},{"from":0,"to":2},{"from":4,"to":1},{"from":6,"to":0},{"from":4,"to":6},{"from":2,"to":4},{"from":0,"to":2},{"from":0,"to":1},{"from":3,"to":0},{"from":3,"to":8},{"from":3,"to":0},{"from":5,"to":0},{"from":5,"to":7},{"from":5,"to":8},{"from":6,"to":3},{"from":6,"to":2},{"from":4,"to":5},{"from":3,"to":6}],
+      "payload": {"capacity":4,"tubes":[["b","n","t","r"],["n","y","s","n"],["t","r","y","s"],["p","b","s","b"],["r","p","n","y"],["r","s","y","b"],["p","t","p","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-091",
+      "mode": "liquid", "destination": "relax-liquid", "order": 91, "title": "Sunny Soda", "difficulty": 5,
+      "twists": [], "par": 9,
+      "solution": [{"from":1,"to":3},{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":4},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["t","i","s","i"],["i","s","s","t"],["i","s","t","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-092",
+      "mode": "liquid", "destination": "relax-liquid", "order": 92, "title": "Cozy Soda", "difficulty": 5,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":4},{"from":0,"to":5},{"from":1,"to":0},{"from":1,"to":5},{"from":0,"to":1},{"from":2,"to":5},{"from":3,"to":0},{"from":3,"to":2},{"from":3,"to":5},{"from":0,"to":3},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["i","o","s","i"],["o","o","s","o"],["t","t","t","s"],["i","s","t","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-093",
+      "mode": "liquid", "destination": "relax-liquid", "order": 93, "title": "Fizzy Soda", "difficulty": 5,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":5},{"from":0,"to":6},{"from":1,"to":5},{"from":2,"to":6},{"from":1,"to":2},{"from":3,"to":1},{"from":3,"to":0},{"from":3,"to":5},{"from":1,"to":3},{"from":2,"to":1},{"from":2,"to":6},{"from":4,"to":3},{"from":4,"to":2},{"from":4,"to":1},{"from":4,"to":5},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["i","t","t","s"],["k","o","k","s"],["i","t","k","t"],["o","s","i","o"],["s","k","i","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-094",
+      "mode": "liquid", "destination": "relax-liquid", "order": 94, "title": "Frosty Soda", "difficulty": 5,
+      "twists": [], "par": 18,
+      "solution": [{"from":3,"to":6},{"from":0,"to":3},{"from":2,"to":6},{"from":1,"to":2},{"from":4,"to":0},{"from":4,"to":6},{"from":3,"to":4},{"from":5,"to":1},{"from":3,"to":5},{"from":1,"to":3},{"from":0,"to":1},{"from":5,"to":0},{"from":2,"to":5},{"from":2,"to":3},{"from":5,"to":2},{"from":0,"to":5},{"from":1,"to":0},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["k","i","k","g"],["g","k","t","o"],["o","t","o","s"],["t","i","g","s"],["g","s","s","k"],["i","o","i","t"],[]]}
+    },
+    {
+      "id": "relax-liquid-095",
+      "mode": "liquid", "destination": "relax-liquid", "order": 95, "title": "Minty Soda", "difficulty": 5,
+      "twists": ["hidden"], "par": 21,
+      "solution": [{"from":6,"to":7},{"from":0,"to":6},{"from":1,"to":7},{"from":5,"to":1},{"from":5,"to":7},{"from":5,"to":0},{"from":6,"to":5},{"from":2,"to":6},{"from":2,"to":7},{"from":6,"to":2},{"from":5,"to":6},{"from":1,"to":5},{"from":4,"to":1},{"from":4,"to":5},{"from":0,"to":4},{"from":1,"to":0},{"from":2,"to":1},{"from":3,"to":2},{"from":3,"to":2},{"from":3,"to":5},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["k","k","w","o"],["t","k","i","s"],["g","t","s","t"],["g","i","g","g"],["w","w","i","k"],["o","w","s","i"],["o","t","o","s"],[]],"hidden":[[3,2],[4,1]]}
+    },
+    {
+      "id": "relax-liquid-096",
+      "mode": "liquid", "destination": "relax-liquid", "order": 96, "title": "Honeyed Soda", "difficulty": 5,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":3},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["g","b","g","w"],["g","w","g","w"],["b","b","b","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-097",
+      "mode": "liquid", "destination": "relax-liquid", "order": 97, "title": "Velvet Soda", "difficulty": 5,
+      "twists": [], "par": 12,
+      "solution": [{"from":2,"to":4},{"from":1,"to":5},{"from":1,"to":4},{"from":3,"to":1},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":5},{"from":3,"to":0},{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":4},{"from":3,"to":5}],
+      "payload": {"capacity":4,"tubes":[["w","b","w","w"],["g","r","g","b"],["r","r","b","g"],["b","w","g","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-098",
+      "mode": "liquid", "destination": "relax-liquid", "order": 98, "title": "Zesty Soda", "difficulty": 5,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":5},{"from":3,"to":0},{"from":2,"to":6},{"from":2,"to":3},{"from":2,"to":5},{"from":1,"to":2},{"from":4,"to":2},{"from":4,"to":5},{"from":3,"to":4},{"from":3,"to":6},{"from":0,"to":3},{"from":0,"to":6},{"from":1,"to":3},{"from":1,"to":6},{"from":0,"to":2},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["p","w","g","b"],["r","w","g","p"],["p","b","r","w"],["g","w","r","g"],["r","b","b","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-099",
+      "mode": "liquid", "destination": "relax-liquid", "order": 99, "title": "Dreamy Soda", "difficulty": 5,
+      "twists": [], "par": 19,
+      "solution": [{"from":2,"to":6},{"from":4,"to":6},{"from":0,"to":4},{"from":0,"to":6},{"from":4,"to":0},{"from":1,"to":4},{"from":3,"to":1},{"from":5,"to":3},{"from":2,"to":5},{"from":4,"to":2},{"from":1,"to":4},{"from":1,"to":6},{"from":1,"to":4},{"from":5,"to":1},{"from":0,"to":5},{"from":3,"to":0},{"from":3,"to":1},{"from":2,"to":3},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["r","y","g","y"],["w","g","w","b"],["r","b","p","g"],["b","p","r","w"],["w","b","y","g"],["y","p","p","r"],[]]}
+    },
+    {
+      "id": "relax-liquid-100",
+      "mode": "liquid", "destination": "relax-liquid", "order": 100, "title": "Breezy Soda", "difficulty": 5,
+      "twists": [], "par": 21,
+      "solution": [{"from":0,"to":7},{"from":2,"to":7},{"from":1,"to":2},{"from":0,"to":1},{"from":7,"to":0},{"from":5,"to":7},{"from":2,"to":7},{"from":3,"to":7},{"from":3,"to":5},{"from":1,"to":3},{"from":1,"to":2},{"from":4,"to":2},{"from":5,"to":1},{"from":6,"to":4},{"from":6,"to":5},{"from":3,"to":6},{"from":5,"to":3},{"from":4,"to":5},{"from":4,"to":1},{"from":0,"to":4},{"from":0,"to":5}],
+      "payload": {"capacity":4,"tubes":[["p","w","y","w"],["g","n","y","b"],["n","n","b","w"],["r","y","g","b"],["w","g","p","n"],["p","r","g","b"],["y","r","r","p"],[]]}
+    },
+    {
+      "id": "relax-liquid-101",
+      "mode": "liquid", "destination": "relax-liquid", "order": 101, "title": "Toasty Soda", "difficulty": 5,
+      "twists": [], "par": 9,
+      "solution": [{"from":1,"to":3},{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":3},{"from":2,"to":1},{"from":2,"to":3},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","t","n","y"],["y","t","n","n"],["y","t","n","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-102",
+      "mode": "liquid", "destination": "relax-liquid", "order": 102, "title": "Golden Soda", "difficulty": 5,
+      "twists": [], "par": 12,
+      "solution": [{"from":0,"to":4},{"from":3,"to":4},{"from":1,"to":3},{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":0},{"from":1,"to":3},{"from":2,"to":4},{"from":2,"to":5},{"from":3,"to":2},{"from":1,"to":3},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["t","y","n","n"],["t","y","t","s"],["y","s","s","n"],["t","y","s","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-103",
+      "mode": "liquid", "destination": "relax-liquid", "order": 103, "title": "Misty Soda", "difficulty": 5,
+      "twists": [], "par": 15,
+      "solution": [{"from":0,"to":5},{"from":0,"to":6},{"from":1,"to":6},{"from":1,"to":5},{"from":2,"to":6},{"from":4,"to":0},{"from":4,"to":6},{"from":4,"to":5},{"from":2,"to":4},{"from":3,"to":2},{"from":3,"to":5},{"from":2,"to":3},{"from":1,"to":2},{"from":0,"to":1},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["s","s","n","i"],["s","t","i","n"],["t","y","t","n"],["y","y","i","y"],["t","i","n","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-104",
+      "mode": "liquid", "destination": "relax-liquid", "order": 104, "title": "Sugared Soda", "difficulty": 5,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":6},{"from":1,"to":6},{"from":0,"to":1},{"from":5,"to":0},{"from":5,"to":6},{"from":2,"to":5},{"from":2,"to":0},{"from":3,"to":5},{"from":3,"to":6},{"from":2,"to":3},{"from":0,"to":2},{"from":4,"to":2},{"from":0,"to":4},{"from":3,"to":0},{"from":4,"to":3},{"from":1,"to":4},{"from":1,"to":0},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["n","t","s","i"],["n","o","s","i"],["o","o","t","y"],["n","o","i","y"],["s","s","n","t"],["y","y","i","t"],[]]}
+    },
+    {
+      "id": "relax-liquid-105",
+      "mode": "liquid", "destination": "relax-liquid", "order": 105, "title": "Sparkling Soda", "difficulty": 5,
+      "twists": [], "par": 21,
+      "solution": [{"from":3,"to":7},{"from":1,"to":7},{"from":2,"to":1},{"from":0,"to":2},{"from":5,"to":0},{"from":4,"to":5},{"from":6,"to":1},{"from":6,"to":7},{"from":3,"to":6},{"from":5,"to":3},{"from":4,"to":5},{"from":2,"to":4},{"from":6,"to":2},{"from":5,"to":6},{"from":1,"to":5},{"from":4,"to":1},{"from":3,"to":4},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":5},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["s","o","s","i"],["i","o","t","t"],["s","y","i","o"],["y","k","y","t"],["k","i","n","k"],["n","n","k","s"],["n","y","t","o"],[]]}
+    },
+    {
+      "id": "relax-liquid-106",
+      "mode": "liquid", "destination": "relax-liquid", "order": 106, "title": "Sunny Slush", "difficulty": 5,
+      "twists": [], "par": 9,
+      "solution": [{"from":1,"to":3},{"from":2,"to":1},{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":3},{"from":2,"to":0},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["o","g","k","k"],["k","g","o","g"],["k","o","g","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-107",
+      "mode": "liquid", "destination": "relax-liquid", "order": 107, "title": "Cozy Slush", "difficulty": 5,
+      "twists": [], "par": 13,
+      "solution": [{"from":1,"to":4},{"from":2,"to":5},{"from":0,"to":2},{"from":0,"to":5},{"from":0,"to":4},{"from":2,"to":0},{"from":1,"to":2},{"from":3,"to":2},{"from":3,"to":5},{"from":3,"to":4},{"from":2,"to":3},{"from":0,"to":1},{"from":2,"to":5}],
+      "payload": {"capacity":4,"tubes":[["o","g","k","o"],["o","w","g","g"],["k","w","o","k"],["w","g","k","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-108",
+      "mode": "liquid", "destination": "relax-liquid", "order": 108, "title": "Fizzy Slush", "difficulty": 5,
+      "twists": [], "par": 16,
+      "solution": [{"from":3,"to":5},{"from":3,"to":6},{"from":1,"to":3},{"from":4,"to":1},{"from":4,"to":6},{"from":4,"to":3},{"from":1,"to":4},{"from":1,"to":3},{"from":2,"to":4},{"from":0,"to":2},{"from":0,"to":1},{"from":0,"to":6},{"from":2,"to":0},{"from":2,"to":1},{"from":0,"to":2},{"from":1,"to":5}],
+      "payload": {"capacity":4,"tubes":[["b","w","k","b"],["k","g","o","g"],["b","k","b","o"],["g","w","w","k"],["o","g","w","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-109",
+      "mode": "liquid", "destination": "relax-liquid", "order": 109, "title": "Frosty Slush", "difficulty": 6,
+      "twists": ["hidden"], "par": 19,
+      "solution": [{"from":0,"to":6},{"from":3,"to":6},{"from":3,"to":6},{"from":1,"to":3},{"from":1,"to":6},{"from":1,"to":3},{"from":1,"to":0},{"from":3,"to":1},{"from":0,"to":3},{"from":0,"to":1},{"from":5,"to":3},{"from":0,"to":5},{"from":2,"to":0},{"from":5,"to":2},{"from":4,"to":5},{"from":4,"to":0},{"from":5,"to":4},{"from":2,"to":5},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["b","k","r","w"],["r","k","w","k"],["g","b","o","o"],["r","k","w","w"],["g","o","o","g"],["b","g","b","r"],[]],"hidden":[[0,0],[2,1],[3,2]]}
+    },
+    {
+      "id": "relax-liquid-110",
+      "mode": "liquid", "destination": "relax-liquid", "order": 110, "title": "Minty Slush", "difficulty": 6,
+      "twists": [], "par": 22,
+      "solution": [{"from":2,"to":7},{"from":1,"to":7},{"from":3,"to":2},{"from":4,"to":1},{"from":4,"to":7},{"from":5,"to":3},{"from":5,"to":1},{"from":5,"to":4},{"from":3,"to":5},{"from":2,"to":3},{"from":0,"to":2},{"from":6,"to":5},{"from":6,"to":2},{"from":6,"to":0},{"from":6,"to":4},{"from":2,"to":6},{"from":0,"to":2},{"from":0,"to":6},{"from":1,"to":0},{"from":4,"to":1},{"from":3,"to":4},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["r","b","p","b"],["g","r","w","w"],["p","b","k","w"],["p","k","o","k"],["k","g","w","r"],["o","g","r","o"],["g","p","b","o"],[]]}
+    },
+    {
+      "id": "relax-liquid-111",
+      "mode": "liquid", "destination": "relax-liquid", "order": 111, "title": "Honeyed Slush", "difficulty": 6,
+      "twists": [], "par": 9,
+      "solution": [{"from":0,"to":3},{"from":1,"to":3},{"from":2,"to":0},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":0},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["r","y","p","r"],["p","y","y","r"],["y","p","r","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-112",
+      "mode": "liquid", "destination": "relax-liquid", "order": 112, "title": "Velvet Slush", "difficulty": 6,
+      "twists": [], "par": 13,
+      "solution": [{"from":0,"to":4},{"from":0,"to":5},{"from":1,"to":0},{"from":2,"to":5},{"from":2,"to":1},{"from":2,"to":5},{"from":1,"to":2},{"from":1,"to":5},{"from":3,"to":2},{"from":3,"to":1},{"from":3,"to":0},{"from":3,"to":4},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["y","y","n","r"],["r","n","p","y"],["p","n","p","n"],["r","y","r","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-113",
+      "mode": "liquid", "destination": "relax-liquid", "order": 113, "title": "Zesty Slush", "difficulty": 6,
+      "twists": [], "par": 17,
+      "solution": [{"from":3,"to":5},{"from":1,"to":5},{"from":1,"to":6},{"from":4,"to":1},{"from":4,"to":5},{"from":4,"to":6},{"from":2,"to":4},{"from":2,"to":1},{"from":2,"to":3},{"from":1,"to":2},{"from":0,"to":1},{"from":0,"to":6},{"from":0,"to":5},{"from":3,"to":1},{"from":3,"to":6},{"from":0,"to":4},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","p","n","r"],["r","y","n","p"],["y","r","y","t"],["t","n","r","p"],["t","n","p","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-114",
+      "mode": "liquid", "destination": "relax-liquid", "order": 114, "title": "Dreamy Slush", "difficulty": 6,
+      "twists": [], "par": 20,
+      "solution": [{"from":2,"to":6},{"from":4,"to":6},{"from":5,"to":4},{"from":5,"to":2},{"from":6,"to":5},{"from":2,"to":6},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":2},{"from":0,"to":1},{"from":4,"to":0},{"from":3,"to":4},{"from":3,"to":6},{"from":4,"to":3},{"from":5,"to":4},{"from":0,"to":5},{"from":2,"to":0},{"from":1,"to":2},{"from":3,"to":1},{"from":3,"to":6}],
+      "payload": {"capacity":4,"tubes":[["r","n","s","r"],["t","s","r","s"],["s","r","y","p"],["y","t","y","t"],["p","t","n","p"],["n","p","y","n"],[]]}
+    },
+    {
+      "id": "relax-liquid-115",
+      "mode": "liquid", "destination": "relax-liquid", "order": 115, "title": "Breezy Slush", "difficulty": 6,
+      "twists": [], "par": 21,
+      "solution": [{"from":0,"to":7},{"from":1,"to":7},{"from":2,"to":7},{"from":4,"to":1},{"from":6,"to":1},{"from":4,"to":2},{"from":6,"to":4},{"from":2,"to":6},{"from":5,"to":6},{"from":2,"to":5},{"from":1,"to":2},{"from":3,"to":1},{"from":3,"to":0},{"from":5,"to":3},{"from":1,"to":5},{"from":3,"to":1},{"from":5,"to":3},{"from":4,"to":5},{"from":0,"to":4},{"from":0,"to":1},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["t","p","t","i"],["y","r","i","i"],["r","p","s","i"],["y","p","t","y"],["t","n","s","r"],["n","y","p","s"],["s","n","n","r"],[]]}
+    },
+    {
+      "id": "relax-liquid-116",
+      "mode": "liquid", "destination": "relax-liquid", "order": 116, "title": "Toasty Slush", "difficulty": 6,
+      "twists": [], "par": 9,
+      "solution": [{"from":2,"to":3},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":3},{"from":1,"to":0},{"from":1,"to":2},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["i","o","s","o"],["o","i","o","s"],["s","i","i","s"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-117",
+      "mode": "liquid", "destination": "relax-liquid", "order": 117, "title": "Golden Slush", "difficulty": 6,
+      "twists": [], "par": 13,
+      "solution": [{"from":0,"to":4},{"from":1,"to":5},{"from":1,"to":4},{"from":2,"to":4},{"from":2,"to":1},{"from":2,"to":4},{"from":1,"to":2},{"from":3,"to":1},{"from":1,"to":5},{"from":0,"to":1},{"from":3,"to":1},{"from":3,"to":5},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["o","s","s","k"],["i","o","k","i"],["o","k","o","k"],["i","s","s","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-118",
+      "mode": "liquid", "destination": "relax-liquid", "order": 118, "title": "Misty Slush", "difficulty": 6,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":5},{"from":0,"to":6},{"from":4,"to":5},{"from":3,"to":5},{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":4},{"from":4,"to":6},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":1},{"from":2,"to":0},{"from":3,"to":1},{"from":4,"to":2},{"from":3,"to":5},{"from":4,"to":6}],
+      "payload": {"capacity":4,"tubes":[["s","o","g","k"],["s","s","g","i"],["i","s","i","o"],["k","o","o","k"],["g","i","g","k"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-119",
+      "mode": "liquid", "destination": "relax-liquid", "order": 119, "title": "Sugared Slush", "difficulty": 6,
+      "twists": [], "par": 19,
+      "solution": [{"from":0,"to":6},{"from":1,"to":6},{"from":4,"to":0},{"from":3,"to":4},{"from":3,"to":1},{"from":0,"to":3},{"from":6,"to":0},{"from":2,"to":6},{"from":3,"to":6},{"from":0,"to":3},{"from":0,"to":2},{"from":1,"to":0},{"from":5,"to":0},{"from":1,"to":5},{"from":2,"to":1},{"from":4,"to":2},{"from":4,"to":5},{"from":2,"to":4},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["s","g","k","g"],["s","w","o","g"],["s","i","s","k"],["g","k","o","i"],["i","w","i","k"],["w","w","o","o"],[]]}
+    },
+    {
+      "id": "relax-liquid-120",
+      "mode": "liquid", "destination": "relax-liquid", "order": 120, "title": "Sparkling Slush", "difficulty": 6,
+      "twists": [], "par": 22,
+      "solution": [{"from":6,"to":7},{"from":4,"to":6},{"from":1,"to":4},{"from":1,"to":7},{"from":3,"to":1},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":1},{"from":5,"to":0},{"from":5,"to":7},{"from":5,"to":0},{"from":5,"to":7},{"from":2,"to":5},{"from":4,"to":2},{"from":4,"to":5},{"from":1,"to":4},{"from":6,"to":1},{"from":2,"to":6},{"from":0,"to":2},{"from":3,"to":0},{"from":3,"to":5},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["i","s","w","k"],["b","w","g","o"],["s","o","k","i"],["i","k","i","w"],["w","k","o","b"],["g","s","g","s"],["o","b","b","g"],[]]}
+    },
+    {
+      "id": "relax-liquid-121",
+      "mode": "liquid", "destination": "relax-liquid", "order": 121, "title": "Sunny Nectar", "difficulty": 6,
+      "twists": [], "par": 8,
+      "solution": [{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":4},{"from":2,"to":0},{"from":2,"to":4},{"from":2,"to":1},{"from":2,"to":3},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","b","b","w"],["r","r","r","b"],["w","r","b","w"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-122",
+      "mode": "liquid", "destination": "relax-liquid", "order": 122, "title": "Cozy Nectar", "difficulty": 6,
+      "twists": [], "par": 12,
+      "solution": [{"from":0,"to":4},{"from":3,"to":4},{"from":2,"to":3},{"from":1,"to":2},{"from":0,"to":1},{"from":0,"to":4},{"from":3,"to":0},{"from":2,"to":3},{"from":2,"to":4},{"from":1,"to":2},{"from":1,"to":3},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["p","r","w","r"],["w","b","w","b"],["w","r","b","p"],["b","p","p","r"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-123",
+      "mode": "liquid", "destination": "relax-liquid", "order": 123, "title": "Fizzy Nectar", "difficulty": 6,
+      "twists": ["hidden"], "par": 17,
+      "solution": [{"from":0,"to":5},{"from":0,"to":6},{"from":3,"to":5},{"from":3,"to":6},{"from":4,"to":6},{"from":4,"to":3},{"from":1,"to":4},{"from":1,"to":6},{"from":1,"to":3},{"from":0,"to":1},{"from":2,"to":4},{"from":3,"to":0},{"from":2,"to":3},{"from":2,"to":1},{"from":4,"to":2},{"from":1,"to":4},{"from":3,"to":5}],
+      "payload": {"capacity":4,"tubes":[["y","w","b","p"],["w","y","b","r"],["r","w","p","r"],["p","y","b","p"],["w","r","y","b"],[],[]],"hidden":[[0,2],[1,1],[3,2]]}
+    },
+    {
+      "id": "relax-liquid-124",
+      "mode": "liquid", "destination": "relax-liquid", "order": 124, "title": "Frosty Nectar", "difficulty": 6,
+      "twists": [], "par": 19,
+      "solution": [{"from":1,"to":6},{"from":3,"to":6},{"from":0,"to":3},{"from":0,"to":6},{"from":0,"to":1},{"from":0,"to":6},{"from":5,"to":0},{"from":2,"to":0},{"from":2,"to":5},{"from":4,"to":2},{"from":4,"to":0},{"from":5,"to":4},{"from":1,"to":5},{"from":1,"to":2},{"from":5,"to":1},{"from":0,"to":5},{"from":3,"to":0},{"from":4,"to":3},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["n","b","n","w"],["b","y","b","n"],["y","y","p","r"],["p","w","w","n"],["w","p","r","y"],["r","b","p","r"],[]]}
+    },
+    {
+      "id": "relax-liquid-125",
+      "mode": "liquid", "destination": "relax-liquid", "order": 125, "title": "Minty Nectar", "difficulty": 6,
+      "twists": [], "par": 21,
+      "solution": [{"from":0,"to":7},{"from":1,"to":7},{"from":3,"to":7},{"from":3,"to":0},{"from":1,"to":3},{"from":2,"to":1},{"from":4,"to":1},{"from":4,"to":7},{"from":6,"to":3},{"from":4,"to":6},{"from":0,"to":4},{"from":2,"to":4},{"from":0,"to":2},{"from":5,"to":2},{"from":0,"to":5},{"from":6,"to":0},{"from":5,"to":6},{"from":5,"to":0},{"from":1,"to":5},{"from":3,"to":1},{"from":3,"to":6}],
+      "payload": {"capacity":4,"tubes":[["t","b","p","r"],["w","y","w","r"],["b","b","p","y"],["t","w","p","r"],["p","n","r","y"],["y","n","t","b"],["t","n","n","w"],[]]}
+    },
+    {
+      "id": "relax-liquid-126",
+      "mode": "liquid", "destination": "relax-liquid", "order": 126, "title": "Honeyed Nectar", "difficulty": 6,
+      "twists": [], "par": 10,
+      "solution": [{"from":1,"to":3},{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":4},{"from":0,"to":3},{"from":2,"to":3},{"from":2,"to":4},{"from":2,"to":3},{"from":0,"to":1},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["s","n","t","s"],["s","t","t","n"],["s","n","t","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-127",
+      "mode": "liquid", "destination": "relax-liquid", "order": 127, "title": "Velvet Nectar", "difficulty": 6,
+      "twists": [], "par": 14,
+      "solution": [{"from":0,"to":4},{"from":1,"to":4},{"from":3,"to":5},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":5},{"from":1,"to":0},{"from":2,"to":5},{"from":2,"to":4},{"from":2,"to":1},{"from":3,"to":1},{"from":3,"to":4},{"from":0,"to":3},{"from":2,"to":5}],
+      "payload": {"capacity":4,"tubes":[["s","i","s","t"],["n","s","n","t"],["i","n","t","i"],["s","t","n","i"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-128",
+      "mode": "liquid", "destination": "relax-liquid", "order": 128, "title": "Zesty Nectar", "difficulty": 6,
+      "twists": [], "par": 17,
+      "solution": [{"from":0,"to":5},{"from":1,"to":5},{"from":2,"to":6},{"from":2,"to":0},{"from":1,"to":2},{"from":1,"to":5},{"from":3,"to":1},{"from":3,"to":2},{"from":0,"to":3},{"from":4,"to":1},{"from":4,"to":6},{"from":4,"to":5},{"from":2,"to":4},{"from":0,"to":2},{"from":3,"to":0},{"from":1,"to":3},{"from":2,"to":6}],
+      "payload": {"capacity":4,"tubes":[["o","n","o","i"],["t","i","s","i"],["n","s","o","n"],["t","o","s","t"],["s","i","n","t"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-129",
+      "mode": "liquid", "destination": "relax-liquid", "order": 129, "title": "Dreamy Nectar", "difficulty": 6,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":6},{"from":3,"to":0},{"from":3,"to":6},{"from":2,"to":3},{"from":4,"to":6},{"from":2,"to":4},{"from":5,"to":3},{"from":5,"to":2},{"from":4,"to":5},{"from":1,"to":4},{"from":2,"to":1},{"from":2,"to":3},{"from":4,"to":2},{"from":5,"to":4},{"from":1,"to":5},{"from":0,"to":1},{"from":0,"to":2},{"from":0,"to":1}],
+      "payload": {"capacity":4,"tubes":[["k","s","k","t"],["k","o","s","s"],["i","o","n","i"],["i","t","t","k"],["n","s","n","t"],["o","n","o","i"],[]]}
+    },
+    {
+      "id": "relax-liquid-130",
+      "mode": "liquid", "destination": "relax-liquid", "order": 130, "title": "Breezy Nectar", "difficulty": 7,
+      "twists": ["hidden"], "par": 23,
+      "solution": [{"from":3,"to":7},{"from":1,"to":7},{"from":3,"to":1},{"from":7,"to":3},{"from":1,"to":7},{"from":4,"to":7},{"from":0,"to":4},{"from":5,"to":0},{"from":1,"to":5},{"from":3,"to":1},{"from":2,"to":3},{"from":6,"to":2},{"from":6,"to":1},{"from":4,"to":6},{"from":3,"to":4},{"from":2,"to":3},{"from":4,"to":2},{"from":0,"to":4},{"from":0,"to":3},{"from":5,"to":0},{"from":5,"to":4},{"from":6,"to":5},{"from":0,"to":6}],
+      "payload": {"capacity":4,"tubes":[["n","t","s","i"],["n","g","g","o"],["k","t","t","k"],["k","o","g","o"],["s","k","i","g"],["i","s","n","s"],["n","i","o","t"],[]],"hidden":[[0,2],[5,2],[6,0]]}
+    },
+    {
+      "id": "relax-liquid-131",
+      "mode": "liquid", "destination": "relax-liquid", "order": 131, "title": "Toasty Nectar", "difficulty": 7,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":3},{"from":1,"to":3},{"from":2,"to":3},{"from":0,"to":2},{"from":0,"to":1},{"from":2,"to":0},{"from":1,"to":2},{"from":1,"to":0},{"from":2,"to":1},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","g","w","k"],["g","w","g","k"],["k","g","w","k"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-132",
+      "mode": "liquid", "destination": "relax-liquid", "order": 132, "title": "Golden Nectar", "difficulty": 7,
+      "twists": [], "par": 14,
+      "solution": [{"from":3,"to":4},{"from":1,"to":3},{"from":1,"to":5},{"from":0,"to":1},{"from":0,"to":4},{"from":0,"to":5},{"from":2,"to":1},{"from":2,"to":4},{"from":2,"to":5},{"from":1,"to":2},{"from":3,"to":1},{"from":3,"to":5},{"from":1,"to":3},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["b","k","b","g"],["w","g","k","w"],["g","k","b","g"],["w","k","w","b"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-133",
+      "mode": "liquid", "destination": "relax-liquid", "order": 133, "title": "Misty Nectar", "difficulty": 7,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":5},{"from":2,"to":5},{"from":3,"to":2},{"from":1,"to":3},{"from":4,"to":5},{"from":1,"to":4},{"from":3,"to":1},{"from":0,"to":3},{"from":2,"to":0},{"from":2,"to":3},{"from":1,"to":2},{"from":3,"to":1},{"from":4,"to":3},{"from":4,"to":5},{"from":0,"to":4},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["b","k","w","r"],["w","g","b","g"],["g","w","k","r"],["b","w","g","k"],["k","r","b","r"],[]]}
+    },
+    {
+      "id": "relax-liquid-134",
+      "mode": "liquid", "destination": "relax-liquid", "order": 134, "title": "Sugared Nectar", "difficulty": 7,
+      "twists": [], "par": 20,
+      "solution": [{"from":0,"to":6},{"from":2,"to":6},{"from":3,"to":2},{"from":5,"to":6},{"from":1,"to":5},{"from":4,"to":1},{"from":4,"to":6},{"from":1,"to":4},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":3},{"from":4,"to":0},{"from":3,"to":4},{"from":5,"to":3},{"from":5,"to":0},{"from":1,"to":5},{"from":3,"to":1},{"from":3,"to":4}],
+      "payload": {"capacity":4,"tubes":[["b","w","k","r"],["g","k","p","g"],["w","k","w","r"],["b","g","b","w"],["b","p","r","p"],["k","p","g","r"],[]]}
+    },
+    {
+      "id": "relax-liquid-135",
+      "mode": "liquid", "destination": "relax-liquid", "order": 135, "title": "Sparkling Nectar", "difficulty": 7,
+      "twists": [], "par": 23,
+      "solution": [{"from":6,"to":7},{"from":4,"to":7},{"from":5,"to":4},{"from":5,"to":6},{"from":5,"to":7},{"from":6,"to":5},{"from":6,"to":7},{"from":4,"to":6},{"from":0,"to":4},{"from":1,"to":6},{"from":3,"to":0},{"from":2,"to":3},{"from":1,"to":2},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":6},{"from":2,"to":4},{"from":0,"to":2},{"from":3,"to":0},{"from":3,"to":2},{"from":1,"to":3},{"from":4,"to":1},{"from":0,"to":4}],
+      "payload": {"capacity":4,"tubes":[["r","b","p","y"],["y","p","b","g"],["y","g","b","r"],["p","b","r","p"],["r","y","g","w"],["k","w","k","g"],["w","k","k","w"],[]]}
+    },
+    {
+      "id": "relax-liquid-136",
+      "mode": "liquid", "destination": "relax-liquid", "order": 136, "title": "Sunny Cup", "difficulty": 7,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":3},{"from":0,"to":4},{"from":1,"to":4},{"from":1,"to":3},{"from":1,"to":4},{"from":2,"to":0},{"from":2,"to":3},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":2}],
+      "payload": {"capacity":4,"tubes":[["n","y","p","p"],["n","y","p","y"],["n","y","p","n"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-137",
+      "mode": "liquid", "destination": "relax-liquid", "order": 137, "title": "Cozy Cup", "difficulty": 7,
+      "twists": [], "par": 13,
+      "solution": [{"from":1,"to":4},{"from":0,"to":1},{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":4},{"from":2,"to":5},{"from":2,"to":4},{"from":0,"to":2},{"from":3,"to":0},{"from":3,"to":5},{"from":3,"to":0},{"from":0,"to":1},{"from":3,"to":5}],
+      "payload": {"capacity":4,"tubes":[["y","n","t","n"],["y","t","n","t"],["n","t","p","p"],["p","y","p","y"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-138",
+      "mode": "liquid", "destination": "relax-liquid", "order": 138, "title": "Fizzy Cup", "difficulty": 7,
+      "twists": [], "par": 17,
+      "solution": [{"from":4,"to":5},{"from":2,"to":4},{"from":2,"to":5},{"from":4,"to":2},{"from":1,"to":4},{"from":3,"to":4},{"from":3,"to":1},{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":3},{"from":1,"to":5},{"from":1,"to":0},{"from":4,"to":1},{"from":0,"to":4},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":4}],
+      "payload": {"capacity":4,"tubes":[["y","s","t","p"],["t","n","p","s"],["t","y","n","y"],["p","n","p","s"],["t","s","y","n"],[]]}
+    },
+    {
+      "id": "relax-liquid-139",
+      "mode": "liquid", "destination": "relax-liquid", "order": 139, "title": "Frosty Cup", "difficulty": 7,
+      "twists": [], "par": 18,
+      "solution": [{"from":4,"to":6},{"from":1,"to":6},{"from":5,"to":4},{"from":1,"to":5},{"from":4,"to":1},{"from":4,"to":6},{"from":5,"to":4},{"from":2,"to":4},{"from":5,"to":2},{"from":4,"to":5},{"from":1,"to":4},{"from":3,"to":1},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":1},{"from":2,"to":0},{"from":3,"to":2},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["y","y","n","t"],["n","p","s","i"],["t","t","y","s"],["n","t","p","n"],["i","p","i","i"],["s","y","s","p"],[]]}
+    },
+    {
+      "id": "relax-liquid-140",
+      "mode": "liquid", "destination": "relax-liquid", "order": 140, "title": "Minty Cup", "difficulty": 7,
+      "twists": [], "par": 23,
+      "solution": [{"from":6,"to":7},{"from":1,"to":7},{"from":2,"to":6},{"from":4,"to":1},{"from":0,"to":4},{"from":5,"to":2},{"from":5,"to":0},{"from":6,"to":5},{"from":7,"to":6},{"from":0,"to":7},{"from":3,"to":0},{"from":4,"to":0},{"from":3,"to":4},{"from":2,"to":3},{"from":1,"to":2},{"from":4,"to":1},{"from":3,"to":4},{"from":6,"to":3},{"from":1,"to":6},{"from":1,"to":7},{"from":2,"to":1},{"from":5,"to":2},{"from":1,"to":5}],
+      "payload": {"capacity":4,"tubes":[["o","t","t","o"],["t","s","i","n"],["y","i","p","y"],["n","p","s","o"],["p","s","o","i"],["i","y","t","p"],["s","n","y","n"],[]]}
+    },
+    {
+      "id": "relax-liquid-141",
+      "mode": "liquid", "destination": "relax-liquid", "order": 141, "title": "Honeyed Cup", "difficulty": 7,
+      "twists": [], "par": 10,
+      "solution": [{"from":0,"to":3},{"from":0,"to":4},{"from":0,"to":3},{"from":1,"to":4},{"from":1,"to":0},{"from":2,"to":3},{"from":2,"to":1},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["k","o","i","o"],["i","k","k","i"],["k","o","i","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-142",
+      "mode": "liquid", "destination": "relax-liquid", "order": 142, "title": "Velvet Cup", "difficulty": 7,
+      "twists": [], "par": 14,
+      "solution": [{"from":0,"to":4},{"from":0,"to":5},{"from":1,"to":4},{"from":3,"to":5},{"from":3,"to":1},{"from":3,"to":5},{"from":2,"to":3},{"from":2,"to":1},{"from":2,"to":5},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":2},{"from":0,"to":3},{"from":1,"to":4}],
+      "payload": {"capacity":4,"tubes":[["k","i","o","g"],["g","i","g","g"],["k","o","i","k"],["k","o","i","o"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-143",
+      "mode": "liquid", "destination": "relax-liquid", "order": 143, "title": "Zesty Cup", "difficulty": 7,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":5},{"from":3,"to":0},{"from":3,"to":5},{"from":1,"to":3},{"from":4,"to":1},{"from":4,"to":5},{"from":3,"to":4},{"from":3,"to":5},{"from":1,"to":3},{"from":0,"to":1},{"from":0,"to":3},{"from":2,"to":3},{"from":4,"to":0},{"from":4,"to":2},{"from":1,"to":4},{"from":2,"to":1},{"from":2,"to":4},{"from":1,"to":2}],
+      "payload": {"capacity":4,"tubes":[["i","o","g","w"],["k","g","o","i"],["k","g","k","o"],["w","i","w","g"],["k","i","w","o"],[]]}
+    },
+    {
+      "id": "relax-liquid-144",
+      "mode": "liquid", "destination": "relax-liquid", "order": 144, "title": "Dreamy Cup", "difficulty": 7,
+      "twists": ["hidden"], "par": 20,
+      "solution": [{"from":5,"to":6},{"from":0,"to":5},{"from":1,"to":6},{"from":1,"to":0},{"from":1,"to":6},{"from":4,"to":1},{"from":2,"to":4},{"from":2,"to":6},{"from":1,"to":2},{"from":5,"to":1},{"from":5,"to":1},{"from":3,"to":5},{"from":4,"to":3},{"from":4,"to":1},{"from":2,"to":4},{"from":2,"to":5},{"from":3,"to":2},{"from":0,"to":3},{"from":0,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["w","b","w","o"],["g","k","w","k"],["i","g","k","b"],["w","b","i","i"],["g","o","b","g"],["i","o","o","k"],[]],"hidden":[[1,0],[2,0],[5,1]]}
+    },
+    {
+      "id": "relax-liquid-145",
+      "mode": "liquid", "destination": "relax-liquid", "order": 145, "title": "Breezy Cup", "difficulty": 7,
+      "twists": [], "par": 25,
+      "solution": [{"from":3,"to":7},{"from":1,"to":7},{"from":4,"to":3},{"from":1,"to":4},{"from":7,"to":1},{"from":0,"to":7},{"from":3,"to":7},{"from":4,"to":3},{"from":5,"to":7},{"from":6,"to":0},{"from":2,"to":6},{"from":2,"to":4},{"from":0,"to":2},{"from":4,"to":0},{"from":4,"to":5},{"from":2,"to":4},{"from":6,"to":2},{"from":5,"to":6},{"from":5,"to":4},{"from":0,"to":5},{"from":0,"to":2},{"from":1,"to":0},{"from":3,"to":1},{"from":6,"to":3},{"from":0,"to":6}],
+      "payload": {"capacity":4,"tubes":[["g","r","w","k"],["o","i","o","i"],["g","w","r","g"],["b","o","k","i"],["b","r","o","k"],["r","w","b","k"],["i","b","g","w"],[]]}
+    },
+    {
+      "id": "relax-liquid-146",
+      "mode": "liquid", "destination": "relax-liquid", "order": 146, "title": "Toasty Cup", "difficulty": 7,
+      "twists": [], "par": 11,
+      "solution": [{"from":0,"to":3},{"from":1,"to":4},{"from":2,"to":3},{"from":2,"to":0},{"from":2,"to":4},{"from":0,"to":2},{"from":0,"to":4},{"from":1,"to":2},{"from":1,"to":4},{"from":0,"to":3},{"from":1,"to":3}],
+      "payload": {"capacity":4,"tubes":[["p","b","r","p"],["p","b","r","b"],["r","b","r","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-147",
+      "mode": "liquid", "destination": "relax-liquid", "order": 147, "title": "Golden Cup", "difficulty": 7,
+      "twists": [], "par": 14,
+      "solution": [{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":5},{"from":0,"to":4},{"from":1,"to":4},{"from":1,"to":5},{"from":1,"to":0},{"from":2,"to":5},{"from":2,"to":4},{"from":2,"to":0},{"from":3,"to":1},{"from":3,"to":5},{"from":1,"to":2},{"from":0,"to":3}],
+      "payload": {"capacity":4,"tubes":[["b","p","r","y"],["y","b","r","p"],["y","b","p","r"],["b","r","y","p"],[],[]]}
+    },
+    {
+      "id": "relax-liquid-148",
+      "mode": "liquid", "destination": "relax-liquid", "order": 148, "title": "Misty Cup", "difficulty": 7,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":5},{"from":1,"to":5},{"from":4,"to":0},{"from":2,"to":4},{"from":1,"to":2},{"from":0,"to":1},{"from":2,"to":0},{"from":4,"to":2},{"from":5,"to":4},{"from":0,"to":5},{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":0},{"from":4,"to":1},{"from":2,"to":4},{"from":3,"to":2},{"from":3,"to":0},{"from":2,"to":3}],
+      "payload": {"capacity":4,"tubes":[["r","p","y","n"],["n","y","p","n"],["r","b","p","b"],["r","y","r","p"],["b","n","b","y"],[]]}
+    },
+    {
+      "id": "relax-liquid-149",
+      "mode": "liquid", "destination": "relax-liquid", "order": 149, "title": "Sugared Cup", "difficulty": 7,
+      "twists": [], "par": 19,
+      "solution": [{"from":0,"to":6},{"from":1,"to":0},{"from":4,"to":6},{"from":1,"to":4},{"from":0,"to":1},{"from":4,"to":0},{"from":4,"to":6},{"from":5,"to":4},{"from":3,"to":5},{"from":3,"to":4},{"from":3,"to":6},{"from":0,"to":3},{"from":5,"to":0},{"from":2,"to":5},{"from":2,"to":3},{"from":0,"to":2},{"from":1,"to":0},{"from":5,"to":1},{"from":0,"to":5}],
+      "payload": {"capacity":4,"tubes":[["r","b","t","n"],["p","t","b","t"],["r","b","p","p"],["n","y","y","r"],["y","n","b","n"],["t","p","r","y"],[]]}
+    },
+    {
+      "id": "relax-liquid-150",
+      "mode": "liquid", "destination": "relax-liquid", "order": 150, "title": "Sparkling Cup", "difficulty": 7,
+      "twists": [], "par": 24,
+      "solution": [{"from":0,"to":7},{"from":1,"to":0},{"from":2,"to":7},{"from":4,"to":7},{"from":4,"to":1},{"from":0,"to":4},{"from":3,"to":0},{"from":5,"to":0},{"from":3,"to":5},{"from":2,"to":3},{"from":5,"to":2},{"from":5,"to":3},{"from":5,"to":7},{"from":4,"to":5},{"from":6,"to":5},{"from":4,"to":6},{"from":0,"to":4},{"from":3,"to":0},{"from":2,"to":3},{"from":6,"to":2},{"from":6,"to":4},{"from":1,"to":6},{"from":1,"to":2},{"from":1,"to":6}],
+      "payload": {"capacity":4,"tubes":[["y","p","r","n"],["t","b","t","r"],["b","s","y","n"],["s","y","s","p"],["b","r","t","n"],["n","y","s","p"],["t","p","b","r"],[]]}
+    }
+  ]
 }

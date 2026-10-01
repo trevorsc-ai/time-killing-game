@@ -1,0 +1,40 @@
+{
+  "destination": "d2", "mode": "bolt",
+  "levels": [
+    {
+      "id": "d2-bolt-01",
+      "mode": "bolt", "destination": "d2", "order": 1, "title": "Garden Gate Nuts", "difficulty": 4,
+      "twists": [], "par": 14,
+      "solution": [{"from":3,"to":4},{"from":2,"to":4},{"from":0,"to":2},{"from":1,"to":0},{"from":1,"to":5},{"from":3,"to":5},{"from":3,"to":4},{"from":0,"to":3},{"from":0,"to":4},{"from":0,"to":5},{"from":2,"to":0},{"from":3,"to":2},{"from":0,"to":3},{"from":1,"to":4}],
+      "payload": {"capacity":5,"tubes":[["r","p","w","b","r"],["w","p","p","p","b"],["b","b","r","r","w"],["r","b","w","p","w"],[],[]]}
+    },
+    {
+      "id": "d2-bolt-02",
+      "mode": "bolt", "destination": "d2", "order": 2, "title": "Short Stack", "difficulty": 5,
+      "twists": ["capped"], "par": 16,
+      "solution": [{"from":1,"to":0},{"from":1,"to":6},{"from":1,"to":2},{"from":1,"to":6},{"from":2,"to":1},{"from":2,"to":6},{"from":4,"to":1},{"from":3,"to":4},{"from":3,"to":1},{"from":4,"to":3},{"from":5,"to":2},{"from":5,"to":4},{"from":2,"to":5},{"from":2,"to":3},{"from":4,"to":6},{"from":5,"to":0}],
+      "payload": {"capacity":5,"tubes":[["k"],["o","i","o","i","k"],["s","k","i","o"],["s","s","o","s"],["i","s","o"],["k","i","k"],[]],"capacities":[5,5,5,5,3,3,5]}
+    },
+    {
+      "id": "d2-bolt-03",
+      "mode": "bolt", "destination": "d2", "order": 3, "title": "Trellis Tangle", "difficulty": 6,
+      "twists": ["capped"], "par": 19,
+      "solution": [{"from":5,"to":6},{"from":1,"to":5},{"from":2,"to":1},{"from":5,"to":7},{"from":2,"to":5},{"from":0,"to":2},{"from":1,"to":2},{"from":1,"to":7},{"from":4,"to":0},{"from":1,"to":4},{"from":3,"to":1},{"from":4,"to":3},{"from":4,"to":1},{"from":4,"to":7},{"from":0,"to":4},{"from":6,"to":4},{"from":0,"to":1},{"from":5,"to":3},{"from":6,"to":7}],
+      "payload": {"capacity":5,"tubes":[["y","y","b","n","n"],["y","p","r","n","r"],["n","p","n"],["p","y"],["b","r","y","p","b"],["p","r","b"],["r","b"],[]],"capacities":[5,5,5,5,5,3,4,5]}
+    },
+    {
+      "id": "d2-bolt-04",
+      "mode": "bolt", "destination": "d2", "order": 4, "title": "Rusty Watering Can", "difficulty": 7,
+      "twists": ["rusty"], "par": 15,
+      "solution": [{"from":0,"to":4},{"from":1,"to":0},{"from":1,"to":4},{"from":2,"to":1},{"from":3,"to":2},{"from":3,"to":4},{"from":2,"to":3},{"from":2,"to":1},{"from":2,"to":4},{"from":3,"to":2},{"from":0,"to":3},{"from":0,"to":2},{"from":3,"to":0},{"from":1,"to":3},{"from":0,"to":1}],
+      "payload": {"capacity":5,"tubes":[["k","g","g","k","o"],["k","w","o","o","k"],["o","w","g","w","w"],["w","k","g","o","g"],[]],"rusty":[{"bolt":0,"index":0,"color":"w"}]}
+    },
+    {
+      "id": "d2-bolt-05",
+      "mode": "bolt", "destination": "d2", "order": 5, "title": "Greenhouse Fix-up", "difficulty": 8,
+      "twists": ["capped","rusty"], "par": 18,
+      "solution": [{"from":2,"to":0},{"from":1,"to":2},{"from":4,"to":7},{"from":4,"to":0},{"from":1,"to":4},{"from":1,"to":2},{"from":6,"to":7},{"from":5,"to":6},{"from":5,"to":4},{"from":3,"to":5},{"from":3,"to":7},{"from":4,"to":3},{"from":2,"to":4},{"from":2,"to":7},{"from":0,"to":2},{"from":0,"to":4},{"from":5,"to":1},{"from":6,"to":1}],
+      "payload": {"capacity":5,"tubes":[["y","s"],["n","y","p","p","y"],["s","t","y","s","s"],["p","t","n"],["y","p","s","t","t"],["n","p","n"],["n","t"],[]],"capacities":[5,5,5,5,5,3,4,5],"rusty":[{"bolt":4,"index":0,"color":"n"},{"bolt":6,"index":0,"color":"y"}]}
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "destination": "d1", "mode": "bolt",
+  "levels": [
+    {
+      "id": "d1-bolt-16",
+      "mode": "bolt", "destination": "d1", "order": 16, "title": "Bench Warm-up", "difficulty": 2,
+      "tutorial": "bolt.move",
+      "twists": [], "par": 6,
+      "solution": [{"from":0,"to":3},{"from":1,"to":0},{"from":2,"to":1},{"from":2,"to":3},{"from":1,"to":2},{"from":1,"to":3}],
+      "payload": {"capacity":5,"tubes":[["p","p","p","r","r"],["r","y","y","p","p"],["y","r","r","y","y"],[],[]]}
+    },
+    {
+      "id": "d1-bolt-19",
+      "mode": "bolt", "destination": "d1", "order": 19, "title": "Spanner Shuffle", "difficulty": 2,
+      "twists": [], "par": 13,
+      "solution": [{"from":0,"to":4},{"from":1,"to":5},{"from":1,"to":4},{"from":1,"to":5},{"from":2,"to":5},{"from":2,"to":1},{"from":0,"to":2},{"from":0,"to":5},{"from":3,"to":5},{"from":3,"to":4},{"from":2,"to":3},{"from":0,"to":1},{"from":1,"to":2}],
+      "payload": {"capacity":5,"tubes":[["p","y","n","n","t"],["p","p","y","t","y"],["p","n","n","p","y"],["n","t","t","t","y"],[],[]]}
+    },
+    {
+      "id": "d1-bolt-22",
+      "mode": "bolt", "destination": "d1", "order": 22, "title": "Nuts About Colors", "difficulty": 3,
+      "twists": [], "par": 16,
+      "solution": [{"from":0,"to":4},{"from":3,"to":5},{"from":0,"to":3},{"from":1,"to":4},{"from":1,"to":5},{"from":2,"to":5},{"from":2,"to":4},{"from":0,"to":2},{"from":3,"to":0},{"from":2,"to":3},{"from":2,"to":4},{"from":3,"to":2},{"from":1,"to":3},{"from":1,"to":2},{"from":1,"to":5},{"from":0,"to":3}],
+      "payload": {"capacity":5,"tubes":[["s","i","s","n","n"],["t","i","s","t","n"],["n","i","i","n","t"],["s","i","s","t","t"],[],[]]}
+    },
+    {
+      "id": "d1-bolt-24",
+      "mode": "bolt", "destination": "d1", "order": 24, "title": "Tidy the Toolbox", "difficulty": 3,
+      "twists": [], "par": 19,
+      "solution": [{"from":0,"to":5},{"from":4,"to":6},{"from":0,"to":4},{"from":0,"to":6},{"from":2,"to":6},{"from":2,"to":5},{"from":3,"to":2},{"from":4,"to":0},{"from":4,"to":5},{"from":4,"to":6},{"from":3,"to":4},{"from":2,"to":3},{"from":2,"to":4},{"from":1,"to":2},{"from":1,"to":5},{"from":1,"to":4},{"from":1,"to":5},{"from":1,"to":3},{"from":0,"to":2}],
+      "payload": {"capacity":5,"tubes":[["s","t","t","s","o"],["i","o","n","o","s"],["s","n","i","o","t"],["i","i","n","n","i"],["n","t","o","s","t"],[],[]]}
+    },
+    {
+      "id": "d1-bolt-25",
+      "mode": "bolt", "destination": "d1", "order": 25, "title": "Workshop Rush", "difficulty": 4,
+      "twists": [], "par": 18,
+      "solution": [{"from":0,"to":5},{"from":3,"to":5},{"from":1,"to":3},{"from":2,"to":1},{"from":4,"to":0},{"from":2,"to":4},{"from":3,"to":2},{"from":1,"to":3},{"from":5,"to":1},{"from":3,"to":5},{"from":1,"to":3},{"from":1,"to":5},{"from":4,"to":1},{"from":4,"to":3},{"from":0,"to":4},{"from":0,"to":1},{"from":2,"to":0},{"from":2,"to":4}],
+      "payload": {"capacity":5,"tubes":[["k","k","i","s","g"],["i","o","g","o","k"],["s","s","k","i","o"],["g","o","o","k","g"],["s","g","i","i","s"],[]]}
+    }
+  ]
+}

@@ -27,7 +27,9 @@ There is no "pointless move" filter: for example pouring a lone-colored tube int
 
 **Hidden layers (twist `hidden`, from L7).** A hidden layer renders as "?" and is **not** part of a run (`run` stops at the first hidden layer going downward). It becomes revealed permanently the moment it is the top of its tube (including at the initial state: the top of every tube is revealed on load). A hidden layer cannot be the top of the `to` tube (tops are always revealed), so matching never depends on hidden colors.
 
-**Locked tubes (twist `lock`, from L9).** Payload `locks: [{tube, color}]`. A locked tube can be neither source nor target. It opens (permanently, tracked in state) when the named color is *completed*: some tube holds `capacity` layers all of that color. Check after every move, and once at load. Lock openings are not themselves moves.
+**Completed color.** A color `c` is *completed* in a state iff exactly one tube contains any layer of color `c` and that tube is single-colored (hidden flags are ignored; when every color appears exactly `capacity` times this means some tube is full of `c`). This one definition is used by both locks and rusty nuts.
+
+**Locked tubes (twist `lock`, from L9).** Payload `locks: [{tube, color}]`. A locked tube can be neither source nor target. It opens (permanently, tracked in state) when its named color is *completed*. Check after every move, and once at load. Lock openings are not themselves moves. (The named color should not appear in the locked tube itself, otherwise it can never be completed.)
 
 **Solved.** Every non-empty tube is single-colored (all layers same color), and no color appears in more than one tube. (With every color appearing exactly `capacity` times this means each non-empty tube is full of one color.) A tube that is still locked and non-empty is judged like any other tube.
 
@@ -38,7 +40,7 @@ There is no "pointless move" filter: for example pouring a lone-colored tube int
 Shares the Liquid engine and the Liquid move definition (`{from, to}`, "bolts" = tubes, "nuts" = layers, same top-run pour rule, same solved rule). Differences:
 
 - **Per-bolt capacity.** Payload may give `capacities: [int]`, one per bolt (default: `capacity` for all). "Space left" and `len(to) < capacity` use the target bolt's own capacity. (Twist `capped`, Dest 2.)
-- **Rusty nuts (twist `rusty`, Dest 2 late).** Payload `rusty: [{bolt, index, color}]`: the nut at `index` (0 = bottom) of `bolt` is rusty until `color` is *completed* (all nuts of that color sit together in a single bolt that holds only that color; evaluated after every move and at load; once cleared, a nut stays clear). A rusty nut cannot be moved: if the top nut of `from` is rusty the bolt is not a legal source, and a top run stops above a rusty nut. Rusty nuts are never hidden.
+- **Rusty nuts (twist `rusty`, Dest 2 late).** Payload `rusty: [{bolt, index, color}]`: the nut at `index` (0 = bottom) of `bolt` is rusty until `color` is *completed* (see "Completed color" above; evaluated after every move and at load; once cleared, a nut stays clear). Rust is a property of the nut (it travels with it), though a rusty nut cannot be moved until cleared. A rusty nut cannot be moved: if the top nut of `from` is rusty the bolt is not a legal source, and a top run stops above a rusty nut. Rusty nuts are never hidden. A rusty nut can still be covered: a legal move may place a matching nut on top of a rusty top nut of the *target* bolt (only moving a rusty nut is forbidden).
 - Hidden layers and locks are not used in Bolt, but the engine supports them identically if a payload provides them.
 
 ## Pixel Picnic ("Critter Clear"), mode `pixel`
